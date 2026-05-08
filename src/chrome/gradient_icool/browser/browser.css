@@ -35,8 +35,8 @@
   border-bottom: 1px solid ThreeDShadow;
 }
 
-#navigator-toolbox[tabsontop=true] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
-#navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
+#navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
+#navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar) {
   appearance: none;
   border-style: none;
   background-color: -moz-Dialog;
@@ -47,26 +47,15 @@
   padding-bottom: 1px;
 }
 
-#nav-bar:not(:-moz-lwtheme),
-#nav-bar[collapsed=true] + toolbar:not(:-moz-lwtheme),
-#nav-bar[collapsed=true] + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme),
+#nav-bar,
+#nav-bar[collapsed=true] + toolbar,
+#nav-bar[collapsed=true] + #customToolbars + #PersonalToolbar,
 #nav-bar[tabsontop=true],
 #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
 #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar {
   background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
 }
 
-#nav-bar[tabsontop=true]:-moz-lwtheme,
-#nav-bar[tabsontop=true][collapsed=true]:not([customizing]):-moz-lwtheme + toolbar,
-#nav-bar[tabsontop=true][collapsed=true]:not([customizing]):-moz-lwtheme + #customToolbars + #PersonalToolbar {
-  background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,0));
-}
-
-#nav-bar[tabsontop=true]:-moz-lwtheme-brighttext,
-#nav-bar[tabsontop=true][collapsed=true]:not([customizing]):-moz-lwtheme-brighttext + toolbar,
-#nav-bar[tabsontop=true][collapsed=true]:not([customizing]):-moz-lwtheme-brighttext + #customToolbars + #PersonalToolbar {
-  background-image: linear-gradient(rgba(32,32,32,.8), rgba(32,32,32,0));
-}
 
 #personal-bookmarks {
   min-height: 29px;
@@ -75,11 +64,6 @@
 #browser-bottombox {
   /* opaque for layers optimization */
   background-color: -moz-Dialog;
-}
-
-#urlbar:-moz-lwtheme:not([focused="true"]),
-.searchbar-textbox:-moz-lwtheme:not([focused="true"]) {
-  opacity: .85;
 }
 
 /* Places toolbar */
@@ -1086,12 +1070,6 @@ toolbar[iconsize="small"] #webrtc-status-button {
   box-shadow: inset 0 0 4px rgb(0,168,0);
 }
 
-#urlbar[https_color="all"]:-moz-lwtheme-darktext,
-#urlbar[https_color="secure-mixed"]:-moz-lwtheme-darktext,
-#urlbar[https_color="secure-only"]:-moz-lwtheme-darktext {
-  box-shadow: inset 0 0 2px;
-}
-
 /* Identity popup icons */
 #identity-popup-icon {
   height: 64px;
@@ -1592,13 +1570,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding: 0;
 }
 
-#TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
+#TabsToolbar[tabsontop=true] {
   appearance: menubar;
   color: -moz-menubartext;
   box-shadow: 0 -1px 0 rgba(0,0,0,.1) inset;
 }
 
-#TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
+#TabsToolbar[tabsontop=true]:-moz-system-metric(menubar-drag) {
   -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
 }
 
@@ -1646,48 +1624,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
                     linear-gradient(-moz-dialog, -moz-dialog);
 }
 
-.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
+.tabbrowser-tab[selected="true"] {
   color: -moz-dialogtext;
 }
 
-#main-window[tabsontop=false]:not([disablechrome]) .tabbrowser-tab[selected=true]:not(:-moz-lwtheme) {
+#main-window[tabsontop=false]:not([disablechrome]) .tabbrowser-tab[selected=true] {
   background-image: linear-gradient(to top, rgba(0,0,0,.3) 1px, transparent 1px),
                     linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
                     linear-gradient(-moz-dialog, -moz-dialog);
 }
 
-
-.tabbrowser-tab:-moz-lwtheme:not([selected="true"]) {
-  opacity: 0.9;
-}
-
-.tabbrowser-tab[selected="true"]:-moz-lwtheme {
-  background-image: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.8) 50%);
-}
-
-.tabbrowser-tab[selected="true"]:-moz-lwtheme-brighttext {
-  background-image: linear-gradient(rgba(128,128,128,.9), rgba(32,32,32,.9) 50%, rgba(32,32,32,.9) 80%, rgba(32,32,32,.8) 100%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-brighttext {
-  background-image: linear-gradient(hsla(0,0%,25%,.4), hsla(0,0%,15%,.6) 80%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-brighttext:hover {
-  background-image: linear-gradient(hsla(0,0%,60%,.4), hsla(0,0%,10%,.8) 80%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-darktext {
-  background-image: linear-gradient(hsla(0,0%,75%,.4), hsla(0,0%,85%,.6) 80%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-darktext:hover {
-  background-image: linear-gradient(hsla(0,0%,60%,.4), hsla(0,0%,90%,.8) 80%);
-}
 
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
   background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(233,242,252,1) 3%, rgba(172,206,255,.75) 40%, rgba(87,151,201,.5) 80%, rgba(87,151,201,0));
@@ -1791,12 +1737,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio.svg#tab-audio-blocked");
 }
 
-#TabsToolbar:-moz-lwtheme-brighttext .tab-icon-sound[soundplaying],
-#TabsToolbar:-moz-lwtheme-brighttext .tab-icon-sound[blocked],
-#TabsToolbar:-moz-lwtheme-brighttext .tab-icon-sound[muted] {
-  filter: invert(1);
-}
-
 .tab-icon-sound[soundplaying-scheduledremoval]:not([muted]):not(:hover),
 .tab-icon-overlay[soundplaying-scheduledremoval]:not([muted]):not(:hover) {
   transition: opacity .3s linear var(--soundplaying-removal-delay);
@@ -1837,20 +1777,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-blocked");
 }
 
-#TabsToolbar:-moz-lwtheme-brighttext .tab-icon-overlay[soundplaying]:not([selected]):not(:hover),
-.tab-icon-overlay[soundplaying][selected]:-moz-lwtheme-brighttext:not(:hover) {
-  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-white");
-}
-
-#TabsToolbar:-moz-lwtheme-brighttext .tab-icon-overlay[muted]:not([crashed]):not([selected]):not(:hover),
-.tab-icon-overlay[muted][selected]:-moz-lwtheme-brighttext:not(:hover) {
-  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-white-muted");
-}
-
-#TabsToolbar:-moz-lwtheme-brighttext .tab-icon-overlay[blocked]:not([crashed]):not([selected]):not(:hover),
-.tab-icon-overlay[blocked][selected]:-moz-lwtheme-brighttext:not(:hover) {
-  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-white-blocked");
-}
 
 /* Tabstrip new tab button */
 .tabs-newtab-button,
@@ -2053,7 +1979,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   margin-inline-end: 1px;
 }
 
-#appmenu-toolbar-button:not(:hover):not([open]):not(:-moz-lwtheme) {
+#appmenu-toolbar-button:not(:hover):not([open]) {
   color: inherit;
 }
 
@@ -2355,3 +2281,370 @@ window#CustomizeToolbarWindow,
 #CustomizeToolbarWindow #palette-box .toolbarpaletteitem-box[type="spring"][place="palette"] {
   background: #ffffff url("chrome://global/skin/toolbar/spring.png") no-repeat center !important;
 }
+
+/* iCool Blue
+ * URL/Search splitter fix.
+ *
+ * The global splitter skeleton defines a tall generic grippy for real
+ * splitters. Keep the browser URL/search splitter visually hidden.
+ */
+#urlbar-search-splitter {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-width: 6px !important;
+  width: 6px !important;
+  max-width: 6px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  margin-inline-start: -3px !important;
+  margin-inline-end: -3px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent none !important;
+  list-style-image: none !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+#urlbar-search-splitter > grippy,
+#urlbar-search-splitter grippy,
+#urlbar-search-splitter > .grippy,
+#urlbar-search-splitter .grippy {
+  display: none !important;
+  visibility: collapse !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-width: 0 !important;
+  width: 0 !important;
+  max-width: 0 !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent none !important;
+  list-style-image: none !important;
+}
+
+/* iCool Blue
+ * Final browser-layer sidebar chrome override.
+ *
+ * DOM Inspector shows the sidebar header as sidebarheader#sidebar-header.
+ * Keep this late in browser.css so it wins over earlier browser layers.
+ */
+#sidebar-box,
+#sidebar,
+#sidebar-box > browser,
+sidebarheader#sidebar-header,
+#sidebar-header {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
+}
+
+sidebarheader#sidebar-header,
+#sidebar-header {
+  background-color: #07090d !important;
+  background-image: linear-gradient(to bottom, #1b2533, #07090d) !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  border-top: 1px solid #2e5f9b !important;
+  border-bottom: 1px solid #000000 !important;
+}
+
+#sidebar-title,
+sidebarheader#sidebar-header > #sidebar-title {
+  color: #ffffff !important;
+  font-weight: bold !important;
+  text-shadow: none !important;
+}
+
+/* iCool Blue
+ * Conservative URL bar history dropmarker styling.
+ *
+ * Removes the native/generic button shell and swaps the image without changing
+ * toolbar geometry.
+ */
+#urlbar dropmarker[anonid="historydropmarker"].urlbar-history-dropmarker,
+#urlbar dropmarker[anonid="historydropmarker"].private-autocomplete-history-dropmarker,
+#urlbar dropmarker.urlbar-history-dropmarker,
+#urlbar dropmarker.private-autocomplete-history-dropmarker {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/urlbar-history-dropmarker-blue.png") !important;
+  -moz-image-region: auto !important;
+}
+
+#urlbar dropmarker[anonid="historydropmarker"].urlbar-history-dropmarker:hover,
+#urlbar dropmarker[anonid="historydropmarker"].private-autocomplete-history-dropmarker:hover,
+#urlbar dropmarker.urlbar-history-dropmarker:hover,
+#urlbar dropmarker.private-autocomplete-history-dropmarker:hover {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/urlbar-history-dropmarker-blue-hover.png") !important;
+}
+
+#urlbar dropmarker[anonid="historydropmarker"].urlbar-history-dropmarker:hover:active,
+#urlbar dropmarker[anonid="historydropmarker"].private-autocomplete-history-dropmarker:hover:active,
+#urlbar dropmarker.urlbar-history-dropmarker:hover:active,
+#urlbar dropmarker.private-autocomplete-history-dropmarker:hover:active,
+#urlbar dropmarker[anonid="historydropmarker"].urlbar-history-dropmarker[open="true"],
+#urlbar dropmarker[anonid="historydropmarker"].private-autocomplete-history-dropmarker[open="true"],
+#urlbar dropmarker.urlbar-history-dropmarker[open="true"],
+#urlbar dropmarker.private-autocomplete-history-dropmarker[open="true"] {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/urlbar-history-dropmarker-blue-active.png") !important;
+}
+
+#urlbar dropmarker[anonid="historydropmarker"].urlbar-history-dropmarker[disabled="true"],
+#urlbar dropmarker[anonid="historydropmarker"].private-autocomplete-history-dropmarker[disabled="true"],
+#urlbar dropmarker.urlbar-history-dropmarker[disabled="true"],
+#urlbar dropmarker.private-autocomplete-history-dropmarker[disabled="true"] {
+  opacity: .45 !important;
+}
+
+/* iCool Blue
+ * Minimal browser surface fallback.
+ *
+ * Ensures browser chrome surfaces around sidebar/appcontent stay dark without
+ * broad widget styling.
+ */
+#main-window,
+#browser,
+#browser-panel,
+#browser > hbox,
+#browser > vbox,
+#browser-box,
+#appcontent,
+#content,
+#content > tabbox,
+#content .browserStack,
+#sidebar-box,
+#sidebar-box > browser,
+#sidebar-splitter {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+}
+
+/* iCool Blue
+ * Targeted dark All Tabs surfaces.
+ *
+ * Styles the classic List all tabs menupopup and the related All Tabs preview
+ * panels without styling generic panels globally.
+ */
+#alltabs-popup {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  box-shadow: none !important;
+}
+
+#alltabs-popup > menuitem,
+#alltabs-popup > .alltabs-item {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  text-shadow: none !important;
+}
+
+#alltabs-popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+#alltabs-popup > .alltabs-item[_moz-menuactive="true"]:not([disabled="true"]) {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #ffffff !important;
+}
+
+#alltabs-popup .menu-text,
+#alltabs-popup .menu-iconic-text,
+#alltabs-popup .menu-accel,
+#alltabs-popup .menu-iconic-accel,
+#alltabs-popup .menu-iconic-left,
+#alltabs-popup .menu-iconic-icon {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+#allTabs-panel,
+#ctrlTab-panel {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#allTabs-meta,
+#allTabs-stack,
+#allTabs-container {
+  background: transparent !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+#allTabs-filter {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #101923 !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  box-shadow: none !important;
+}
+
+#allTabs-filter[focused="true"],
+#allTabs-filter:focus {
+  border-color: #63b8ff !important;
+}
+
+#allTabs-filter .textbox-input,
+#allTabs-filter .textbox-input-box {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.allTabs-preview {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+.allTabs-preview-label {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+.allTabs-preview-inner > .tabPreview-canvas {
+  background-color: #101923 !important;
+  border: 1px solid #1e4772 !important;
+  box-shadow: 0 0 2px rgba(99, 184, 255, .45) !important;
+}
+
+.allTabs-preview:focus > * > .allTabs-preview-inner,
+.allTabs-preview:hover > * > .allTabs-preview-inner {
+  outline: 1px solid #63b8ff !important;
+}
+
+.allTabs-favicon[src] {
+  background-color: #102a49 !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+#allTabs-tab-close-button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: #102a49 !important;
+  border: 1px solid #1e4772 !important;
+  box-shadow: none !important;
+}
+
+/* iCool Blue
+ * All Tabs search field.
+ *
+ * The All Tabs panel is dark, but the search field remains a light input for
+ * consistency with the rest of the theme.
+ */
+#allTabs-filter {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: linear-gradient(to bottom, #ffffff, #e9eef7) !important;
+  color: #000000 !important;
+  border: 1px solid #2e5f9b !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#allTabs-filter[focused="true"],
+#allTabs-filter:focus {
+  border-color: #63b8ff !important;
+}
+
+#allTabs-filter .textbox-input,
+#allTabs-filter .textbox-input-box,
+#allTabs-filter html|*.textbox-input {
+  background: transparent !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+#allTabs-filter .textbox-search-icon,
+#allTabs-filter > .textbox-search-icon {
+  opacity: 1 !important;
+}
+
+/* iCool Blue
+ * Stabilize List all tabs button geometry.
+ *
+ * On Linux, hovering the tab bar List all tabs button can trigger a 1px layout
+ * shift. Keep this scoped to #alltabs-button only.
+ */
+#TabsToolbar #alltabs-button,
+#TabsToolbar #alltabs-button:hover,
+#TabsToolbar #alltabs-button:hover:active,
+#TabsToolbar #alltabs-button[open="true"] {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#TabsToolbar #alltabs-button > .toolbarbutton-icon,
+#TabsToolbar #alltabs-button:hover > .toolbarbutton-icon,
+#TabsToolbar #alltabs-button:hover:active > .toolbarbutton-icon,
+#TabsToolbar #alltabs-button[open="true"] > .toolbarbutton-icon,
+#TabsToolbar #alltabs-button > .toolbarbutton-menu-dropmarker,
+#TabsToolbar #alltabs-button:hover > .toolbarbutton-menu-dropmarker,
+#TabsToolbar #alltabs-button:hover:active > .toolbarbutton-menu-dropmarker,
+#TabsToolbar #alltabs-button[open="true"] > .toolbarbutton-menu-dropmarker {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0 !important;
+  background: transparent none !important;
+  box-shadow: none !important;
+}
+
+#TabsToolbar #alltabs-button > .toolbarbutton-menu-dropmarker,
+#TabsToolbar #alltabs-button:hover > .toolbarbutton-menu-dropmarker,
+#TabsToolbar #alltabs-button:hover:active > .toolbarbutton-menu-dropmarker,
+#TabsToolbar #alltabs-button[open="true"] > .toolbarbutton-menu-dropmarker {
+  min-height: 16px !important;
+  height: 16px !important;
+  max-height: 16px !important;
+  min-width: 16px !important;
+  width: 16px !important;
+  max-width: 16px !important;
+}
+
+/* Guard against the old generic tabbar negative icon margins affecting this
+ * special toolbarbutton. */
+#TabsToolbar #alltabs-button.toolbarbutton-1 > .toolbarbutton-icon,
+#TabsToolbar #alltabs-button.toolbarbutton-1 > .toolbarbutton-menu-dropmarker {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+

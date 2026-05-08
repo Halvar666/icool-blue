@@ -257,3 +257,147 @@ radio[pane=paneSync] {
 #CookiesDialog #filter .textbox-search-icons .textbox-search-icon:hover {
   -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
 }
+
+/* iCool Blue
+ * Preferences exception dialogs.
+ *
+ * These windows are opened from Preferences for pop-up exceptions, cookie/site
+ * data exceptions, saved login exceptions and related permission lists.
+ */
+#PermissionsDialog,
+window#PermissionsDialog {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+#PermissionsDialog .contentPane,
+#PermissionsDialog .actionButtons,
+#PermissionsDialog > vbox,
+#PermissionsDialog > hbox,
+#PermissionsDialog vbox,
+#PermissionsDialog hbox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+#PermissionsDialog label,
+#PermissionsDialog description,
+#PermissionsDialog #permissionsText,
+#PermissionsDialog #urlLabel {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+#PermissionsDialog #url,
+#PermissionsDialog textbox#url {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: linear-gradient(to bottom, #ffffff, #e9eef7) !important;
+  color: #000000 !important;
+  border: 1px solid #2e5f9b !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#PermissionsDialog #url[focused="true"],
+#PermissionsDialog textbox#url[focused="true"],
+#PermissionsDialog #url:focus {
+  border-color: #63b8ff !important;
+}
+
+#PermissionsDialog #url > .textbox-input-box,
+#PermissionsDialog #url .textbox-input,
+#PermissionsDialog #url html|*.textbox-input {
+  background: transparent !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+#PermissionsDialog tree,
+#PermissionsDialog #permissionsTree {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+}
+
+#PermissionsDialog treechildren,
+#PermissionsDialog #permissionsTree treechildren {
+  background-color: #07101b !important;
+  color: #ffffff !important;
+}
+
+#PermissionsDialog treechildren::-moz-tree-row {
+  background-color: transparent !important;
+}
+
+#PermissionsDialog treechildren::-moz-tree-row(selected),
+#PermissionsDialog treechildren::-moz-tree-row(current, focus) {
+  background-color: #1d78c8 !important;
+  background-image: linear-gradient(to bottom, #3398ef, #095aab) !important;
+}
+
+#PermissionsDialog treechildren::-moz-tree-cell-text {
+  color: #ffffff !important;
+}
+
+#PermissionsDialog treechildren::-moz-tree-cell-text(selected),
+#PermissionsDialog treechildren::-moz-tree-cell-text(current, focus) {
+  color: #ffffff !important;
+}
+
+#PermissionsDialog treecol,
+#PermissionsDialog treecols {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #101923 !important;
+  background-image: linear-gradient(to bottom, #24364d, #080c11) !important;
+  color: #ffffff !important;
+  border-color: #7f8ea1 !important;
+}
+
+#PermissionsDialog button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #1b1b1b !important;
+  background-image: linear-gradient(to bottom, #3a3a3a, #121212) !important;
+  color: #ffffff !important;
+  border: 1px solid #6b6b6b !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#PermissionsDialog button:hover:not([disabled="true"]) {
+  background-image: linear-gradient(to bottom, #4b4b4b, #1b1b1b) !important;
+  border-color: #8a8a8a !important;
+}
+
+#PermissionsDialog button:hover:active:not([disabled="true"]),
+#PermissionsDialog button[open="true"],
+#PermissionsDialog button[default="true"] {
+  background-image: linear-gradient(to bottom, #0f0f0f, #2a2a2a) !important;
+  color: #ffffff !important;
+}
+
+#PermissionsDialog button[disabled="true"] {
+  color: #8e8e8e !important;
+  opacity: .65 !important;
+}
+
+#PermissionsDialog button > .button-box,
+#PermissionsDialog button .button-text {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+

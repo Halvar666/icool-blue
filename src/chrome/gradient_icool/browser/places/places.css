@@ -401,3 +401,131 @@ menuitem[command="placesCmd_show:info"] {
   background-image: linear-gradient(to bottom, #315783, #0a1725) !important;
   border-color: #63b8ff !important;
 }
+
+/* iCool Blue 1.0.0rc4
+ * Sidebar Places context menus.
+ *
+ * The Bookmarks/History sidebar uses this Places sidebar document, so the
+ * normal browser-window menu skin does not reach its context popup on all
+ * platforms. Keep the same dark iCool popup logic here for both Linux and
+ * Windows.
+ */
+menupopup,
+popup:not(tooltip):not(panel) {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  padding: 1px !important;
+  box-shadow: none !important;
+}
+
+menupopup > menu,
+popup > menu,
+menupopup > menuitem,
+popup > menuitem {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  text-shadow: none !important;
+}
+
+menu[disabled="true"],
+menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+  color: #8e8e8e !important;
+  text-shadow: none !important;
+}
+
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #ffffff !important;
+}
+
+menupopup > menu[_moz-menuactive="true"][disabled="true"],
+menupopup > menuitem[_moz-menuactive="true"][disabled="true"],
+popup > menu[_moz-menuactive="true"][disabled="true"],
+popup > menuitem[_moz-menuactive="true"][disabled="true"] {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #8e8e8e !important;
+}
+
+.menu-text,
+.menu-iconic-text,
+.menu-accel,
+.menu-iconic-accel,
+.menubar-text,
+.menu-right,
+.menu-iconic-left,
+.menu-iconic-icon {
+  color: inherit !important;
+}
+
+.menu-right {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow.png") !important;
+  -moz-image-region: auto !important;
+}
+.menu-right[_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover.png") !important;
+}
+.menu-right[disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled.png") !important;
+}
+.menu-right[chromedir="rtl"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-rtl.png") !important;
+}
+.menu-right[chromedir="rtl"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover-rtl.png") !important;
+}
+.menu-right[chromedir="rtl"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled-rtl.png") !important;
+}
+
+menuitem[checked="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check.png") !important;
+  -moz-image-region: auto !important;
+}
+menuitem[checked="true"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-dis.png") !important;
+}
+menuitem:not([disabled="true"])[checked="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-hov.png") !important;
+}
+menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio.png") !important;
+}
+menuitem:not([disabled="true"])[checked="true"][type="radio"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio-hover.png") !important;
+}
+
+menuseparator {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 1px !important;
+  border: 0 !important;
+  margin: 1px 0 !important;
+  background: #8aa0b8 !important;
+}
+
+menuseparator > * {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  background: transparent !important;
+}
+

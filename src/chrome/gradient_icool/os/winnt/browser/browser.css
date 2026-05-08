@@ -18,19 +18,6 @@
   --window-text-color: currentColor;
 }
 
-:root:-moz-lwtheme {
-  --tab-selected-background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%);
-}
-
-:root:-moz-lwtheme-brighttext {
-  --tab-background: linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 80%);
-  --tab-background-hover: linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,45%,.6) 80%);
-}
-
-:root:-moz-lwtheme-darktext {
-  --tab-background: linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 80%);
-  --tab-background-hover: linear-gradient(hsla(0,0%,80%,.5), hsla(0,0%,60%,.5) 80%);
-}
 
 /* navigator-toolbox */
 
@@ -43,26 +30,20 @@
 }
 
 @media not all and (-moz-windows-compositor) {
-  #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme) {
+  #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar {
     background: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px),
                 linear-gradient(rgba(50%,50%,50%,0), ActiveCaption 85%);
     color: CaptionText;
   }
-  #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme):-moz-window-inactive {
+  #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar:-moz-window-inactive {
     background: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px),
                 linear-gradient(rgba(50%,50%,50%,0), InactiveCaption 85%);
     color: InactiveCaptionText;
   }
 
-  #main-window[tabsintitlebar] #titlebar:-moz-lwtheme {
-    visibility: hidden;
-  }
-  #main-window[tabsintitlebar] #titlebar-content:-moz-lwtheme {
-    -moz-binding: url("chrome://global/content/bindings/general.xml#windowdragbox");
-    visibility: visible;
-  }
+
   
-  #main-menubar > menu:not(:-moz-lwtheme) {
+  #main-menubar > menu {
     color: inherit; /* allow menubar items to be styled */
   }
 }
@@ -442,29 +423,29 @@
 }
 
 @media (-moz-windows-default-theme) {
-  #navigator-toolbox > toolbar:not(:-moz-lwtheme),
-  #browser-bottombox:not(:-moz-lwtheme) {
+  #navigator-toolbox > toolbar,
+  #browser-bottombox {
     background-color: var(--toolbar-custom-color);
   }
 
-  .tabbrowser-tab:not(:-moz-lwtheme),
-  .tabs-newtab-button:not(:-moz-lwtheme) {
+  .tabbrowser-tab,
+  .tabs-newtab-button {
     background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), var(--tab-background),
                       linear-gradient(var(--toolbar-custom-color), var(--toolbar-custom-color));
   }
 
-  .tabbrowser-tab:not(:-moz-lwtheme):hover,
-  .tabs-newtab-button:not(:-moz-lwtheme):hover {
+  .tabbrowser-tab:hover,
+  .tabs-newtab-button:hover {
     background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), var(--tab-background-hover),
                       linear-gradient(var(--toolbar-custom-color), var(--toolbar-custom-color));
   }
 
-  .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
+  .tabbrowser-tab[selected="true"] {
     background-image: linear-gradient(#fff, var(--toolbar-highlight-top) 50%),
                       linear-gradient(var(--toolbar-custom-color), var(--toolbar-custom-color));
   }
 
-  #main-window[tabsontop=false]:not([disablechrome]) .tabbrowser-tab[selected=true]:not(:-moz-lwtheme) {
+  #main-window[tabsontop=false]:not([disablechrome]) .tabbrowser-tab[selected=true] {
     background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px),
                       linear-gradient(#fff, var(--toolbar-highlight-top) 50%),
                       linear-gradient(var(--toolbar-custom-color), var(--toolbar-custom-color));
@@ -472,7 +453,7 @@
   
   @media (-moz-os-version: windows-vista),
          (-moz-os-version: windows-win7) {
-    :root:not(:-moz-lwtheme) {
+    :root {
       --toolbox-after-color: #aabccf;
     }
   }
@@ -484,7 +465,7 @@
       --toolbar-custom-color: hsl(210,0%,92%);
     }
     
-    :root:not(:-moz-lwtheme) {
+    :root {
       --toolbox-after-color: #bcbcbc;
     }
   }
@@ -505,18 +486,18 @@
     }
   }
  
-  #navigator-toolbox[tabsontop=true] #urlbar:not(:-moz-lwtheme),
-  #navigator-toolbox[tabsontop=true] .searchbar-textbox:not(:-moz-lwtheme) {
+  #navigator-toolbox[tabsontop=true] #urlbar,
+  #navigator-toolbox[tabsontop=true] .searchbar-textbox {
     border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3);
   }
 
-  #navigator-toolbox[tabsontop=true] #urlbar:not(:-moz-lwtheme):not([focused]):hover,
-  #navigator-toolbox[tabsontop=true] .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover {
+  #navigator-toolbox[tabsontop=true] #urlbar:not([focused]):hover,
+  #navigator-toolbox[tabsontop=true] .searchbar-textbox:not([focused]):hover {
     border-color: hsla(210,54%,20%,.35) hsla(210,54%,20%,.37) hsla(210,54%,20%,.4);
   }
 
-  #navigator-toolbox[tabsontop=true] #urlbar:not(:-moz-lwtheme)[focused],
-  #navigator-toolbox[tabsontop=true] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+  #navigator-toolbox[tabsontop=true] #urlbar[focused],
+  #navigator-toolbox[tabsontop=true] .searchbar-textbox[focused] {
     border-color: hsla(206,100%,60%,.65) hsla(206,100%,55%,.65) hsla(206,100%,50%,.65);
   }
 
@@ -570,52 +551,52 @@
     /* Draw XUL caption buttons and background on Win10 */
     @media (-moz-windows-accent-color-applies: 0) {
       /* Default styling for when no accent color is applied */
-      #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+      #main-window:not(:-moz-window-inactive) {
         background-color: white;
       }
       
-      :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+      :root:not(:-moz-window-inactive) {
         --window-text-color: black;
       }
       
-      #titlebar-min:not(:-moz-window-inactive):not(:-moz-lwtheme),
-      #minimize-button:not(:-moz-lwtheme) {
+      #titlebar-min:not(:-moz-window-inactive),
+      #minimize-button {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
       }
 
-      #titlebar-max:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+      #titlebar-max:not(:-moz-window-inactive) {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize);
       }
 
-      #main-window[sizemode="maximized"] #titlebar-max:not(:-moz-window-inactive):not(:-moz-lwtheme),
-      #restore-button:not(:-moz-lwtheme) {
+      #main-window[sizemode="maximized"] #titlebar-max:not(:-moz-window-inactive),
+      #restore-button {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore);
       }
       
-      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme),
-      #close-button:not(:-moz-lwtheme) {
+      #titlebar-close:not(:-moz-window-inactive),
+      #close-button {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
       }
 
-      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover,
-      #window-controls > toolbarbutton:not(#close-button):not(:-moz-lwtheme):hover {
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):hover,
+      #window-controls > toolbarbutton:not(#close-button):hover {
         background-color: hsla(0, 0%, 0%, .17);
       }
 
-      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active,
-      #window-controls > toolbarbutton:not(#close-button):not(:-moz-lwtheme):hover:active	{
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):hover:active,
+      #window-controls > toolbarbutton:not(#close-button):hover:active	{
         background-color: hsla(0, 0%, 0%, .27);
         transition: none;
       }
       
-      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover,
-      #close-button:not(:-moz-lwtheme):hover {
+      #titlebar-close:not(:-moz-window-inactive):hover,
+      #close-button:hover {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
         background-color: hsla(0, 86%, 49%, 1);
       }
 
-      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active,
-      #close-button:not(:-moz-lwtheme):hover:active	{
+      #titlebar-close:not(:-moz-window-inactive):hover:active,
+      #close-button:hover:active	{
         background-color: hsla(0, 60%, 49%, 0.6);
         transition: none;
       }
@@ -623,15 +604,15 @@
     
     @media (-moz-windows-accent-color-applies) {
       /* Styling for when an accent color is applied to the titlebar */
-      #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+      #main-window:not(:-moz-window-inactive) {
         background-color: -moz-win-accentcolor;
       }
       
-      :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+      :root:not(:-moz-window-inactive) {
         --window-text-color: -moz-win-accentcolortext;
       }
 
-      #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
+      #main-window[sizemode=fullscreen] {
         --fullscreen-background-color: -moz-win-accentcolor;
         --fullscreen-text-color: -moz-win-accentcolortext;
       }
@@ -686,38 +667,38 @@
           list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
         }
       
-        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover,
-        #window-controls > toolbarbutton:not(#close-button):not(:-moz-lwtheme):hover {
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):hover,
+        #window-controls > toolbarbutton:not(#close-button):hover {
           background-color: hsla(0, 0%, 100%, .17);
         }
 
-        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active,
-        #window-controls > toolbarbutton:not(#close-button):not(:-moz-lwtheme):hover:active	{
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):hover:active,
+        #window-controls > toolbarbutton:not(#close-button):hover:active	{
           background-color: hsla(0, 0%, 100%, .27);
           transition: none;
         }
       
-        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover,
-        #close-button:not(:-moz-lwtheme):hover {
+        #titlebar-close:not(:-moz-window-inactive):hover,
+        #close-button:hover {
           background-color: hsla(0, 86%, 49%, 1);
         }
 
-        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active,
-        #close-button:not(:-moz-lwtheme):hover:active {
+        #titlebar-close:not(:-moz-window-inactive):hover:active,
+        #close-button:hover:active {
           background-color: hsla(0, 60%, 39%, 1);
           transition: none;
         }
       }
     }
     
-    #main-window:-moz-window-inactive:not(:-moz-lwtheme) {
+    #main-window:-moz-window-inactive {
       background-color: hsl(0, 0%, 95%);
     }
 
     /* If we don't have [chromemargin], it means the menubar is active; set the
        window background to transparent in that case to match it with the dwm
        color and prevent a drawing delay between title bar and UI region */
-    #main-window:not([chromemargin]):not(:-moz-lwtheme) {
+    #main-window:not([chromemargin]) {
       background-color: transparent;
     }
 
@@ -774,102 +755,32 @@
     
     /* inactive window */
 
-    #titlebar-min:-moz-window-inactive:not(:-moz-lwtheme) {
+    #titlebar-min:-moz-window-inactive {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-inactive);
     }
 
-    #titlebar-max:-moz-window-inactive:not(:-moz-lwtheme) {
+    #titlebar-max:-moz-window-inactive {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-inactive);
     }
 
-    #main-window[sizemode="maximized"] #titlebar-max:-moz-window-inactive:not(:-moz-lwtheme) {
+    #main-window[sizemode="maximized"] #titlebar-max:-moz-window-inactive {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-inactive);
     }
 
-    #titlebar-close:-moz-window-inactive:not(:-moz-lwtheme):not(:hover) {
+    #titlebar-close:-moz-window-inactive:not(:hover) {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-inactive);
     }
     
-    .titlebar-button:-moz-window-inactive:not(:-moz-lwtheme):hover {
+    .titlebar-button:-moz-window-inactive:hover {
       background-color: hsla(0, 0%, 0%, .17);
     }
 
-    .titlebar-button:-moz-window-inactive:not(:-moz-lwtheme):hover:active {
+    .titlebar-button:-moz-window-inactive:hover:active {
       background-color: hsla(0, 0%, 0%, .27);
       transition: none;
     }
-    
-    /* light persona */
-    
-    .titlebar-button:-moz-lwtheme-darktext:hover,
-    #window-controls > toolbarbutton:not(#close-button):-moz-lwtheme-darktext:hover {
-      background-color: hsla(0, 0%, 0%, .17);
-    }
 
-    .titlebar-button:-moz-lwtheme-darktext:hover:active,
-    #window-controls > toolbarbutton:not(#close-button):-moz-lwtheme-darktext:hover:active {
-      background-color: hsla(0, 0%, 0%, .27);
-      transition: none;
-    }
-    
-    #titlebar-min:-moz-lwtheme-darktext,
-    #minimize-button:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline);
-    }
 
-    #titlebar-max:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline);
-    }
-
-    #main-window[sizemode="maximized"]:-moz-lwtheme-darktext #titlebar-max:-moz-lwtheme-darktext,
-    #restore-button:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline);
-    }
-
-    #titlebar-close:-moz-lwtheme-darktext,
-    #close-button:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
-    }
-    #titlebar-close:hover:-moz-lwtheme-darktext,
-    #close-button:hover:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
-    }
-        
-    /* dark persona */
-    
-    .titlebar-button:-moz-lwtheme-brighttext:hover,
-    #window-controls > toolbarbutton:not(#close-button):-moz-lwtheme-brighttext:hover {
-      background-color: hsla(0, 0%, 100%, .27);
-    }
-
-    .titlebar-button:-moz-lwtheme-brighttext:hover:active,
-    #window-controls > toolbarbutton:not(#close-button):-moz-lwtheme-brighttext:hover:active {
-      background-color: hsla(0, 0%, 100%, .37);
-      transition: none;
-    }
-    
-    #titlebar-min:-moz-lwtheme-brighttext,
-    #minimize-button:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline-inverted);
-    }
-
-    #titlebar-max:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline-inverted);
-    }
-
-    #main-window[sizemode="maximized"]:-moz-lwtheme-brighttext #titlebar-max:-moz-lwtheme-brighttext,
-    #restore-button:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline-inverted);
-    }
-
-    #titlebar-close:-moz-lwtheme-brighttext,
-    #close-button:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
-    }
-    #titlebar-close:hover:-moz-lwtheme-brighttext,
-    #close-button:hover:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
-    }
         
     /* the 12px image renders a 10px icon, and the 10px upscaled gets rounded to 12.5, which
      * rounds up to 13px, which makes the icon one pixel too big on 1.25dppx. Fix: */
@@ -952,23 +863,6 @@
       margin-top: -7px;
     }
 
-    /* Artificially draw window borders that are covered by lwtheme, see bug 591930. */
-    #main-window[sizemode="normal"] > #titlebar > #titlebar-content:-moz-lwtheme {
-      border-top: 2px solid;
-      -moz-border-top-colors: rgb(37, 44, 51) rgba(255,255,255,.6);
-    }
-
-    #main-window[sizemode="normal"] > #titlebar > #titlebar-content:-moz-lwtheme:-moz-window-inactive {
-      -moz-border-top-colors: rgb(102, 102, 102) rgba(255,255,255,.6);
-    }
-    
-    #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container:-moz-lwtheme {
-      margin-top: -1px;
-    }
-
-    #main-window[sizemode="normal"] #titlebar-buttonbox:-moz-lwtheme {
-      margin-top: -2px;
-    }
 
     #appmenu-button {
       margin-bottom: -1px; /* compensate white outer border */
@@ -980,24 +874,24 @@
 
   @media (-moz-os-version: windows-vista),
          (-moz-os-version: windows-win7) {
-    #toolbar-menubar:not(:-moz-lwtheme),
-    #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme),
-    #nav-bar[tabsontop=false]:not(:-moz-lwtheme),
-    #nav-bar[tabsontop=false]:not(:-moz-lwtheme) .toolbarbutton-text,
-    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child:not(:-moz-lwtheme) {
+    #toolbar-menubar,
+    #TabsToolbar[tabsontop=true],
+    #nav-bar[tabsontop=false],
+    #nav-bar[tabsontop=false] .toolbarbutton-text,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child {
       text-shadow: 0 0 .5em white, 0 0 .5em white, 0 1px 0 rgba(255,255,255,.4);
     }
   
-    #main-menubar:not(:-moz-lwtheme):not(:-moz-window-inactive) {
+    #main-menubar:not(:-moz-window-inactive) {
       background-color: rgba(255,255,255,.7);
       border-radius: var(--toolbarbutton-border-radius);
       color: black;
     }
 
-    :-moz-any(#toolbar-menubar, #TabsToolbar[tabsontop=true], #nav-bar[tabsontop=false]) .toolbarbutton-1 > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme),
-    :-moz-any(#toolbar-menubar, #TabsToolbar[tabsontop=true], #nav-bar[tabsontop=false]) .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:not(:-moz-lwtheme),
-    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child .toolbarbutton-1 > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme),
-    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:not(:-moz-lwtheme) {
+    :-moz-any(#toolbar-menubar, #TabsToolbar[tabsontop=true], #nav-bar[tabsontop=false]) .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
+    :-moz-any(#toolbar-menubar, #TabsToolbar[tabsontop=true], #nav-bar[tabsontop=false]) .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
       list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png");
     }
   }
@@ -1006,7 +900,7 @@
 
   @media (-moz-os-version: windows-win8) {
     /* Use a light text styling on dark window frames */
-    :root[darkwindowframe="true"]:not(:-moz-lwtheme):not(:-moz-window-inactive) {
+    :root[darkwindowframe="true"]:not(:-moz-window-inactive) {
       --window-text-color: white;
     }
   }
@@ -1015,40 +909,40 @@
          (-moz-os-version: windows-win10),
          (-moz-os-version: windows-win11) {
     /* Fade text stylings on window inactivity */
-    :root:not(:-moz-lwtheme):-moz-window-inactive {
+    :root:-moz-window-inactive {
       --window-text-color: rgba(0, 0, 0, 0.5);
     }
   }
   
 /* ==== ==== */
 
-  #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
+  #main-window[sizemode=fullscreen] {
     --window-text-color: var(--fullscreen-text-color);
     -moz-appearance: none;
     background-color: var(--fullscreen-background-color);
   }
 
-  #toolbar-menubar:not(:-moz-lwtheme),
-  #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme),
-  #nav-bar[tabsontop=false]:not(:-moz-lwtheme),
-  #nav-bar[tabsontop=false]:not(:-moz-lwtheme) .toolbarbutton-text,
-  #nav-bar + #customToolbars + #PersonalToolbar:-moz-any([collapsed=true],[moz-collapsed=true]) + #TabsToolbar[tabsontop=false]:last-child:not(:-moz-lwtheme) {
+  #toolbar-menubar,
+  #TabsToolbar[tabsontop=true],
+  #nav-bar[tabsontop=false],
+  #nav-bar[tabsontop=false] .toolbarbutton-text,
+  #nav-bar + #customToolbars + #PersonalToolbar:-moz-any([collapsed=true],[moz-collapsed=true]) + #TabsToolbar[tabsontop=false]:last-child {
     background-color: transparent !important;
     color: var(--window-text-color);
     border-left-style: none !important;
     border-right-style: none !important;
   }
 
-  #main-menubar > menu:not(:-moz-lwtheme) {
+  #main-menubar > menu {
     color: inherit;
   }
 
-  :-moz-any(#toolbar-menubar, #nav-bar[tabsontop=false]) :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button):not(:-moz-any(#alltabs-button,#sync-button[status])) > .toolbarbutton-icon:not(:-moz-lwtheme),
-  :-moz-any(#toolbar-menubar, #nav-bar[tabsontop=false]) :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button) > toolbarbutton > .toolbarbutton-icon:not(:-moz-lwtheme),
-  #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button):not(:-moz-any(#alltabs-button,#new-tab-button,#sync-button[status])) > .toolbarbutton-icon:not(:-moz-lwtheme),
-  #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button) > toolbarbutton > .toolbarbutton-icon:not(:-moz-lwtheme),
-  #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button):not(:-moz-any(#alltabs-button,#new-tab-button,#sync-button[status])) > .toolbarbutton-icon:not(:-moz-lwtheme),
-  #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button) > toolbarbutton > .toolbarbutton-icon:not(:-moz-lwtheme) {
+  :-moz-any(#toolbar-menubar, #nav-bar[tabsontop=false]) :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button):not(:-moz-any(#alltabs-button,#sync-button[status])) > .toolbarbutton-icon,
+  :-moz-any(#toolbar-menubar, #nav-bar[tabsontop=false]) :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button) > toolbarbutton > .toolbarbutton-icon,
+  #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button):not(:-moz-any(#alltabs-button,#new-tab-button,#sync-button[status])) > .toolbarbutton-icon,
+  #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button) > toolbarbutton > .toolbarbutton-icon,
+  #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button):not(:-moz-any(#alltabs-button,#new-tab-button,#sync-button[status])) > .toolbarbutton-icon,
+  #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button) > toolbarbutton > .toolbarbutton-icon {
     list-style-image: var(--toolbarbutton-glass-image);
   }
   
@@ -1064,9 +958,6 @@
     border-right: 1px solid rgba(10%,10%,10%,.4);
     background-clip: padding-box;
   }
-  #main-window[sizemode=normal] #navigator-toolbox > toolbar:-moz-lwtheme {
-    border-color: transparent !important;
-  }
   #main-window[sizemode=normal] #browser-border-start,
   #main-window[sizemode=normal] #browser-border-end {
     display: -moz-box;
@@ -1080,15 +971,15 @@
   }
 }
 
-  #main-window[sizemode=normal][tabsontop=false] #PersonalToolbar:not(:-moz-lwtheme) {
+  #main-window[sizemode=normal][tabsontop=false] #PersonalToolbar {
     border-top-left-radius: var(--toolbarbutton-border-radius);
     border-top-right-radius: var(--toolbarbutton-border-radius);
   }
 
-  #main-window[sizemode=normal] #nav-bar[tabsontop=true]:not(:-moz-lwtheme),
-  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar:not(:-moz-lwtheme),
-  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme),
-  #main-window[sizemode=normal][disablechrome] #navigator-toolbox[tabsontop=true]:not(:-moz-lwtheme)::after {
+  #main-window[sizemode=normal] #nav-bar[tabsontop=true],
+  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
+  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar,
+  #main-window[sizemode=normal][disablechrome] #navigator-toolbox[tabsontop=true]::after {
     border-top-left-radius: var(--toolbarbutton-border-radius);
     border-top-right-radius: var(--toolbarbutton-border-radius);
   }
@@ -1096,18 +987,18 @@
   /* Toolbar shadow behind tabs */
   /* This code is only needed for restored windows (i.e. sizemode=normal)
      because of the border radius on the toolbar below the tab bar. */
-  #main-window[sizemode=normal] #nav-bar[tabsontop=true]:not(:-moz-lwtheme),
-  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar:not(:-moz-lwtheme),
-  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme),
-  #main-window[sizemode=normal][disablechrome] #navigator-toolbox[tabsontop=true]:not(:-moz-lwtheme)::after {
+  #main-window[sizemode=normal] #nav-bar[tabsontop=true],
+  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
+  #main-window[sizemode=normal] #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar,
+  #main-window[sizemode=normal][disablechrome] #navigator-toolbox[tabsontop=true]::after {
     border-top: 1px solid rgba(10%,10%,10%,.4);
     background-clip: padding-box;
   }
-  #main-window[sizemode=normal] #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
+  #main-window[sizemode=normal] #TabsToolbar[tabsontop=true] {
     margin-bottom: -1px;
     background-image: none !important;
   }
-  #main-window[sizemode=normal] #tabbrowser-tabs[tabsontop=true] > .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox > .scrollbox-innerbox:not(:-moz-lwtheme) {
+  #main-window[sizemode=normal] #tabbrowser-tabs[tabsontop=true] > .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox > .scrollbox-innerbox {
     position: relative;
   }
 
@@ -1115,7 +1006,7 @@
     margin-top: 3px;
   }
   
-  #navigator-toolbox[tabsontop=false] > #PersonalToolbar:not(:-moz-lwtheme) {
+  #navigator-toolbox[tabsontop=false] > #PersonalToolbar {
     margin-top: 2px;
     border-top: 1px solid rgba(10%,10%,10%,.4);
     background-image: linear-gradient(var(--toolbar-highlight-top), var(--toolbar-highlight-bottom));
@@ -1124,7 +1015,7 @@
   @media (-moz-os-version: windows-win10),
        (-moz-os-version: windows-win11) {
     /* Remove gradient and make border faded */
-    #navigator-toolbox[tabsontop=false] > #PersonalToolbar:not(:-moz-lwtheme) {
+    #navigator-toolbox[tabsontop=false] > #PersonalToolbar {
       border-top: 1px solid rgba(10%,10%,10%,.2);
       background-image: none;
     }
@@ -1141,50 +1032,42 @@
   }
 
   /* Rounded corners for when chrome is disabled */
-  #main-window[sizemode=normal][disablechrome] #navigator-toolbox[tabsontop=true]:not(:-moz-lwtheme)::after {
+  #main-window[sizemode=normal][disablechrome] #navigator-toolbox[tabsontop=true]::after {
     visibility: visible;
     background-color: var(--toolbar-custom-color);
     background-image: linear-gradient(var(--toolbar-highlight-top), var(--toolbar-highlight-top));
     height: 4px;
   }
 
-  /* Make the window draggable by glassed toolbars (bug 555081) */
-  #toolbar-menubar:not([autohide="true"]),
-  #TabsToolbar[tabsontop="true"],
-  #nav-bar[tabsontop=false],
-  #nav-bar + #customToolbars + #PersonalToolbar[collapsed="true"] + #TabsToolbar[tabsontop="false"]:last-child,
-  #navigator-toolbox > toolbar:not(#toolbar-menubar):-moz-lwtheme {
-    -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
-  }
 
-  #appcontent:not(:-moz-lwtheme) {
+  #appcontent {
     background-color: -moz-dialog;
   }
 
-  #navigator-toolbox[tabsontop=false] #urlbar:not(:-moz-lwtheme),
-  #navigator-toolbox[tabsontop=false] .searchbar-textbox:not(:-moz-lwtheme) {
+  #navigator-toolbox[tabsontop=false] #urlbar,
+  #navigator-toolbox[tabsontop=false] .searchbar-textbox {
     background-color: rgba(255,255,255,.725);
     border-color: rgba(0,0,0,.32);
     color: black;
   }
 
-  #navigator-toolbox[tabsontop=false] html|*.urlbar-input:not(:-moz-lwtheme)::-moz-placeholder,
-  #navigator-toolbox[tabsontop=false] .searchbar-textbox > .autocomplete-textbox-container > .textbox-input-box > html|*.textbox-input:not(:-moz-lwtheme)::-moz-placeholder {
+  #navigator-toolbox[tabsontop=false] html|*.urlbar-input::-moz-placeholder,
+  #navigator-toolbox[tabsontop=false] .searchbar-textbox > .autocomplete-textbox-container > .textbox-input-box > html|*.textbox-input::-moz-placeholder {
     opacity: 1.0;
     color: #777;
   }
 
-  #navigator-toolbox[tabsontop=false] #urlbar:not(:-moz-lwtheme):hover,
-  #navigator-toolbox[tabsontop=false] .searchbar-textbox:not(:-moz-lwtheme):hover {
+  #navigator-toolbox[tabsontop=false] #urlbar:hover,
+  #navigator-toolbox[tabsontop=false] .searchbar-textbox:hover {
     background-color: rgba(255,255,255,.898);
   }
 
-  #navigator-toolbox[tabsontop=false] #urlbar:not(:-moz-lwtheme)[focused],
-  #navigator-toolbox[tabsontop=false] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+  #navigator-toolbox[tabsontop=false] #urlbar[focused],
+  #navigator-toolbox[tabsontop=false] .searchbar-textbox[focused] {
     background-color: white;
   }
 
-  .tabbrowser-tab:not(:-moz-lwtheme) {
+  .tabbrowser-tab {
     text-shadow: none;
   }
 
@@ -1215,9 +1098,9 @@
       background-color: rgb(215,228,242);
     }
 
-    #toolbar-menubar:not([autohide=true]):not(:-moz-lwtheme),
-    #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme),
-    #navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(:-moz-lwtheme) {
+    #toolbar-menubar:not([autohide=true]),
+    #TabsToolbar[tabsontop=true],
+    #navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar) {
       -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
       background-color: transparent;
     }
@@ -1226,7 +1109,7 @@
     }
   }
 
-  #print-preview-toolbar:not(:-moz-lwtheme) {
+  #print-preview-toolbar {
     -moz-appearance: -moz-win-browsertabbar-toolbox;
   }
 }
@@ -1317,35 +1200,6 @@
   list-style-image: url("chrome://browser/skin/privatebrowsing-light.png");
   width: 20px;
   height: 16px;
-}
-
-
-#urlbar-search-splitter {
-  -moz-appearance: none !important;
-  appearance: none !important;
-  min-width: 6px !important;
-  width: 6px !important;
-  max-width: 6px !important;
-  min-height: 0 !important;
-  margin-inline-start: -3px !important;
-  margin-inline-end: -3px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  background: transparent none !important;
-  list-style-image: none !important;
-  box-shadow: none !important;
-  opacity: 0 !important;
-}
-
-#urlbar-search-splitter > grippy,
-#urlbar-search-splitter grippy,
-#urlbar-search-splitter > .grippy,
-#urlbar-search-splitter .grippy {
-  display: none !important;
-  visibility: collapse !important;
-  -moz-appearance: none !important;
-  background: transparent none !important;
-  list-style-image: none !important;
 }
 
 

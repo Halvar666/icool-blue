@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{d941cc0d-7a17-462e-b045-6af89bd77e4b}</em:id>
-    <em:version>1.0.0rc3</em:version>
+    <em:version>1.0.0rc1</em:version>
     <em:type>4</em:type>
 
     <em:targetApplication>
@@ -19,7 +19,7 @@
     <em:name>iCool Blue</em:name>
     <em:description>Classic black-and-blue iCool complete theme for Pale Moon.</em:description>
     <em:creator>Gradient Studio</em:creator>
-    <em:contributor>Pale Moon port: Karel Hladik</em:contributor>
+    <em:contributor>Pale Moon port: Halvar666</em:contributor>
     <em:homepageURL>http://gradients.web.fc2.com/</em:homepageURL>
     <em:internalName>icool_blue</em:internalName>
   </Description>

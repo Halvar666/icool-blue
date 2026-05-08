@@ -1,0 +1,181 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+window,
+dialog {
+  padding: 6px;
+}
+
+#instructions {
+  font-weight: bold;
+  font-size: larger;
+}
+
+#palette-box {
+  -moz-appearance: listbox;
+  margin: 0 0 10px;
+}
+
+#palette-box > toolbarpaletteitem {
+  padding: 8px 2px;
+  margin: 0 8px;
+}
+
+/* iCool Blue
+ * Customize Toolbar compact controls.
+ *
+ * The limited global skin pulls in Linux os/global button and menulist rules.
+ * In the Customize Toolbar dialog those rules bring back large GTK buttons,
+ * stock GTK button icons and a taller native menulist. Keep this override
+ * scoped to the Customize Toolbar window only.
+ */
+#CustomizeToolbarWindow button,
+window#CustomizeToolbarWindow button,
+#CustomizeToolbarWindow #donebutton,
+#CustomizeToolbarWindow #addnewtoolbar,
+#CustomizeToolbarWindow #restoreDefaultSet,
+#main-box button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 4px !important;
+  padding: 2px 8px !important;
+  border: 1px solid #6b6b6b !important;
+  border-radius: 2px !important;
+  background-color: #1b1b1b !important;
+  background-image: linear-gradient(to bottom, #3a3a3a, #121212) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#CustomizeToolbarWindow button:hover:not([disabled="true"]),
+window#CustomizeToolbarWindow button:hover:not([disabled="true"]),
+#main-box button:hover:not([disabled="true"]) {
+  background-image: linear-gradient(to bottom, #4b4b4b, #1b1b1b) !important;
+  border-color: #8a8a8a !important;
+  color: #ffffff !important;
+}
+
+#CustomizeToolbarWindow button:hover:active:not([disabled="true"]),
+#CustomizeToolbarWindow button[open="true"],
+#CustomizeToolbarWindow button[default="true"],
+window#CustomizeToolbarWindow button:hover:active:not([disabled="true"]),
+window#CustomizeToolbarWindow button[open="true"],
+window#CustomizeToolbarWindow button[default="true"],
+#main-box button:hover:active:not([disabled="true"]),
+#main-box button[open="true"],
+#main-box button[default="true"] {
+  background-image: linear-gradient(to bottom, #0f0f0f, #2a2a2a) !important;
+  color: #ffffff !important;
+}
+
+#CustomizeToolbarWindow button[disabled="true"],
+window#CustomizeToolbarWindow button[disabled="true"],
+#main-box button[disabled="true"] {
+  color: #8e8e8e !important;
+  opacity: .65 !important;
+}
+
+/* Hide GTK stock icons injected by os/linux/global/button.css in this dialog. */
+#CustomizeToolbarWindow button .button-icon,
+window#CustomizeToolbarWindow button .button-icon,
+#main-box button .button-icon {
+  list-style-image: none !important;
+  display: none !important;
+  visibility: collapse !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#CustomizeToolbarWindow button > .button-box,
+window#CustomizeToolbarWindow button > .button-box,
+#main-box button > .button-box {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent none !important;
+  color: inherit !important;
+}
+
+#CustomizeToolbarWindow button .button-text,
+window#CustomizeToolbarWindow button .button-text,
+#main-box button .button-text {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Keep the Show: menulist compact and light, matching the rc branch. */
+#CustomizeToolbarWindow #modelist,
+window#CustomizeToolbarWindow #modelist,
+#main-box #modelist,
+#main-box menulist {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-width: 0 !important;
+  min-height: 22px !important;
+  height: 24px !important;
+  margin: 0 4px !important;
+  padding: 0 !important;
+  border: 1px solid #9aa7b8 !important;
+  border-radius: 2px !important;
+  background-color: #ffffff !important;
+  background-image: linear-gradient(to bottom, #ffffff, #e9eef7) !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#CustomizeToolbarWindow #modelist > .menulist-label-box,
+window#CustomizeToolbarWindow #modelist > .menulist-label-box,
+#main-box #modelist > .menulist-label-box,
+#main-box menulist > .menulist-label-box {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent none !important;
+  color: #000000 !important;
+  padding: 0 6px !important;
+  margin: 0 !important;
+}
+
+#CustomizeToolbarWindow #modelist .menulist-label,
+window#CustomizeToolbarWindow #modelist .menulist-label,
+#main-box #modelist .menulist-label,
+#main-box menulist .menulist-label {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+#CustomizeToolbarWindow #modelist > dropmarker,
+window#CustomizeToolbarWindow #modelist > dropmarker,
+#main-box #modelist > dropmarker,
+#main-box menulist > dropmarker {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent none !important;
+  border: 0 !important;
+  min-width: 16px !important;
+  width: 16px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style-image: url("chrome://browser/skin/urlbar-arrow.png") !important;
+  -moz-image-region: auto !important;
+}
+
+/* Keep the bottom control area from being inflated by global dialog/button
+ * defaults on Linux. */
+#CustomizeToolbarWindow #main-box,
+#CustomizeToolbarWindow #button-box,
+#CustomizeToolbarWindow #bottom-box,
+#CustomizeToolbarWindow .customizeToolbarControls,
+#CustomizeToolbarWindow .customize-toolbar-controls,
+#main-box {
+  min-height: 0 !important;
+}
+

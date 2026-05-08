@@ -1,10 +1,14 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#sidebar-box:not(:-moz-lwtheme) {
-  background-color: #eceff4 !important;
+#sidebar-box {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
 }
 
-#sidebar-header:not(:-moz-lwtheme) {
+#sidebar-header {
   background-color: #07090d !important;
   background-image: linear-gradient(to bottom, #1b2533, #07090d) !important;
   color: #ffffff !important;
@@ -83,3 +87,23 @@
 .sidebar-placesTreechildren::-moz-tree-cell-text(hover) {
   color: #ffffff !important;
 }
+
+/* iCool Blue 1.0.0-the global skin branch
+ * Outer sidebar chrome background.
+ *
+ * the global skin setup proved the registered global skin works for normal XUL menus,
+ * but the browser sidebar still had an old local light fallback. Keep this in
+ * the browser sidebar layer because #sidebar-box/#sidebar-header are browser
+ * chrome, not generic global widgets.
+ */
+#sidebar-box,
+#sidebar-box > #sidebar,
+#sidebar,
+#sidebar-box > browser {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
+}
+

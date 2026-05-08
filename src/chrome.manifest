@@ -1,14 +1,6 @@
 skin browser icool_blue chrome/gradient_icool/browser/
+skin global icool_blue chrome/gradient_icool/global/
 skin mozapps icool_blue chrome/gradient_icool/mozapps/
 
 skin os icool_blue chrome/gradient_icool/os/linux/
 skin os icool_blue chrome/gradient_icool/os/winnt/ os=WINNT
-
-override chrome://global/skin/scrollbars.css chrome://browser/skin/gradient-icool-global-scrollbars.css
-override chrome://global/skin/preferences.css chrome://browser/skin/gradient-icool-preferences-window.css
-override chrome://global/skin/tabbox.css chrome://browser/skin/gradient-icool-global-tabbox.css
-override chrome://global/skin/groupbox.css chrome://browser/skin/gradient-icool-global-groupbox.css
-override chrome://global/skin/richlistbox.css chrome://browser/skin/gradient-icool-global-richlistbox.css
-override chrome://global/skin/tree.css chrome://browser/skin/gradient-icool-global-tree.css
-override chrome://global/skin/passwordmgr.css chrome://browser/skin/gradient-icool-global-passwordmgr.css
-override chrome://global/skin/menu.css chrome://browser/skin/gradient-icool-global-menu-winnt.css os=WINNT

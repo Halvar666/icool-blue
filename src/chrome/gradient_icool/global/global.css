@@ -1,0 +1,573 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== global.css =====================================================
+  == Styles that apply everywhere.
+  ======================================================================= */
+
+/* all localizable skin settings shall live here */
+@import url("chrome://global/locale/intl.css");
+@import url("chrome://os/skin/global/global.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: XBL bindings ::::: */
+
+menulist > menupopup {
+  -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
+}
+
+/* ::::: root elements ::::: */
+
+window,
+page,
+dialog,
+wizard,
+prefwindow {
+  color: -moz-DialogText;
+  font: message-box;
+}
+
+/* deprecated */
+window.dialog {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-inline-start: 8px;
+  padding-inline-end: 10px;
+}
+
+/* ::::: iframe ::::: */
+
+iframe {
+  border: none;
+  width: 100px;
+  height: 100px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+
+.inset {
+  border: 1px solid ThreeDShadow;
+  border-right-color: ThreeDHighlight;
+  border-bottom-color: ThreeDHighlight;
+  margin: 0 5px 5px;
+}
+  
+
+.outset {
+  border: 1px solid ThreeDShadow;
+  border-left-color: ThreeDHighlight;
+  border-top-color: ThreeDHighlight;
+}
+
+
+separator:not([orient="vertical"]) {
+  height: 1.5em;
+}
+separator[orient="vertical"] {
+  width: 1.5em;
+}
+
+separator.thin:not([orient="vertical"]) {
+  height: 0.5em;
+}  
+
+separator.thin[orient="vertical"] {
+  width: 0.5em;
+}
+    
+.plain {
+  -moz-appearance: none;
+  margin: 0 !important;
+  border: none;
+  padding: 0;
+}
+
+description,
+label {
+  cursor: default;
+}
+
+description {
+  margin-bottom: 4px;
+}
+
+label[disabled="true"] {
+  color: GrayText;
+}
+
+.tooltip-label {
+  margin: 0;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.indent {
+  margin-inline-start: 23px;
+}
+
+.box-padded {
+  padding: 5px;
+}
+
+.spaced {
+  margin: 3px 5px 4px;
+}
+
+.wizard-box {
+  padding: 20px 44px 10px;
+}
+
+.text-link {
+  color: -moz-nativehyperlinktext;
+  cursor: pointer;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* :::::: autoscroll popup ::::: */
+
+.autoscroller {
+  height: 28px;
+  width: 28px;
+  border: none;
+  margin: -14px;
+  padding: 0;
+  background-image: url("chrome://global/skin/icons/autoscroll.png");
+  background-color: transparent;
+  background-position: right top;
+  -moz-appearance: none;
+}
+
+.autoscroller[scrolldir="NS"] {
+  background-position: right center;
+}
+
+.autoscroller[scrolldir="EW"] {
+  background-position: right bottom;
+}
+
+/* :::::: Close button icons ::::: */
+
+.close-icon {
+  list-style-image: url("chrome://global/skin/icons/close.svg");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.close-icon:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.close-icon:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+/* iCool Blue
+ * Minimal global surface fallback.
+ *
+ * Keeps the main browser window root dark without reintroducing broad global
+ * widget styling for textboxes, buttons or menulists.
+ */
+window#main-window,
+#main-window {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
+}
+
+/* iCool Blue
+ * XUL page surface.
+ *
+ * Keeps chrome subdocuments dark enough to avoid light seams around sidebar
+ * and browser content, while widget styling remains scoped elsewhere.
+ */
+page {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
+}
+
+/* iCool Blue
+ * DOM Inspector inner DOM viewer compatibility.
+ *
+ * Targets chrome://inspector/content/views/dom/dom.xul with root
+ * page#winDOMViewer.
+ */
+page#winDOMViewer,
+#winDOMViewer {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #eceff4 !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+/* General inner viewer workspace containers. */
+#winDOMViewer vbox,
+#winDOMViewer hbox,
+#winDOMViewer box,
+#winDOMViewer deck,
+#winDOMViewer tabbox,
+#winDOMViewer tabpanels,
+#winDOMViewer tabpanel,
+#winDOMViewer splitter,
+#winDOMViewer groupbox,
+#winDOMViewer stack,
+#winDOMViewer .tree-bodybox,
+#winDOMViewer .tree-stack,
+#winDOMViewer .tree-rows,
+#winDOMViewer .tree-input {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #eceff4 !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+/* Main DOM tree and related inspector trees should be light/readable. */
+#winDOMViewer tree,
+#winDOMViewer #trDOMTree,
+#winDOMViewer #trDOMNode,
+#winDOMViewer #trDOMNodeChildren,
+#winDOMViewer #trObject,
+#winDOMViewer #trAttributes,
+#winDOMViewer #trStyleRules,
+#winDOMViewer #trCSSRules,
+#winDOMViewer #trBoxObject,
+#winDOMViewer #trJSObject,
+#winDOMViewer #trAccessible,
+#winDOMViewer listbox,
+#winDOMViewer richlistbox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border: 1px solid #9aa7b8 !important;
+}
+
+/* Tree body. DOM screenshot confirms treechildren#trDOMTreeBody. */
+#winDOMViewer treechildren,
+#winDOMViewer #trDOMTreeBody,
+#winDOMViewer #trDOMTree treechildren {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+#winDOMViewer treechildren::-moz-tree-row {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#winDOMViewer treechildren::-moz-tree-cell,
+#winDOMViewer treechildren::-moz-tree-cell-text {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+#winDOMViewer treechildren::-moz-tree-row(selected),
+#winDOMViewer treechildren::-moz-tree-row(current, focus) {
+  background-color: #1d78c8 !important;
+  background-image: linear-gradient(to bottom, #3398ef, #095aab) !important;
+}
+
+#winDOMViewer treechildren::-moz-tree-cell-text(selected),
+#winDOMViewer treechildren::-moz-tree-cell-text(current, focus) {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Keep tree headers in iCool dark style, matching other chrome tree headers. */
+#winDOMViewer treecols,
+#winDOMViewer treecol {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #101923 !important;
+  background-image: linear-gradient(to bottom, #24364d, #080c11) !important;
+  color: #ffffff !important;
+  border-color: #7f8ea1 !important;
+}
+
+#winDOMViewer treecol label,
+#winDOMViewer treecol .treecol-text {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Inline tree editing textbox should stay light. */
+#winDOMViewer textbox,
+#winDOMViewer .tree-input,
+#winDOMViewer html|*.tree-input {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border: 1px solid #9aa7b8 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Labels/descriptions in the inner viewer back to dark text on light surface. */
+#winDOMViewer label,
+#winDOMViewer description,
+#winDOMViewer caption {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* Popups/tooltips inside DOM viewer: keep readable if they inherit from this document. */
+#winDOMViewer tooltip,
+#winDOMViewer tooltip label,
+#winDOMViewer .tooltip-label {
+  background-color: #ffffe1 !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* iCool Blue
+ * DOM Inspector outer window and DOM Node viewer compatibility.
+ *
+ * Completes DOM Inspector support by targeting the main inspector window and
+ * the right/Object viewer document.
+ */
+
+/* Outer DOM Inspector chrome: dark top area with readable menu text. */
+window#winInspectorMain,
+#winInspectorMain {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #eceff4 !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+#winInspectorMain #tbxInsToolbox,
+#winInspectorMain toolbox#tbxInsToolbox,
+#winInspectorMain #tbInspectorPrimary,
+#winInspectorMain toolbar#tbInspectorPrimary,
+#winInspectorMain #mbrInspectorMain,
+#winInspectorMain menubar#mbrInspectorMain,
+#tbxInsToolbox,
+#tbInspectorPrimary,
+#mbrInspectorMain {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07090d !important;
+  background-image: linear-gradient(to bottom, #1b2533, #07090d) !important;
+  color: #ffffff !important;
+  border-color: #2e5f9b !important;
+  text-shadow: none !important;
+}
+
+#winInspectorMain #mbrInspectorMain > menu,
+#winInspectorMain menubar#mbrInspectorMain > menu,
+#winInspectorMain #mbrInspectorMain menu,
+#winInspectorMain menubar#mbrInspectorMain menu,
+#mbrInspectorMain > menu,
+#mbrInspectorMain menu {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+#winInspectorMain #mbrInspectorMain > menu[_moz-menuactive="true"],
+#winInspectorMain menubar#mbrInspectorMain > menu[_moz-menuactive="true"],
+#mbrInspectorMain > menu[_moz-menuactive="true"] {
+  background-color: #1d78c8 !important;
+  background-image: linear-gradient(to bottom, #3398ef, #095aab) !important;
+  color: #ffffff !important;
+}
+
+/* Top chrome labels/buttons stay readable. */
+#winInspectorMain #tbxInsToolbox label,
+#winInspectorMain #tbInspectorPrimary label,
+#winInspectorMain #tbxInsToolbox description,
+#winInspectorMain #tbInspectorPrimary description,
+#tbxInsToolbox label,
+#tbInspectorPrimary label {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Toolbar URL/location textbox: light field. */
+#winInspectorMain #tbInspectorPrimary textbox,
+#winInspectorMain toolbar#tbInspectorPrimary textbox,
+#winInspectorMain textbox,
+#tbInspectorPrimary textbox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: linear-gradient(to bottom, #ffffff, #e9eef7) !important;
+  color: #000000 !important;
+  border: 1px solid #9aa7b8 !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#winInspectorMain #tbInspectorPrimary textbox .textbox-input-box,
+#winInspectorMain #tbInspectorPrimary textbox .textbox-input,
+#winInspectorMain #tbInspectorPrimary textbox html|*.textbox-input,
+#tbInspectorPrimary textbox .textbox-input-box,
+#tbInspectorPrimary textbox .textbox-input {
+  background: transparent !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* The main container around the two viewer documents should be light. */
+#winInspectorMain #bxInspectorMain,
+#winInspectorMain vbox#bxInspectorMain,
+#bxInspectorMain {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #eceff4 !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+/* Right/Object DOM Node viewer document. */
+page#winNodeDefault,
+#winNodeDefault {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #eceff4 !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+#winNodeDefault vbox,
+#winNodeDefault hbox,
+#winNodeDefault box,
+#winNodeDefault grid,
+#winNodeDefault rows,
+#winNodeDefault row,
+#winNodeDefault deck,
+#winNodeDefault tabbox,
+#winNodeDefault tabpanels,
+#winNodeDefault tabpanel,
+#winNodeDefault groupbox,
+#winNodeDefault #bxElement,
+#winNodeDefault #bxText,
+#winNodeDefault #dkContent,
+#winNodeDefault #olNodeInfo,
+#winNodeDefault #grpAttr {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #eceff4 !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+#winNodeDefault label,
+#winNodeDefault description,
+#winNodeDefault caption,
+#winNodeDefault .olNodeInfoLabel,
+#winNodeDefault groupbox caption {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* Read-only info textboxes and text node editor remain light. */
+#winNodeDefault textbox,
+#winNodeDefault textbox.plain,
+#winNodeDefault #tx_localName,
+#winNodeDefault #tx_namespace,
+#winNodeDefault #tx_nodeType,
+#winNodeDefault #txbTextNodeValue {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border: 1px solid #9aa7b8 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#winNodeDefault textbox .textbox-input-box,
+#winNodeDefault textbox .textbox-input,
+#winNodeDefault textbox html|*.textbox-input {
+  background: transparent !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* Attribute tree in the right/Object viewer. */
+#winNodeDefault tree,
+#winNodeDefault #olAttr,
+#winNodeDefault #olNodeInfo,
+#winNodeDefault listbox,
+#winNodeDefault richlistbox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border: 1px solid #9aa7b8 !important;
+}
+
+#winNodeDefault treechildren,
+#winNodeDefault #olAttrBody,
+#winNodeDefault #olAttr treechildren {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+#winNodeDefault treechildren::-moz-tree-row {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#winNodeDefault treechildren::-moz-tree-cell,
+#winNodeDefault treechildren::-moz-tree-cell-text {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+#winNodeDefault treechildren::-moz-tree-row(selected),
+#winNodeDefault treechildren::-moz-tree-row(current, focus) {
+  background-color: #1d78c8 !important;
+  background-image: linear-gradient(to bottom, #3398ef, #095aab) !important;
+}
+
+#winNodeDefault treechildren::-moz-tree-cell-text(selected),
+#winNodeDefault treechildren::-moz-tree-cell-text(current, focus) {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+#winNodeDefault treecols,
+#winNodeDefault treecol {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #101923 !important;
+  background-image: linear-gradient(to bottom, #24364d, #080c11) !important;
+  color: #ffffff !important;
+  border-color: #7f8ea1 !important;
+}
+
+#winNodeDefault treecol label,
+#winNodeDefault treecol .treecol-text {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+

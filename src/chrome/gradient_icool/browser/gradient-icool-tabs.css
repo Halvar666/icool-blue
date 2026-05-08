@@ -1,6 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#TabsToolbar:not(:-moz-lwtheme) {
+#TabsToolbar {
   appearance: none !important;
   background-color: #000 !important;
   background-image: url("chrome://browser/skin/gradient-icool/tabs/tabbrowser-tabs-bkgnd.png") !important;
@@ -10,8 +10,8 @@
   text-shadow: none !important;
 }
 
-#TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected="true"]),
-#TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme) {
+#TabsToolbar .tabbrowser-tab:not([selected="true"]),
+#TabsToolbar .tabs-newtab-button {
   color: #dbeaff !important;
   text-shadow: none !important;
   background-image: url("chrome://browser/skin/gradient-icool/tabs/tab-bkgnd.png") !important;
@@ -19,15 +19,15 @@
   background-position: left top !important;
 }
 
-#TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected="true"]):hover,
-#TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme):hover {
+#TabsToolbar .tabbrowser-tab:not([selected="true"]):hover,
+#TabsToolbar .tabs-newtab-button:hover {
   color: #fff !important;
   background-image: url("chrome://browser/skin/gradient-icool/tabs/tab-hover-bkgnd.png") !important;
   background-repeat: repeat-x !important;
   background-position: left top !important;
 }
 
-#TabsToolbar .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
+#TabsToolbar .tabbrowser-tab[selected="true"] {
   color: #fff !important;
   text-shadow: none !important;
   background-image: url("chrome://browser/skin/gradient-icool/tabs/tab-active-bkgnd.png") !important;

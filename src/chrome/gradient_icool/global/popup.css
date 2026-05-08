@@ -1,0 +1,24 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://os/skin/global/popup.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* iCool Blue
+ * Slim global popup layer.
+ *
+ * Keep menu popups dark without styling generic panel elements globally.
+ */
+menupopup,
+popup:not(tooltip):not(panel) {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  box-shadow: none !important;
+}
+
