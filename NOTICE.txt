@@ -10,7 +10,7 @@ Original add-on metadata archived from Mozilla Add-ons lists:
 - License: Mozilla Public License Version 1.1
 
 Pale Moon port and maintenance:
-- Karel Hladik
+- Halvar666
 
 Internal technical paths may still use "gradient_icool" or "gradient-icool"
 for compatibility with the existing theme structure. The user-facing theme name
