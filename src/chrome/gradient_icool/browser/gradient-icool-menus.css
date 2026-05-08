@@ -1,0 +1,148 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+/* Generic popup/menu surfaces in the browser window */
+menupopup,
+popup:not(tooltip):not(panel),
+#appmenu-popup,
+#appmenuPrimaryPane,
+#appmenuSecondaryPane {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  padding: 1px !important;
+  box-shadow: none !important;
+}
+
+#appmenuPrimaryPane,
+#appmenuSecondaryPane {
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+}
+
+#appmenuSecondaryPane {
+  border-inline-start: 1px solid #6f6f6f !important;
+}
+
+#appmenuSecondaryPane-spacer {
+  background: transparent !important;
+}
+
+/* Top menubar hover/open state */
+#main-menubar > menu[_moz-menuactive="true"]:not([disabled="true"]),
+#main-menubar > menu[open="true"]:not([disabled="true"]) {
+  color: #ffffff !important;
+  background: url("chrome://browser/skin/menu/menu-title-active.png") repeat-x top center #065eb5 !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+}
+
+/* Popup menu items */
+menupopup > menu,
+popup > menu,
+menupopup > menuitem,
+popup > menuitem,
+#appmenu-popup menu,
+#appmenu-popup menuitem,
+.splitmenu-menuitem {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  text-shadow: none !important;
+}
+
+menu[disabled="true"],
+menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"],
+#appmenu-popup menu[disabled="true"],
+#appmenu-popup menuitem[disabled="true"] {
+  color: #8e8e8e !important;
+}
+
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+#appmenu-popup menu[_moz-menuactive="true"]:not([disabled="true"]),
+#appmenu-popup menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+.splitmenu-menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #ffffff !important;
+}
+
+menupopup > menu[_moz-menuactive="true"][disabled="true"],
+menupopup > menuitem[_moz-menuactive="true"][disabled="true"],
+popup > menu[_moz-menuactive="true"][disabled="true"],
+popup > menuitem[_moz-menuactive="true"][disabled="true"],
+#appmenu-popup menu[_moz-menuactive="true"][disabled="true"],
+#appmenu-popup menuitem[_moz-menuactive="true"][disabled="true"] {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #8e8e8e !important;
+}
+
+/* Menu internals keep stock sizing; recolor arrows/checks/radios */
+.menu-text,
+.menu-iconic-text,
+.menu-accel,
+.menu-iconic-accel,
+.menubar-text,
+.menu-right,
+.menu-iconic-left,
+.menu-iconic-icon {
+  color: inherit !important;
+}
+
+.menu-right {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow.png") !important;
+}
+.menu-right[_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover.png") !important;
+}
+.menu-right[disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled.png") !important;
+}
+.menu-right[chromedir="rtl"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-rtl.png") !important;
+}
+.menu-right[chromedir="rtl"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover-rtl.png") !important;
+}
+.menu-right[chromedir="rtl"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled-rtl.png") !important;
+}
+
+menuitem[checked="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check.png") !important;
+}
+menuitem[checked="true"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-dis.png") !important;
+}
+menuitem:not([disabled="true"])[checked="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-hov.png") !important;
+}
+menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio.png") !important;
+}
+menuitem:not([disabled="true"])[checked="true"][type="radio"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio-hover.png") !important;
+}
+
+menuseparator {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 1px !important;
+  border: 0 !important;
+  margin: 1px 0 !important;
+  background: #8aa0b8 !important;
+}

@@ -1,0 +1,681 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#back-button,
+#forward-button,
+#stop-button,
+#reload-button,
+#home-button,
+#downloads-button,
+#history-button,
+#history-menu-button,
+#bookmarks-button,
+#bookmarks-menu-button,
+#print-button,
+#new-tab-button,
+#new-window-button,
+#cut-button,
+#copy-button,
+#paste-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool-main-toolbar.png") !important;
+}
+
+#back-button { -moz-image-region: rect(0px 32px 32px 0px) !important; }
+#forward-button { -moz-image-region: rect(0px 64px 32px 32px) !important; }
+#stop-button { -moz-image-region: rect(0px 96px 32px 64px) !important; }
+#reload-button { -moz-image-region: rect(0px 128px 32px 96px) !important; }
+#home-button { -moz-image-region: rect(0px 160px 32px 128px) !important; }
+#downloads-button { -moz-image-region: rect(0px 192px 32px 160px) !important; }
+#history-button,
+#history-menu-button { -moz-image-region: rect(0px 224px 32px 192px) !important; }
+#bookmarks-button,
+#bookmarks-menu-button { -moz-image-region: rect(0px 256px 32px 224px) !important; }
+#print-button { -moz-image-region: rect(0px 288px 32px 256px) !important; }
+#new-tab-button { -moz-image-region: rect(0px 320px 32px 288px) !important; }
+#new-window-button { -moz-image-region: rect(0px 352px 32px 320px) !important; }
+#cut-button { -moz-image-region: rect(0px 384px 32px 352px) !important; }
+#copy-button { -moz-image-region: rect(0px 416px 32px 384px) !important; }
+#paste-button { -moz-image-region: rect(0px 448px 32px 416px) !important; }
+
+#back-button:hover { -moz-image-region: rect(32px 32px 64px 0px) !important; }
+#forward-button:hover { -moz-image-region: rect(32px 64px 64px 32px) !important; }
+#stop-button:hover { -moz-image-region: rect(32px 96px 64px 64px) !important; }
+#reload-button:hover { -moz-image-region: rect(32px 128px 64px 96px) !important; }
+#home-button:hover { -moz-image-region: rect(32px 160px 64px 128px) !important; }
+#downloads-button:hover { -moz-image-region: rect(32px 192px 64px 160px) !important; }
+#history-button:hover,
+#history-menu-button:hover { -moz-image-region: rect(32px 224px 64px 192px) !important; }
+#bookmarks-button:hover,
+#bookmarks-menu-button:hover { -moz-image-region: rect(32px 256px 64px 224px) !important; }
+#print-button:hover { -moz-image-region: rect(32px 288px 64px 256px) !important; }
+#new-tab-button:hover { -moz-image-region: rect(32px 320px 64px 288px) !important; }
+#new-window-button:hover { -moz-image-region: rect(32px 352px 64px 320px) !important; }
+#cut-button:hover { -moz-image-region: rect(32px 384px 64px 352px) !important; }
+#copy-button:hover { -moz-image-region: rect(32px 416px 64px 384px) !important; }
+#paste-button:hover { -moz-image-region: rect(32px 448px 64px 416px) !important; }
+
+#back-button[disabled="true"] { -moz-image-region: rect(64px 32px 96px 0px) !important; }
+#forward-button[disabled="true"] { -moz-image-region: rect(64px 64px 96px 32px) !important; }
+#stop-button[disabled="true"] { -moz-image-region: rect(64px 96px 96px 64px) !important; }
+#reload-button[disabled="true"] { -moz-image-region: rect(64px 128px 96px 96px) !important; }
+#home-button[disabled="true"] { -moz-image-region: rect(64px 160px 96px 128px) !important; }
+#downloads-button[disabled="true"] { -moz-image-region: rect(64px 192px 96px 160px) !important; }
+#history-button[disabled="true"],
+#history-menu-button[disabled="true"] { -moz-image-region: rect(64px 224px 96px 192px) !important; }
+#bookmarks-button[disabled="true"],
+#bookmarks-menu-button[disabled="true"] { -moz-image-region: rect(64px 256px 96px 224px) !important; }
+#print-button[disabled="true"] { -moz-image-region: rect(64px 288px 96px 256px) !important; }
+#new-tab-button[disabled="true"] { -moz-image-region: rect(64px 320px 96px 288px) !important; }
+#new-window-button[disabled="true"] { -moz-image-region: rect(64px 352px 96px 320px) !important; }
+#cut-button[disabled="true"] { -moz-image-region: rect(64px 384px 96px 352px) !important; }
+#copy-button[disabled="true"] { -moz-image-region: rect(64px 416px 96px 384px) !important; }
+#paste-button[disabled="true"] { -moz-image-region: rect(64px 448px 96px 416px) !important; }
+
+
+/* 24px small icon mode - original iCool small sprite. */
+toolbar[iconsize="small"] #back-button,
+toolbar[iconsize="small"] #forward-button,
+toolbar[iconsize="small"] #stop-button,
+toolbar[iconsize="small"] #reload-button,
+toolbar[iconsize="small"] #home-button,
+toolbar[iconsize="small"] #downloads-button,
+toolbar[iconsize="small"] #history-button,
+toolbar[iconsize="small"] #history-menu-button,
+toolbar[iconsize="small"] #bookmarks-button,
+toolbar[iconsize="small"] #bookmarks-menu-button,
+toolbar[iconsize="small"] #print-button,
+toolbar[iconsize="small"] #new-tab-button,
+toolbar[iconsize="small"] #new-window-button,
+toolbar[iconsize="small"] #cut-button,
+toolbar[iconsize="small"] #copy-button,
+toolbar[iconsize="small"] #paste-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool-main-toolbar-small.png") !important;
+}
+
+toolbar[iconsize="small"] #back-button { -moz-image-region: rect(0px 24px 24px 0px) !important; }
+toolbar[iconsize="small"] #forward-button { -moz-image-region: rect(0px 48px 24px 24px) !important; }
+toolbar[iconsize="small"] #stop-button { -moz-image-region: rect(0px 72px 24px 48px) !important; }
+toolbar[iconsize="small"] #reload-button { -moz-image-region: rect(0px 96px 24px 72px) !important; }
+toolbar[iconsize="small"] #home-button { -moz-image-region: rect(0px 120px 24px 96px) !important; }
+toolbar[iconsize="small"] #downloads-button { -moz-image-region: rect(0px 144px 24px 120px) !important; }
+toolbar[iconsize="small"] #history-button,
+toolbar[iconsize="small"] #history-menu-button { -moz-image-region: rect(0px 168px 24px 144px) !important; }
+toolbar[iconsize="small"] #bookmarks-button,
+toolbar[iconsize="small"] #bookmarks-menu-button { -moz-image-region: rect(0px 192px 24px 168px) !important; }
+toolbar[iconsize="small"] #print-button { -moz-image-region: rect(0px 216px 24px 192px) !important; }
+toolbar[iconsize="small"] #new-tab-button { -moz-image-region: rect(0px 240px 24px 216px) !important; }
+toolbar[iconsize="small"] #new-window-button { -moz-image-region: rect(0px 264px 24px 240px) !important; }
+toolbar[iconsize="small"] #cut-button { -moz-image-region: rect(0px 288px 24px 264px) !important; }
+toolbar[iconsize="small"] #copy-button { -moz-image-region: rect(0px 312px 24px 288px) !important; }
+toolbar[iconsize="small"] #paste-button { -moz-image-region: rect(0px 336px 24px 312px) !important; }
+
+toolbar[iconsize="small"] #back-button:hover { -moz-image-region: rect(24px 24px 48px 0px) !important; }
+toolbar[iconsize="small"] #forward-button:hover { -moz-image-region: rect(24px 48px 48px 24px) !important; }
+toolbar[iconsize="small"] #stop-button:hover { -moz-image-region: rect(24px 72px 48px 48px) !important; }
+toolbar[iconsize="small"] #reload-button:hover { -moz-image-region: rect(24px 96px 48px 72px) !important; }
+toolbar[iconsize="small"] #home-button:hover { -moz-image-region: rect(24px 120px 48px 96px) !important; }
+toolbar[iconsize="small"] #downloads-button:hover { -moz-image-region: rect(24px 144px 48px 120px) !important; }
+toolbar[iconsize="small"] #history-button:hover,
+toolbar[iconsize="small"] #history-menu-button:hover { -moz-image-region: rect(24px 168px 48px 144px) !important; }
+toolbar[iconsize="small"] #bookmarks-button:hover,
+toolbar[iconsize="small"] #bookmarks-menu-button:hover { -moz-image-region: rect(24px 192px 48px 168px) !important; }
+toolbar[iconsize="small"] #print-button:hover { -moz-image-region: rect(24px 216px 48px 192px) !important; }
+toolbar[iconsize="small"] #new-tab-button:hover { -moz-image-region: rect(24px 240px 48px 216px) !important; }
+toolbar[iconsize="small"] #new-window-button:hover { -moz-image-region: rect(24px 264px 48px 240px) !important; }
+toolbar[iconsize="small"] #cut-button:hover { -moz-image-region: rect(24px 288px 48px 264px) !important; }
+toolbar[iconsize="small"] #copy-button:hover { -moz-image-region: rect(24px 312px 48px 288px) !important; }
+toolbar[iconsize="small"] #paste-button:hover { -moz-image-region: rect(24px 336px 48px 312px) !important; }
+
+toolbar[iconsize="small"] #back-button[disabled="true"] { -moz-image-region: rect(48px 24px 72px 0px) !important; }
+toolbar[iconsize="small"] #forward-button[disabled="true"] { -moz-image-region: rect(48px 48px 72px 24px) !important; }
+toolbar[iconsize="small"] #stop-button[disabled="true"] { -moz-image-region: rect(48px 72px 72px 48px) !important; }
+toolbar[iconsize="small"] #reload-button[disabled="true"] { -moz-image-region: rect(48px 96px 72px 72px) !important; }
+toolbar[iconsize="small"] #home-button[disabled="true"] { -moz-image-region: rect(48px 120px 72px 96px) !important; }
+toolbar[iconsize="small"] #downloads-button[disabled="true"] { -moz-image-region: rect(48px 144px 72px 120px) !important; }
+toolbar[iconsize="small"] #history-button[disabled="true"],
+toolbar[iconsize="small"] #history-menu-button[disabled="true"] { -moz-image-region: rect(48px 168px 72px 144px) !important; }
+toolbar[iconsize="small"] #bookmarks-button[disabled="true"],
+toolbar[iconsize="small"] #bookmarks-menu-button[disabled="true"] { -moz-image-region: rect(48px 192px 72px 168px) !important; }
+toolbar[iconsize="small"] #print-button[disabled="true"] { -moz-image-region: rect(48px 216px 72px 192px) !important; }
+toolbar[iconsize="small"] #new-tab-button[disabled="true"] { -moz-image-region: rect(48px 240px 72px 216px) !important; }
+toolbar[iconsize="small"] #new-window-button[disabled="true"] { -moz-image-region: rect(48px 264px 72px 240px) !important; }
+toolbar[iconsize="small"] #cut-button[disabled="true"] { -moz-image-region: rect(48px 288px 72px 264px) !important; }
+toolbar[iconsize="small"] #copy-button[disabled="true"] { -moz-image-region: rect(48px 312px 72px 288px) !important; }
+toolbar[iconsize="small"] #paste-button[disabled="true"] { -moz-image-region: rect(48px 336px 72px 312px) !important; }
+
+
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not([disabled="true"]):hover,
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not([disabled="true"]):hover:active,
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not([disabled="true"])[open="true"],
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not([disabled="true"])[checked="true"] {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not([disabled="true"]):hover > .toolbarbutton-icon,
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not([disabled="true"]):hover:active > .toolbarbutton-icon,
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not([disabled="true"])[open="true"] > .toolbarbutton-icon,
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not([disabled="true"])[checked="true"] > .toolbarbutton-icon {
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Menu-button subparts can draw their own native hover frame, so neutralize
+ * ordinary ones as well while leaving bookmarks/history sidebar variants alone.
+ */
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button) > .toolbarbutton-menubutton-button:not([disabled="true"]):hover,
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button) > .toolbarbutton-menubutton-button:not([disabled="true"]):hover:active,
+#navigator-toolbox toolbar .toolbarbutton-1:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button) > .toolbarbutton-menubutton-button:not([disabled="true"])[open="true"] {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+#back-button,
+#forward-button,
+#stop-button,
+#reload-button,
+#home-button,
+#downloads-button,
+#history-button,
+#history-menu-button,
+#bookmarks-button,
+#bookmarks-menu-button,
+#print-button,
+#new-tab-button,
+#new-window-button,
+#cut-button,
+#copy-button,
+#paste-button,
+#back-button:hover,
+#forward-button:hover,
+#stop-button:hover,
+#reload-button:hover,
+#home-button:hover,
+#downloads-button:hover,
+#history-button:hover,
+#history-menu-button:hover,
+#bookmarks-button:hover,
+#bookmarks-menu-button:hover,
+#print-button:hover,
+#new-tab-button:hover,
+#new-window-button:hover,
+#cut-button:hover,
+#copy-button:hover,
+#paste-button:hover,
+#back-button:hover:active,
+#forward-button:hover:active,
+#stop-button:hover:active,
+#reload-button:hover:active,
+#home-button:hover:active,
+#downloads-button:hover:active,
+#history-button:hover:active,
+#history-menu-button:hover:active,
+#bookmarks-button:hover:active,
+#bookmarks-menu-button:hover:active,
+#print-button:hover:active,
+#new-tab-button:hover:active,
+#new-window-button:hover:active,
+#cut-button:hover:active,
+#copy-button:hover:active,
+#paste-button:hover:active,
+#back-button[open="true"],
+#forward-button[open="true"],
+#stop-button[open="true"],
+#reload-button[open="true"],
+#home-button[open="true"],
+#downloads-button[open="true"],
+#history-button[open="true"],
+#history-menu-button[open="true"],
+#bookmarks-button[open="true"],
+#bookmarks-menu-button[open="true"],
+#print-button[open="true"],
+#new-tab-button[open="true"],
+#new-window-button[open="true"],
+#cut-button[open="true"],
+#copy-button[open="true"],
+#paste-button[open="true"],
+#back-button[checked="true"],
+#forward-button[checked="true"],
+#stop-button[checked="true"],
+#reload-button[checked="true"],
+#home-button[checked="true"],
+#downloads-button[checked="true"],
+#history-button[checked="true"],
+#history-menu-button[checked="true"],
+#bookmarks-button[checked="true"],
+#bookmarks-menu-button[checked="true"],
+#print-button[checked="true"],
+#new-tab-button[checked="true"],
+#new-window-button[checked="true"],
+#cut-button[checked="true"],
+#copy-button[checked="true"],
+#paste-button[checked="true"] {
+  margin: 0 !important;
+  padding: 5px !important;
+  min-width: 0 !important;
+  border-width: 0 !important;
+  outline: none !important;
+}
+
+/* Ordinary buttons: no visible square hover frame, only sprite color/state changes.
+ * Sidebar opener style buttons are intentionally not included here, so their
+ * square hover treatment can remain.
+ */
+#back-button:not([disabled="true"]),
+#forward-button:not([disabled="true"]),
+#stop-button:not([disabled="true"]),
+#reload-button:not([disabled="true"]),
+#home-button:not([disabled="true"]),
+#downloads-button:not([disabled="true"]),
+#print-button:not([disabled="true"]),
+#new-tab-button:not([disabled="true"]),
+#new-window-button:not([disabled="true"]),
+#cut-button:not([disabled="true"]),
+#copy-button:not([disabled="true"]),
+#paste-button:not([disabled="true"]),
+#back-button:not([disabled="true"]):hover,
+#forward-button:not([disabled="true"]):hover,
+#stop-button:not([disabled="true"]):hover,
+#reload-button:not([disabled="true"]):hover,
+#home-button:not([disabled="true"]):hover,
+#downloads-button:not([disabled="true"]):hover,
+#print-button:not([disabled="true"]):hover,
+#new-tab-button:not([disabled="true"]):hover,
+#new-window-button:not([disabled="true"]):hover,
+#cut-button:not([disabled="true"]):hover,
+#copy-button:not([disabled="true"]):hover,
+#paste-button:not([disabled="true"]):hover,
+#back-button:not([disabled="true"]):hover:active,
+#forward-button:not([disabled="true"]):hover:active,
+#stop-button:not([disabled="true"]):hover:active,
+#reload-button:not([disabled="true"]):hover:active,
+#home-button:not([disabled="true"]):hover:active,
+#downloads-button:not([disabled="true"]):hover:active,
+#print-button:not([disabled="true"]):hover:active,
+#new-tab-button:not([disabled="true"]):hover:active,
+#new-window-button:not([disabled="true"]):hover:active,
+#cut-button:not([disabled="true"]):hover:active,
+#copy-button:not([disabled="true"]):hover:active,
+#paste-button:not([disabled="true"]):hover:active {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Keep image boxes stable too. */
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon,
+#stop-button > .toolbarbutton-icon,
+#reload-button > .toolbarbutton-icon,
+#home-button > .toolbarbutton-icon,
+#downloads-button > .toolbarbutton-icon,
+#history-button > .toolbarbutton-icon,
+#history-menu-button > .toolbarbutton-icon,
+#bookmarks-button > .toolbarbutton-icon,
+#bookmarks-menu-button > .toolbarbutton-icon,
+#print-button > .toolbarbutton-icon,
+#new-tab-button > .toolbarbutton-icon,
+#new-window-button > .toolbarbutton-icon,
+#cut-button > .toolbarbutton-icon,
+#copy-button > .toolbarbutton-icon,
+#paste-button > .toolbarbutton-icon,
+#back-button:hover > .toolbarbutton-icon,
+#forward-button:hover > .toolbarbutton-icon,
+#stop-button:hover > .toolbarbutton-icon,
+#reload-button:hover > .toolbarbutton-icon,
+#home-button:hover > .toolbarbutton-icon,
+#downloads-button:hover > .toolbarbutton-icon,
+#history-button:hover > .toolbarbutton-icon,
+#history-menu-button:hover > .toolbarbutton-icon,
+#bookmarks-button:hover > .toolbarbutton-icon,
+#bookmarks-menu-button:hover > .toolbarbutton-icon,
+#print-button:hover > .toolbarbutton-icon,
+#new-tab-button:hover > .toolbarbutton-icon,
+#new-window-button:hover > .toolbarbutton-icon,
+#cut-button:hover > .toolbarbutton-icon,
+#copy-button:hover > .toolbarbutton-icon,
+#paste-button:hover > .toolbarbutton-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Menu-button inner parts also need stable geometry. */
+.toolbarbutton-1 > .toolbarbutton-menubutton-button,
+.toolbarbutton-1 > .toolbarbutton-menubutton-button:hover,
+.toolbarbutton-1 > .toolbarbutton-menubutton-button:hover:active,
+.toolbarbutton-1 > .toolbarbutton-menubutton-button[open="true"],
+.toolbarbutton-menubutton-stack,
+.toolbarbutton-menubutton-stack:hover,
+.toolbarbutton-menubutton-stack:hover:active {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+toolbar[iconsize="small"] #back-button,
+toolbar[iconsize="small"] #forward-button,
+toolbar[iconsize="small"] #stop-button,
+toolbar[iconsize="small"] #reload-button,
+toolbar[iconsize="small"] #home-button,
+toolbar[iconsize="small"] #downloads-button,
+toolbar[iconsize="small"] #history-button,
+toolbar[iconsize="small"] #history-menu-button,
+toolbar[iconsize="small"] #bookmarks-button,
+toolbar[iconsize="small"] #bookmarks-menu-button,
+toolbar[iconsize="small"] #print-button,
+toolbar[iconsize="small"] #new-tab-button,
+toolbar[iconsize="small"] #new-window-button,
+toolbar[iconsize="small"] #cut-button,
+toolbar[iconsize="small"] #copy-button,
+toolbar[iconsize="small"] #paste-button,
+toolbar[iconsize="small"] #back-button:hover,
+toolbar[iconsize="small"] #forward-button:hover,
+toolbar[iconsize="small"] #stop-button:hover,
+toolbar[iconsize="small"] #reload-button:hover,
+toolbar[iconsize="small"] #home-button:hover,
+toolbar[iconsize="small"] #downloads-button:hover,
+toolbar[iconsize="small"] #history-button:hover,
+toolbar[iconsize="small"] #history-menu-button:hover,
+toolbar[iconsize="small"] #bookmarks-button:hover,
+toolbar[iconsize="small"] #bookmarks-menu-button:hover,
+toolbar[iconsize="small"] #print-button:hover,
+toolbar[iconsize="small"] #new-tab-button:hover,
+toolbar[iconsize="small"] #new-window-button:hover,
+toolbar[iconsize="small"] #cut-button:hover,
+toolbar[iconsize="small"] #copy-button:hover,
+toolbar[iconsize="small"] #paste-button:hover {
+  padding: 4px !important;
+}
+
+toolbar[iconsize="small"] #back-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #forward-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #stop-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #reload-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #home-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #downloads-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #history-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #history-menu-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #bookmarks-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #bookmarks-menu-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #print-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #new-tab-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #new-window-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #cut-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #copy-button > .toolbarbutton-icon,
+toolbar[iconsize="small"] #paste-button > .toolbarbutton-icon {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#history-button[checked="true"],
+#history-menu-button[checked="true"],
+#bookmarks-button[checked="true"],
+#bookmarks-menu-button[checked="true"],
+#history-button[open="true"],
+#history-menu-button[open="true"],
+#bookmarks-button[open="true"],
+#bookmarks-menu-button[open="true"] {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #17355f !important;
+  background-image: -moz-linear-gradient(top,
+                      rgba(108, 106, 175, 0.92) 0%,
+                      rgba(48, 94, 196, 0.95) 45%,
+                      rgba(13, 42, 84, 0.98) 46%,
+                      rgba(6, 21, 44, 0.98) 100%) !important;
+  border: 1px solid rgba(173, 205, 255, 0.55) !important;
+  border-radius: 3px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18),
+              inset 0 -1px 0 rgba(0,0,0,0.35) !important;
+  color: #ffffff !important;
+}
+
+#history-button[checked="true"]:hover,
+#history-menu-button[checked="true"]:hover,
+#bookmarks-button[checked="true"]:hover,
+#bookmarks-menu-button[checked="true"]:hover,
+#history-button[open="true"]:hover,
+#history-menu-button[open="true"]:hover,
+#bookmarks-button[open="true"]:hover,
+#bookmarks-menu-button[open="true"]:hover,
+#history-button[checked="true"]:hover:active,
+#history-menu-button[checked="true"]:hover:active,
+#bookmarks-button[checked="true"]:hover:active,
+#bookmarks-menu-button[checked="true"]:hover:active,
+#history-button[open="true"]:hover:active,
+#history-menu-button[open="true"]:hover:active,
+#bookmarks-button[open="true"]:hover:active,
+#bookmarks-menu-button[open="true"]:hover:active {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #244f8d !important;
+  background-image: -moz-linear-gradient(top,
+                      rgba(132, 128, 201, 0.96) 0%,
+                      rgba(62, 120, 229, 0.98) 42%,
+                      rgba(29, 79, 163, 0.98) 43%,
+                      rgba(10, 209, 241, 0.90) 100%) !important;
+  border: 1px solid rgba(220, 239, 255, 0.72) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.28),
+              inset 0 -1px 0 rgba(0,0,0,0.35),
+              0 0 0 1px rgba(0,0,0,0.16) !important;
+}
+
+/* Keep button geometry stable in the themed active state. */
+#history-button[checked="true"],
+#history-menu-button[checked="true"],
+#bookmarks-button[checked="true"],
+#bookmarks-menu-button[checked="true"],
+#history-button[open="true"],
+#history-menu-button[open="true"],
+#bookmarks-button[open="true"],
+#bookmarks-menu-button[open="true"],
+#history-button[checked="true"]:hover,
+#history-menu-button[checked="true"]:hover,
+#bookmarks-button[checked="true"]:hover,
+#bookmarks-menu-button[checked="true"]:hover,
+#history-button[open="true"]:hover,
+#history-menu-button[open="true"]:hover,
+#bookmarks-button[open="true"]:hover,
+#bookmarks-menu-button[open="true"]:hover {
+  margin: 0 !important;
+  padding: 5px !important;
+  min-width: 0 !important;
+  outline: none !important;
+}
+
+toolbar[iconsize="small"] #history-button[checked="true"],
+toolbar[iconsize="small"] #history-menu-button[checked="true"],
+toolbar[iconsize="small"] #bookmarks-button[checked="true"],
+toolbar[iconsize="small"] #bookmarks-menu-button[checked="true"],
+toolbar[iconsize="small"] #history-button[open="true"],
+toolbar[iconsize="small"] #history-menu-button[open="true"],
+toolbar[iconsize="small"] #bookmarks-button[open="true"],
+toolbar[iconsize="small"] #bookmarks-menu-button[open="true"],
+toolbar[iconsize="small"] #history-button[checked="true"]:hover,
+toolbar[iconsize="small"] #history-menu-button[checked="true"]:hover,
+toolbar[iconsize="small"] #bookmarks-button[checked="true"]:hover,
+toolbar[iconsize="small"] #bookmarks-menu-button[checked="true"]:hover,
+toolbar[iconsize="small"] #history-button[open="true"]:hover,
+toolbar[iconsize="small"] #history-menu-button[open="true"]:hover,
+toolbar[iconsize="small"] #bookmarks-button[open="true"]:hover,
+toolbar[iconsize="small"] #bookmarks-menu-button[open="true"]:hover {
+  padding: 4px !important;
+}
+
+
+#history-menu-button > .toolbarbutton-menu-dropmarker,
+#history-menu-button > .toolbarbutton-menubutton-dropmarker,
+#bookmarks-menu-button > .toolbarbutton-menu-dropmarker,
+#bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker {
+  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  opacity: 1 !important;
+  width: 7px !important;
+  min-width: 7px !important;
+  height: 4px !important;
+  min-height: 4px !important;
+  margin: 0 0 0 2px !important;
+  padding: 0 !important;
+}
+
+#history-menu-button:hover > .toolbarbutton-menu-dropmarker,
+#history-menu-button:hover > .toolbarbutton-menubutton-dropmarker,
+#history-menu-button[open="true"] > .toolbarbutton-menu-dropmarker,
+#history-menu-button[open="true"] > .toolbarbutton-menubutton-dropmarker,
+#bookmarks-menu-button:hover > .toolbarbutton-menu-dropmarker,
+#bookmarks-menu-button:hover > .toolbarbutton-menubutton-dropmarker,
+#bookmarks-menu-button[open="true"] > .toolbarbutton-menu-dropmarker,
+#bookmarks-menu-button[open="true"] > .toolbarbutton-menubutton-dropmarker {
+  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+  opacity: 1 !important;
+}
+
+#history-menu-button[disabled="true"] > .toolbarbutton-menu-dropmarker,
+#history-menu-button[disabled="true"] > .toolbarbutton-menubutton-dropmarker,
+#bookmarks-menu-button[disabled="true"] > .toolbarbutton-menu-dropmarker,
+#bookmarks-menu-button[disabled="true"] > .toolbarbutton-menubutton-dropmarker {
+  opacity: .55 !important;
+}
+
+
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator),
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator):hover,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator):hover:active,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator)[open="true"],
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator)[checked="true"] {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 !important;
+  padding: 5px !important;
+  border-width: 0 !important;
+  min-width: 0 !important;
+  outline: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator) > .toolbarbutton-icon,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator):hover > .toolbarbutton-icon,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator):hover:active > .toolbarbutton-icon,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator)[open="true"] > .toolbarbutton-icon,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional:not(#history-button):not(#history-menu-button):not(#bookmarks-button):not(#bookmarks-menu-button):not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(#downloads-button):not(#print-button):not(#new-tab-button):not(#new-window-button):not(#downloads-indicator)[checked="true"] > .toolbarbutton-icon {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-width: 0 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Menu-button add-on/custom toolbar buttons need the same stable inner geometry. */
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menubutton-button,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menubutton-button:hover,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menubutton-button:hover:active,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menubutton-button[open="true"],
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menubutton-dropmarker,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menubutton-dropmarker:hover,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menu-dropmarker,
+#navigator-toolbox #nav-bar toolbarbutton.chromeclass-toolbar-additional > .toolbarbutton-menu-dropmarker:hover {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 !important;
+  border-width: 0 !important;
+  outline: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+
+toolbarpaletteitem #history-button,
+toolbarpaletteitem #history-menu-button,
+toolbarpaletteitem #bookmarks-button,
+toolbarpaletteitem #bookmarks-menu-button,
+toolbarpaletteitem #history-button:hover,
+toolbarpaletteitem #history-menu-button:hover,
+toolbarpaletteitem #bookmarks-button:hover,
+toolbarpaletteitem #bookmarks-menu-button:hover,
+toolbarpaletteitem #history-button[checked="true"],
+toolbarpaletteitem #history-menu-button[checked="true"],
+toolbarpaletteitem #bookmarks-button[checked="true"],
+toolbarpaletteitem #bookmarks-menu-button[checked="true"],
+toolbarpaletteitem #history-button[open="true"],
+toolbarpaletteitem #history-menu-button[open="true"],
+toolbarpaletteitem #bookmarks-button[open="true"],
+toolbarpaletteitem #bookmarks-menu-button[open="true"] {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+toolbarpaletteitem #history-button > .toolbarbutton-icon,
+toolbarpaletteitem #history-menu-button > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-button > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-menu-button > .toolbarbutton-icon,
+toolbarpaletteitem #history-button:hover > .toolbarbutton-icon,
+toolbarpaletteitem #history-menu-button:hover > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-button:hover > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-menu-button:hover > .toolbarbutton-icon,
+toolbarpaletteitem #history-button[checked="true"] > .toolbarbutton-icon,
+toolbarpaletteitem #history-menu-button[checked="true"] > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-button[checked="true"] > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-menu-button[checked="true"] > .toolbarbutton-icon,
+toolbarpaletteitem #history-button[open="true"] > .toolbarbutton-icon,
+toolbarpaletteitem #history-menu-button[open="true"] > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-button[open="true"] > .toolbarbutton-icon,
+toolbarpaletteitem #bookmarks-menu-button[open="true"] > .toolbarbutton-icon {
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* The bookmarks menu button may be wrapped as a menu-button in the palette.
+ * Reset those internal boxes as well, otherwise the blue tile can remain on
+ * the inner menubutton part even when the outer toolbarbutton is clean.
+ */
+toolbarpaletteitem #history-menu-button > .toolbarbutton-menubutton-button,
+toolbarpaletteitem #bookmarks-menu-button > .toolbarbutton-menubutton-button,
+toolbarpaletteitem #history-menu-button > .toolbarbutton-menubutton-button:hover,
+toolbarpaletteitem #bookmarks-menu-button > .toolbarbutton-menubutton-button:hover,
+toolbarpaletteitem #history-menu-button > .toolbarbutton-menubutton-button[open="true"],
+toolbarpaletteitem #bookmarks-menu-button > .toolbarbutton-menubutton-button[open="true"],
+toolbarpaletteitem #history-menu-button > .toolbarbutton-menubutton-stack,
+toolbarpaletteitem #bookmarks-menu-button > .toolbarbutton-menubutton-stack {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}

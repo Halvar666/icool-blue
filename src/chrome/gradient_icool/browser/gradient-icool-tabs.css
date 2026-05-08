@@ -1,0 +1,335 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#TabsToolbar:not(:-moz-lwtheme) {
+  appearance: none !important;
+  background-color: #000 !important;
+  background-image: url("chrome://browser/skin/gradient-icool/tabs/tabbrowser-tabs-bkgnd.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left bottom !important;
+  color: #dbeaff !important;
+  text-shadow: none !important;
+}
+
+#TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected="true"]),
+#TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme) {
+  color: #dbeaff !important;
+  text-shadow: none !important;
+  background-image: url("chrome://browser/skin/gradient-icool/tabs/tab-bkgnd.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+}
+
+#TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected="true"]):hover,
+#TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme):hover {
+  color: #fff !important;
+  background-image: url("chrome://browser/skin/gradient-icool/tabs/tab-hover-bkgnd.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+}
+
+#TabsToolbar .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
+  color: #fff !important;
+  text-shadow: none !important;
+  background-image: url("chrome://browser/skin/gradient-icool/tabs/tab-active-bkgnd.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+}
+
+#TabsToolbar .tabbrowser-tab:focus > .tab-stack {
+  outline-color: #6fb7ff !important;
+}
+
+/* Use extracted 16x16 close-button images instead of sprite clipping.
+ * This avoids rendering artifacts where the icon looks like a minimize glyph.
+ */
+#TabsToolbar .tab-close-button {
+  -moz-appearance: none !important;
+  list-style-image: none !important;
+  padding: 0 !important;
+  margin-top: -1px !important;
+  margin-bottom: -1px !important;
+  margin-inline-end: -1px !important;
+  width: 16px !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
+  max-height: 16px !important;
+}
+
+#TabsToolbar .tab-close-button > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-normal.png") !important;
+  -moz-image-region: auto !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#TabsToolbar .tab-close-button:hover > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-hover.png") !important;
+}
+
+#TabsToolbar .tab-close-button:hover:active > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-active.png") !important;
+}
+
+#TabsToolbar .tab-close-button[disabled="true"] > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-disabled.png") !important;
+}
+
+#TabsToolbar > #new-tab-button,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/tab-add.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+
+#TabsToolbar > #new-tab-button:hover,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover {
+  -moz-image-region: rect(0px 32px 16px 16px) !important;
+}
+
+#TabsToolbar > #new-tab-button:hover:active,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover:active {
+  -moz-image-region: rect(0px 48px 16px 32px) !important;
+}
+
+#alltabs-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/tab-all.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+
+#alltabs-button:hover {
+  -moz-image-region: rect(0px 32px 16px 16px) !important;
+}
+
+#alltabs-button:hover:active,
+#alltabs-button[open="true"] {
+  -moz-image-region: rect(0px 48px 16px 32px) !important;
+}
+
+.tab-drop-indicator {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/tabDragIndicator.png") !important;
+}
+
+
+#TabsToolbar .tabbrowser-tab {
+  appearance: none !important;
+  background: none !important;
+  border: none !important;
+  border-image: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 1px 0 0 !important;
+  min-height: 25px !important;
+}
+
+#TabsToolbar .tabbrowser-tab > .tab-stack {
+  background-image:
+    url("chrome://browser/skin/gradient-icool/tabs/tab-left.png"),
+    url("chrome://browser/skin/gradient-icool/tabs/tab-right.png"),
+    url("chrome://browser/skin/gradient-icool/tabs/tab-bkgnd.png") !important;
+  background-position: left top, right top, left top !important;
+  background-repeat: no-repeat, no-repeat, repeat-x !important;
+  min-height: 25px !important;
+}
+
+#TabsToolbar .tabbrowser-tab:hover > .tab-stack {
+  background-image:
+    url("chrome://browser/skin/gradient-icool/tabs/tab-hover-left.png"),
+    url("chrome://browser/skin/gradient-icool/tabs/tab-hover-right.png"),
+    url("chrome://browser/skin/gradient-icool/tabs/tab-hover-bkgnd.png") !important;
+}
+
+#TabsToolbar .tabbrowser-tab[selected="true"] > .tab-stack {
+  background-image:
+    url("chrome://browser/skin/gradient-icool/tabs/tab-active-left.png"),
+    url("chrome://browser/skin/gradient-icool/tabs/tab-active-right.png"),
+    url("chrome://browser/skin/gradient-icool/tabs/tab-active-bkgnd.png") !important;
+}
+
+#TabsToolbar .tabbrowser-tab > .tab-stack > .tab-content {
+  min-height: 25px !important;
+  margin: 0 !important;
+  padding-inline-start: 8px !important;
+  padding-inline-end: 8px !important;
+}
+
+#TabsToolbar .tabbrowser-tab[pinned] > .tab-stack > .tab-content {
+  padding-inline-start: 4px !important;
+  padding-inline-end: 4px !important;
+}
+
+#TabsToolbar .tabbrowser-tab > .tab-stack > .tab-content > .tab-label {
+  margin-top: 0 !important;
+}
+
+
+#TabsToolbar .tabs-newtab-button,
+#TabsToolbar > #new-tab-button,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/tab-add.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  padding: 2px !important;
+  margin: 0 2px !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover,
+#TabsToolbar > #new-tab-button:hover,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover {
+  -moz-image-region: rect(0px 32px 16px 16px) !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover:active,
+#TabsToolbar > #new-tab-button:hover:active,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover:active,
+#TabsToolbar .tabs-newtab-button[open="true"],
+#TabsToolbar > #new-tab-button[open="true"],
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button[open="true"] {
+  -moz-image-region: rect(0px 48px 16px 32px) !important;
+}
+
+#TabsToolbar .tabs-newtab-button[disabled="true"],
+#TabsToolbar > #new-tab-button[disabled="true"],
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button[disabled="true"] {
+  -moz-image-region: rect(0px 64px 16px 48px) !important;
+}
+
+#TabsToolbar .tabs-newtab-button > .toolbarbutton-icon,
+#TabsToolbar > #new-tab-button > .toolbarbutton-icon,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button > .toolbarbutton-icon {
+  list-style-image: inherit !important;
+  -moz-image-region: inherit !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#TabsToolbar .tabs-newtab-button > .toolbarbutton-text,
+#TabsToolbar .tabs-newtab-button > .toolbarbutton-menu-dropmarker,
+#TabsToolbar > #new-tab-button > .toolbarbutton-text,
+#TabsToolbar > #new-tab-button > .toolbarbutton-menu-dropmarker,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button > .toolbarbutton-text,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button > .toolbarbutton-menu-dropmarker {
+  display: none !important;
+}
+
+
+#TabsToolbar .tabs-newtab-button,
+#TabsToolbar > #new-tab-button,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
+  background-color: #02070d !important;
+  background-image: linear-gradient(to bottom, #03070d 0%, #010305 48%, #061420 100%) !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+  border: 1px solid #0b3f72 !important;
+  border-top-color: #092e54 !important;
+  border-bottom-color: #03101d !important;
+  border-radius: 3px 3px 0 0 !important;
+  box-shadow: inset 0 1px 0 rgba(87, 160, 235, .16) !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover,
+#TabsToolbar > #new-tab-button:hover,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover {
+  background-color: #061526 !important;
+  background-image: linear-gradient(to bottom, #08284a 0%, #03101e 48%, #0a2b4d 100%) !important;
+  border-color: #1b73b7 !important;
+  box-shadow: inset 0 1px 0 rgba(155, 212, 255, .25) !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover:active,
+#TabsToolbar > #new-tab-button:hover:active,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover:active,
+#TabsToolbar .tabs-newtab-button[open="true"],
+#TabsToolbar > #new-tab-button[open="true"],
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button[open="true"] {
+  background-color: #010509 !important;
+  background-image: linear-gradient(to bottom, #010509 0%, #000 55%, #061320 100%) !important;
+  border-color: #0a3764 !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .75) !important;
+}
+
+#TabsToolbar .tabs-newtab-button > .toolbarbutton-icon,
+#TabsToolbar > #new-tab-button > .toolbarbutton-icon,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button > .toolbarbutton-icon {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+
+#TabsToolbar .tabs-newtab-button,
+#TabsToolbar > #new-tab-button,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/tab-add.png") !important;
+  -moz-image-region: rect(0px 32px 16px 16px) !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover,
+#TabsToolbar > #new-tab-button:hover,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -moz-image-region: rect(0px 32px 16px 16px) !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover:active,
+#TabsToolbar > #new-tab-button:hover:active,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover:active,
+#TabsToolbar .tabs-newtab-button[open="true"],
+#TabsToolbar > #new-tab-button[open="true"],
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button[open="true"] {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -moz-image-region: rect(0px 48px 16px 32px) !important;
+}
+
+#TabsToolbar .tabs-newtab-button[disabled="true"],
+#TabsToolbar > #new-tab-button[disabled="true"],
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button[disabled="true"] {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -moz-image-region: rect(0px 64px 16px 48px) !important;
+}
+
+#TabsToolbar .tabs-newtab-button > .toolbarbutton-icon,
+#TabsToolbar > #new-tab-button > .toolbarbutton-icon,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button > .toolbarbutton-icon {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}

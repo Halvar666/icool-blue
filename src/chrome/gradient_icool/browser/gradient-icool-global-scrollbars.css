@@ -1,0 +1,161 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* Base binding/state. Keep the stock binding but remove native appearance so
+ * image-based iCool parts can render.
+ */
+scrollbar {
+  -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: default;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+scrollbar[orient="vertical"] {
+  width: 13px !important;
+  min-width: 13px !important;
+  max-width: 13px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/vertical-background.png") no-repeat bottom right !important;
+}
+
+scrollbar[orient="horizontal"] {
+  height: 13px !important;
+  min-height: 13px !important;
+  max-height: 13px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/horizontal-background.png") no-repeat bottom right !important;
+}
+
+slider {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+thumb {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+thumb[orient="vertical"] {
+  min-height: 24px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/thumb-vertical-normal.png") repeat-y top left !important;
+  -moz-border-radius: 8px !important;
+  border-radius: 8px !important;
+}
+
+thumb[orient="vertical"]:hover {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/thumb-vertical-hover.png") repeat-y top left !important;
+}
+
+thumb[orient="vertical"]:hover:active,
+thumb[orient="vertical"]:active {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/thumb-vertical-active.png") repeat-y top left !important;
+}
+
+thumb[orient="horizontal"] {
+  min-width: 24px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/thumb-horizontal-normal.png") repeat-x top left !important;
+  -moz-border-radius: 8px !important;
+  border-radius: 8px !important;
+}
+
+thumb[orient="horizontal"]:hover {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/thumb-horizontal-hover.png") repeat-x top left !important;
+}
+
+thumb[orient="horizontal"]:hover:active,
+thumb[orient="horizontal"]:active {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/thumb-horizontal-active.png") repeat-x top left !important;
+}
+
+/* Scrollbar buttons */
+scrollbarbutton {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Horizontal increment/right */
+scrollbarbutton[type="increment"] {
+  position: absolute !important;
+  margin: 0 0 0 -9px !important;
+  min-width: 24px !important;
+  min-height: 13px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/right_cut.png") no-repeat top left !important;
+}
+
+scrollbarbutton[type="increment"]:hover:active {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/right-active_cut.png") no-repeat top left !important;
+}
+
+/* Vertical increment/down */
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"],
+scrollbarbutton[sbattr="scrollbar-down-bottom"] {
+  position: absolute !important;
+  margin: -9px 0 0 0 !important;
+  min-width: 13px !important;
+  min-height: 24px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/down_cut.png") no-repeat bottom left !important;
+}
+
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"]:hover:active,
+scrollbarbutton[sbattr="scrollbar-down-bottom"]:hover:active {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/down-active_cut.png") no-repeat bottom left !important;
+}
+
+/* Horizontal decrement/left */
+scrollbarbutton[type="decrement"] {
+  margin: 0 -9px 0 0 !important;
+  min-width: 24px !important;
+  min-height: 13px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/left.png") no-repeat top left !important;
+}
+
+scrollbarbutton[type="decrement"]:hover:active {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/left-active.png") no-repeat top left !important;
+}
+
+/* Vertical decrement/up */
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"],
+scrollbarbutton[sbattr="scrollbar-up-top"] {
+  margin: 0 0 -9px 0 !important;
+  min-width: 13px !important;
+  min-height: 24px !important;
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/up.png") no-repeat top left !important;
+}
+
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"]:hover:active,
+scrollbarbutton[sbattr="scrollbar-up-top"]:hover:active {
+  background: url("chrome://browser/skin/gradient-icool/sidebar-scrollbar/up-active.png") no-repeat top left !important;
+}
+
+scrollcorner {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  border: none !important;
+}
+
+/* Keep print fallback closer to stock. */
+@media print {
+  html|div scrollbar,
+  html|div scrollbar[orient="vertical"],
+  html|div thumb,
+  html|div scrollbarbutton {
+    -moz-appearance: auto;
+  }
+}

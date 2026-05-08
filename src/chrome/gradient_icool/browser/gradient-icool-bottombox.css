@@ -1,0 +1,225 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#browser-bottombox {
+  background-color: #000000 !important;
+  background-image: url("chrome://browser/skin/gradient-icool/tabs/tabbrowser-tabs-bkgnd.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+  color: #dcecff !important;
+  border-top: 1px solid #2e5f9b !important;
+}
+
+#global-notificationbox {
+  background: transparent !important;
+  color: #dcecff !important;
+}
+
+#global-notificationbox > notification,
+#global-notificationbox > notificationbox > notification,
+#global-notificationbox notification {
+  background-color: #0d1724 !important;
+  color: #ffffff !important;
+  border-top: 1px solid #2e5f9b !important;
+  border-bottom: 1px solid #000000 !important;
+}
+
+#addon-bar {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: transparent !important;
+  background-image: url("chrome://browser/skin/gradient-icool/tabs/tabbrowser-tabs-bkgnd.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+  color: #dcecff !important;
+  border-top: 1px solid #2e5f9b !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), inset 0 -1px 0 rgba(0,0,0,.8) !important;
+  padding: 0 !important;
+}
+
+#addon-bar toolbaritem,
+#addon-bar label,
+#addon-bar description,
+#addon-bar statusbarpanel,
+#addon-bar toolbarbutton,
+#addon-bar .toolbarbutton-text {
+  color: #dcecff !important;
+  text-shadow: none !important;
+}
+
+#addonbar-closebutton {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  list-style-image: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 2px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#addonbar-closebutton > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-normal.png") !important;
+  -moz-image-region: auto !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#addonbar-closebutton:hover > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-hover.png") !important;
+}
+
+#addonbar-closebutton:hover:active > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-active.png") !important;
+}
+
+#status4evar-status-widget,
+#status4evar-progress-widget,
+#status-bar {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  border: none !important;
+  color: #dcecff !important;
+}
+
+#status4evar-status-widget {
+  padding: 0 4px !important;
+  background: transparent !important;
+  border-top: 1px solid rgba(76, 154, 226, .35) !important;
+  border-inline-start: 1px solid rgba(255,255,255,.06) !important;
+  border-inline-end: 1px solid rgba(46,95,155,.45) !important;
+}
+
+#status4evar-status-text {
+  color: #dcecff !important;
+  text-shadow: none !important;
+}
+
+#status-bar > statusbarpanel {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(76, 154, 226, .35) !important;
+  border-inline-start: 1px solid rgba(255,255,255,.06) !important;
+  border-inline-end: 1px solid rgba(46,95,155,.45) !important;
+  color: #dcecff !important;
+  min-height: 18px !important;
+  padding: 0 3px !important;
+}
+
+#padlock-sb-panel {
+  padding-inline-start: 3px !important;
+  padding-inline-end: 3px !important;
+}
+
+#padlock-sb {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#browser-bottombox progressmeter,
+#browser-bottombox .progressmeter-statusbar {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  height: 12px !important;
+  min-height: 12px !important;
+  border: 1px solid #a3a3a3 !important;
+  background: url("chrome://browser/skin/gradient-icool/bottombox/background.png") repeat-x left center !important;
+}
+
+#browser-bottombox .progress-bar {
+  height: 12px !important;
+  border: 0 !important;
+  background: url("chrome://browser/skin/gradient-icool/bottombox/progress.png") repeat-x left center transparent !important;
+}
+
+.statuspanel-label {
+  background: linear-gradient(#1a3352, #08111d) !important;
+  border-color: #2e5f9b !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+
+#status4evar-progress-widget,
+#status-bar {
+  background: transparent !important;
+  border-top: 1px solid rgba(76, 154, 226, .35) !important;
+}
+
+#status4evar-progress-widget {
+  padding: 0 4px !important;
+  border-inline-start: 1px solid rgba(255,255,255,.06) !important;
+  border-inline-end: 1px solid rgba(46,95,155,.45) !important;
+}
+
+#browser-bottombox .statuspanel-label {
+  background: linear-gradient(#2e7dc7, #0b4f97) !important;
+  border-color: #63b8ff !important;
+  color: #ffffff !important;
+}
+
+
+#status4evar-progress-widget {
+  -moz-box-align: center !important;
+  padding: 0 4px !important;
+  min-width: 104px !important;
+  width: 104px !important;
+  max-width: 104px !important;
+}
+
+#status4evar-progress-bar,
+#status4evar-progress-bar.progressmeter-statusbar {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 12px !important;
+  min-height: 12px !important;
+  max-height: 12px !important;
+  min-width: 96px !important;
+  width: 96px !important;
+  max-width: 96px !important;
+  border: 1px solid #a3a3a3 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: url("chrome://browser/skin/gradient-icool/bottombox/background.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left center !important;
+  box-shadow: none !important;
+}
+
+#status4evar-progress-bar > .progress-bar {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  height: 12px !important;
+  min-height: 12px !important;
+  max-height: 12px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: url("chrome://browser/skin/gradient-icool/bottombox/progress.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left center !important;
+  box-shadow: none !important;
+}
+
+#status4evar-progress-bar > .progress-remainder {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Restore the missing shared Status-4-Evar customize visibility rule as well. */
+#wrapper-status4evar-progress-widget progressmeter {
+  visibility: visible !important;
+}

@@ -1,0 +1,17 @@
+iCool Blue - Notice
+===================
+
+This theme is based on Gradient iCool (Blue) by Gradient Studio.
+
+Original add-on metadata archived from Mozilla Add-ons lists:
+- Name: Gradient iCool (Blue)
+- Original author/publisher: Gradient Studio
+- Version: 1.2.0
+- License: Mozilla Public License Version 1.1
+
+Pale Moon port and maintenance:
+- Karel Hladik
+
+Internal technical paths may still use "gradient_icool" or "gradient-icool"
+for compatibility with the existing theme structure. The user-facing theme name
+is "iCool Blue".

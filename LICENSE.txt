@@ -1,0 +1,12 @@
+Mozilla Public License Version 1.1
+==================================
+
+Original Gradient iCool (Blue) was released under the Mozilla Public License
+Version 1.1.
+
+This package keeps the covered source/assets under MPL 1.1 unless otherwise
+noted. The full license text is available from Mozilla:
+
+https://www.mozilla.org/en-US/MPL/1.1/
+
+SPDX-License-Identifier: MPL-1.1

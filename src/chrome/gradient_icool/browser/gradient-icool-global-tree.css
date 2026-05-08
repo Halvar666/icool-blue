@@ -1,0 +1,90 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+tree {
+  -moz-appearance: none !important;
+  margin: 0 4px !important;
+  border: 1px solid #7f8ea1 !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d 90px) !important;
+  color: #ffffff !important;
+}
+
+treechildren {
+  background-color: #08111d !important;
+  color: #ffffff !important;
+}
+
+.focusring > .tree-stack > .tree-rows > .tree-bodybox {
+  border: 1px solid transparent !important;
+}
+
+.focusring:focus > .tree-stack > .tree-rows > .tree-bodybox {
+  border: 1px solid #7f8ea1 !important;
+}
+
+treechildren::-moz-tree-row {
+  border: 0 solid transparent !important;
+  min-height: 18px;
+  height: 1.3em;
+  background-color: transparent !important;
+}
+
+treechildren::-moz-tree-row(selected),
+treechildren::-moz-tree-row(selected, focus) {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+}
+
+treechildren::-moz-tree-cell {
+  padding: 0 2px !important;
+}
+
+treechildren::-moz-tree-cell-text,
+treechildren::-moz-tree-cell-text(selected),
+treechildren::-moz-tree-cell-text(selected, focus) {
+  color: #ffffff !important;
+}
+
+treechildren::-moz-tree-cell-text(disabled) {
+  color: #7f8ea1 !important;
+}
+
+/* Tree/list header cells */
+treecols {
+  -moz-appearance: none !important;
+  background-color: #0d1724 !important;
+  color: #ffffff !important;
+}
+
+treecol,
+treecolpicker {
+  -moz-appearance: none !important;
+  border: 1px solid #7f8ea1 !important;
+  background-color: #0d1724 !important;
+  background-image: linear-gradient(to bottom, #1a3352, #08111d) !important;
+  color: #ffffff !important;
+  padding: 0 4px !important;
+}
+
+treecol:hover,
+treecolpicker:hover,
+treecol:hover:active,
+treecolpicker:hover:active {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+  border-color: #a8c6e8 !important;
+}
+
+.treecol-text,
+.treecol-icon,
+treecol > label,
+treecolpicker > label {
+  color: inherit !important;
+}
+
+.treecol-sortdirection,
+treecol > .treecol-sortdirection {
+  list-style-image: none !important;
+}

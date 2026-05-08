@@ -1,0 +1,1066 @@
+@import url("chrome://classic/skin/mozapps/extensions/extensions.css");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* Main page surfaces */
+#addons-page,
+#addons-page > * {
+  color: #dcecff;
+}
+
+#addons-page,
+#view-port-container,
+#details-view,
+#detail-view,
+#list-view,
+#updates-view,
+#discover-view,
+#search-view,
+#category-box,
+#categories,
+#header,
+#header-inner,
+#header-search {
+  background-color: #08111d !important;
+  color: #dcecff !important;
+}
+
+/* Top header / search area */
+#header,
+#header-inner,
+#header-search,
+#view-port-container > richlistbox > richlistitem[type="header"],
+#search-filter {
+  background-image: url("chrome://browser/skin/gradient-icool/tabs/tabbrowser-tabs-bkgnd.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+  color: #ffffff !important;
+  border-color: #2e5f9b !important;
+}
+
+#header-search,
+#header > textbox,
+#search-filter {
+  color: #000000 !important;
+}
+
+/* Category sidebar */
+#categories {
+  background: #07101b !important;
+  border-inline-end: 1px solid #2e5f9b !important;
+}
+
+.category,
+#categories > richlistitem,
+#viewGroup > richlistitem,
+#viewGroup > radio {
+  background: transparent !important;
+  color: #dcecff !important;
+  border-color: transparent !important;
+}
+
+.category:hover,
+#categories > richlistitem:hover,
+#viewGroup > richlistitem:hover,
+#viewGroup > radio:hover {
+  background: linear-gradient(#154a82, #0c2d4f) !important;
+  color: #ffffff !important;
+  border-color: #2e5f9b !important;
+}
+
+.category[selected="true"],
+#categories > richlistitem[selected="true"],
+#viewGroup > richlistitem[selected="true"],
+#viewGroup > radio[selected="true"] {
+  background: linear-gradient(#2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+  border-color: #63b8ff !important;
+}
+
+/* Main list */
+richlistbox,
+#addon-list,
+#updates-container,
+#search-list,
+#discover-browser,
+#detail-view {
+  background-color: #08111d !important;
+  color: #dcecff !important;
+}
+
+richlistitem,
+.addon,
+.addon-view,
+.addon-container {
+  background-color: #0a1624 !important;
+  color: #dcecff !important;
+  border-color: #153454 !important;
+}
+
+richlistitem:hover,
+.addon:hover,
+.addon-view:hover,
+.addon-container:hover {
+  background-color: #0d2238 !important;
+}
+
+richlistitem[selected="true"],
+.addon[selected="true"],
+.addon-view[selected="true"],
+.addon-container[selected="true"] {
+  background: linear-gradient(#2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+  border-color: #63b8ff !important;
+}
+
+richlistitem[selected="true"] *,
+.addon[selected="true"] *,
+.addon-view[selected="true"] *,
+.addon-container[selected="true"] * {
+  color: inherit !important;
+}
+
+/* Text */
+.addon-name,
+.name,
+.addonName,
+.addon-description,
+.description,
+.descriptionBox,
+.pending,
+.warning,
+.disabled-postfix,
+.detail-row,
+.detail-row-label,
+.detail-row-value,
+.detail-row-complex,
+.detail-row-complex > label,
+.addon-control,
+.addon-control label,
+.addon-control description,
+#detail-view label,
+#detail-view description,
+#detail-view richlistitem,
+#detail-view textbox,
+#detail-view html|p,
+#detail-view html|div,
+#detail-view html|span {
+  color: #dcecff !important;
+}
+
+.description-link,
+.text-link,
+.addon > .text-link,
+.addon-view .text-link {
+  color: #88c8ff !important;
+}
+
+/* Buttons: keep size/layout, change only visual style */
+button,
+.toolbarbutton-1,
+.notification-button,
+.addon-control button {
+  color: #ffffff !important;
+  background: linear-gradient(#2a2a2a, #101010) !important;
+  border: 1px solid #666666 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10) !important;
+}
+
+button:hover,
+.toolbarbutton-1:hover,
+.notification-button:hover,
+.addon-control button:hover {
+  background: linear-gradient(#3d3d3d, #181818) !important;
+  border-color: #888888 !important;
+}
+
+button:hover:active,
+.toolbarbutton-1:hover:active,
+.notification-button:hover:active,
+.addon-control button:hover:active {
+  background: linear-gradient(#0f0f0f, #2c2c2c) !important;
+}
+
+button[disabled="true"],
+.toolbarbutton-1[disabled="true"],
+.notification-button[disabled="true"] {
+  opacity: .55 !important;
+}
+
+/* Search/filter boxes */
+textbox,
+search-textbox,
+#search-filter,
+#header-search,
+#detail-view textbox {
+  background-color: #f7f7f7 !important;
+  color: #000000 !important;
+  border-color: #5a5a5a !important;
+}
+
+textbox[focused="true"],
+search-textbox[focused="true"],
+#search-filter[focused="true"],
+#header-search[focused="true"],
+#detail-view textbox[focused="true"] {
+  border-color: #5cbcff !important;
+  box-shadow: 0 0 0 1px rgba(92,188,255,.25) !important;
+}
+
+/* Detail / preview panes */
+#detail-view,
+#detail-grid,
+#details-box,
+#addon-details,
+#previewImageContainer,
+#infoDisplay {
+  background-color: #08111d !important;
+  color: #dcecff !important;
+  border-color: #153454 !important;
+}
+
+/* Status areas / messages */
+notification,
+.alert,
+.warning-container,
+.pending-container,
+.update-status,
+.addon-status,
+vbox[typeName="status"],
+#updates-noneFound,
+#updates-installed,
+#updates-manualUpdatesFound-btn,
+#updates-progress {
+  background-color: #0d1724 !important;
+  color: #dcecff !important;
+  border-color: #2e5f9b !important;
+}
+
+
+/* Force the category column itself and its rows to stay dark and readable. */
+#category-box,
+#categories,
+#categories richlistitem,
+#categories > richlistitem,
+#categories .category,
+#viewGroup,
+#viewGroup richlistitem,
+#viewGroup > richlistitem,
+#viewGroup > radio {
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
+}
+
+#categories richlistitem *,
+#categories > richlistitem *,
+#categories .category *,
+#viewGroup richlistitem *,
+#viewGroup > richlistitem *,
+#viewGroup > radio * {
+  color: #dcecff !important;
+  text-shadow: none !important;
+}
+
+#categories richlistitem:hover,
+#categories > richlistitem:hover,
+#categories .category:hover,
+#viewGroup richlistitem:hover,
+#viewGroup > richlistitem:hover,
+#viewGroup > radio:hover {
+  background: linear-gradient(#154a82, #0c2d4f) !important;
+  color: #ffffff !important;
+}
+
+#categories richlistitem:hover *,
+#categories > richlistitem:hover *,
+#categories .category:hover *,
+#viewGroup richlistitem:hover *,
+#viewGroup > richlistitem:hover *,
+#viewGroup > radio:hover * {
+  color: #ffffff !important;
+}
+
+#categories richlistitem[selected="true"],
+#categories > richlistitem[selected="true"],
+#categories .category[selected="true"],
+#viewGroup richlistitem[selected="true"],
+#viewGroup > richlistitem[selected="true"],
+#viewGroup > radio[selected="true"] {
+  background: linear-gradient(#2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+  border-color: #63b8ff !important;
+}
+
+#categories richlistitem[selected="true"] *,
+#categories > richlistitem[selected="true"] *,
+#categories .category[selected="true"] *,
+#viewGroup richlistitem[selected="true"] *,
+#viewGroup > richlistitem[selected="true"] *,
+#viewGroup > radio[selected="true"] * {
+  color: #ffffff !important;
+}
+
+/* Force Add-ons Manager action buttons into the desired black + white style. */
+button,
+.button-link,
+.addon-control button,
+.addon-control toolbarbutton,
+.notification-button,
+.toolbarbutton-1,
+.enableButton,
+.disableButton,
+.optionsButton,
+.useThemeButton,
+.uninstallButton,
+.cancelUninstallButton,
+.installButton,
+.preferencesButton,
+.moreButton,
+.button-box {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: linear-gradient(#2a2a2a, #101010) !important;
+  color: #ffffff !important;
+  border: 1px solid #666666 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10) !important;
+  text-shadow: none !important;
+}
+
+button *,
+.button-link *,
+.addon-control button *,
+.addon-control toolbarbutton *,
+.notification-button *,
+.toolbarbutton-1 *,
+.enableButton *,
+.disableButton *,
+.optionsButton *,
+.useThemeButton *,
+.uninstallButton *,
+.cancelUninstallButton *,
+.installButton *,
+.preferencesButton *,
+.moreButton * {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+button:hover,
+.button-link:hover,
+.addon-control button:hover,
+.addon-control toolbarbutton:hover,
+.notification-button:hover,
+.toolbarbutton-1:hover,
+.enableButton:hover,
+.disableButton:hover,
+.optionsButton:hover,
+.useThemeButton:hover,
+.uninstallButton:hover,
+.cancelUninstallButton:hover,
+.installButton:hover,
+.preferencesButton:hover,
+.moreButton:hover {
+  background: linear-gradient(#3d3d3d, #181818) !important;
+  border-color: #888888 !important;
+}
+
+button:hover:active,
+.button-link:hover:active,
+.addon-control button:hover:active,
+.addon-control toolbarbutton:hover:active,
+.notification-button:hover:active,
+.toolbarbutton-1:hover:active,
+.enableButton:hover:active,
+.disableButton:hover:active,
+.optionsButton:hover:active,
+.useThemeButton:hover:active,
+.uninstallButton:hover:active,
+.cancelUninstallButton:hover:active,
+.installButton:hover:active,
+.preferencesButton:hover:active,
+.moreButton:hover:active {
+  background: linear-gradient(#0f0f0f, #2c2c2c) !important;
+}
+
+
+/* Real category sidebar structure. */
+#addons-page #main > #categories,
+#addons-page #main > #categories > scrollbox,
+#addons-page #main > #categories .scrollbox-innerbox,
+#addons-page #main > #categories > scrollbox > .scrollbox-innerbox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
+}
+
+#addons-page #categories richlistitem.category,
+#addons-page #categories > scrollbox > .scrollbox-innerbox > richlistitem.category,
+#addons-page #categories #category-search,
+#addons-page #categories #category-discover,
+#addons-page #categories #category-extension,
+#addons-page #categories #category-theme,
+#addons-page #categories #category-plugin,
+#addons-page #categories #category-dictionary,
+#addons-page #categories #category-locale,
+#addons-page #categories #category-availableUpdates,
+#addons-page #categories #category-recentUpdates {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: none !important;
+  color: #dcecff !important;
+  text-shadow: none !important;
+}
+
+#addons-page #categories richlistitem.category > .category-name,
+#addons-page #categories richlistitem.category .category-name,
+#addons-page #categories richlistitem.category > label,
+#addons-page #categories richlistitem.category label,
+#addons-page #categories .category-name,
+#addons-page #categories .category-badge {
+  color: #dcecff !important;
+  text-shadow: none !important;
+}
+
+#addons-page #categories richlistitem.category:hover,
+#addons-page #categories richlistitem.category[_moz-menuactive="true"],
+#addons-page #categories #category-search:hover,
+#addons-page #categories #category-discover:hover,
+#addons-page #categories #category-extension:hover,
+#addons-page #categories #category-theme:hover,
+#addons-page #categories #category-plugin:hover,
+#addons-page #categories #category-dictionary:hover,
+#addons-page #categories #category-locale:hover,
+#addons-page #categories #category-availableUpdates:hover,
+#addons-page #categories #category-recentUpdates:hover {
+  background-color: #102a49 !important;
+  background-image: linear-gradient(#154a82, #0c2d4f) !important;
+  color: #ffffff !important;
+}
+
+#addons-page #categories richlistitem.category:hover .category-name,
+#addons-page #categories richlistitem.category:hover .category-badge,
+#addons-page #categories richlistitem.category[_moz-menuactive="true"] .category-name,
+#addons-page #categories richlistitem.category[_moz-menuactive="true"] .category-badge {
+  color: #ffffff !important;
+}
+
+#addons-page #categories richlistitem.category[selected="true"],
+#addons-page #categories richlistitem.category[current="true"],
+#addons-page #categories #category-search[selected="true"],
+#addons-page #categories #category-discover[selected="true"],
+#addons-page #categories #category-extension[selected="true"],
+#addons-page #categories #category-theme[selected="true"],
+#addons-page #categories #category-plugin[selected="true"],
+#addons-page #categories #category-dictionary[selected="true"],
+#addons-page #categories #category-locale[selected="true"],
+#addons-page #categories #category-availableUpdates[selected="true"],
+#addons-page #categories #category-recentUpdates[selected="true"] {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(#2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+}
+
+#addons-page #categories richlistitem.category[selected="true"] .category-name,
+#addons-page #categories richlistitem.category[selected="true"] .category-badge,
+#addons-page #categories richlistitem.category[current="true"] .category-name,
+#addons-page #categories richlistitem.category[current="true"] .category-badge {
+  color: #ffffff !important;
+}
+
+/* Real action buttons from the Add-ons Manager detail/list views. */
+#addons-page button.addon-control,
+#addons-page button.addon-control.enable,
+#addons-page button.addon-control.disable,
+#addons-page button.addon-control.remove,
+#addons-page button.addon-control.preferences,
+#addons-page button.addon-control.debug,
+#addons-page button.addon-control.install,
+#addons-page button.addon-control.purchase,
+#addons-page #detail-enable-btn,
+#addons-page #detail-disable-btn,
+#addons-page #detail-uninstall-btn,
+#addons-page #detail-prefs-btn,
+#addons-page #detail-debug-btn,
+#addons-page #detail-install-btn,
+#addons-page #detail-purchase-btn,
+#addons-page .addon button,
+#addons-page richlistitem.addon button,
+#addons-page richlistitem.addon-view button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #101010 !important;
+  background-image: linear-gradient(#2a2a2a, #101010) !important;
+  color: #ffffff !important;
+  border-color: #666666 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10) !important;
+  text-shadow: none !important;
+}
+
+#addons-page button.addon-control > .button-box,
+#addons-page button.addon-control .button-box,
+#addons-page #detail-enable-btn > .button-box,
+#addons-page #detail-disable-btn > .button-box,
+#addons-page #detail-uninstall-btn > .button-box,
+#addons-page #detail-prefs-btn > .button-box,
+#addons-page #detail-debug-btn > .button-box,
+#addons-page #detail-install-btn > .button-box,
+#addons-page #detail-purchase-btn > .button-box,
+#addons-page .addon button > .button-box,
+#addons-page richlistitem.addon button > .button-box,
+#addons-page richlistitem.addon-view button > .button-box {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#addons-page button.addon-control .button-text,
+#addons-page button.addon-control label,
+#addons-page #detail-enable-btn .button-text,
+#addons-page #detail-disable-btn .button-text,
+#addons-page #detail-uninstall-btn .button-text,
+#addons-page #detail-prefs-btn .button-text,
+#addons-page #detail-debug-btn .button-text,
+#addons-page #detail-install-btn .button-text,
+#addons-page #detail-purchase-btn .button-text,
+#addons-page .addon button .button-text,
+#addons-page .addon button label,
+#addons-page richlistitem.addon button .button-text,
+#addons-page richlistitem.addon-view button .button-text {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+#addons-page button.addon-control:hover,
+#addons-page #detail-enable-btn:hover,
+#addons-page #detail-disable-btn:hover,
+#addons-page #detail-uninstall-btn:hover,
+#addons-page #detail-prefs-btn:hover,
+#addons-page #detail-debug-btn:hover,
+#addons-page #detail-install-btn:hover,
+#addons-page #detail-purchase-btn:hover,
+#addons-page .addon button:hover,
+#addons-page richlistitem.addon button:hover,
+#addons-page richlistitem.addon-view button:hover {
+  background-color: #181818 !important;
+  background-image: linear-gradient(#3d3d3d, #181818) !important;
+  color: #ffffff !important;
+  border-color: #888888 !important;
+}
+
+#addons-page button.addon-control:hover:active,
+#addons-page #detail-enable-btn:hover:active,
+#addons-page #detail-disable-btn:hover:active,
+#addons-page #detail-uninstall-btn:hover:active,
+#addons-page #detail-prefs-btn:hover:active,
+#addons-page #detail-debug-btn:hover:active,
+#addons-page #detail-install-btn:hover:active,
+#addons-page #detail-purchase-btn:hover:active,
+#addons-page .addon button:hover:active,
+#addons-page richlistitem.addon button:hover:active,
+#addons-page richlistitem.addon-view button:hover:active {
+  background-color: #0f0f0f !important;
+  background-image: linear-gradient(#0f0f0f, #2c2c2c) !important;
+  color: #ffffff !important;
+}
+
+#addons-page button.addon-control[disabled="true"],
+#addons-page #detail-enable-btn[disabled="true"],
+#addons-page #detail-disable-btn[disabled="true"],
+#addons-page #detail-uninstall-btn[disabled="true"],
+#addons-page #detail-prefs-btn[disabled="true"],
+#addons-page #detail-debug-btn[disabled="true"],
+#addons-page #detail-install-btn[disabled="true"],
+#addons-page #detail-purchase-btn[disabled="true"],
+#addons-page .addon button[disabled="true"],
+#addons-page richlistitem.addon button[disabled="true"],
+#addons-page richlistitem.addon-view button[disabled="true"] {
+  background-color: #101010 !important;
+  background-image: linear-gradient(#2a2a2a, #101010) !important;
+  color: #dcecff !important;
+  border-color: #555555 !important;
+  opacity: .82 !important;
+}
+
+#addons-page button.addon-control[disabled="true"] .button-text,
+#addons-page button.addon-control[disabled="true"] label,
+#addons-page .addon button[disabled="true"] .button-text,
+#addons-page richlistitem.addon button[disabled="true"] .button-text,
+#addons-page richlistitem.addon-view button[disabled="true"] .button-text {
+  color: #dcecff !important;
+}
+
+
+#addons-page richlistitem.addon .icon-container,
+#addons-page richlistitem.addon-view .icon-container,
+#addons-page #addon-list richlistitem .icon-container,
+#addons-page #search-list richlistitem .icon-container,
+#addons-page #updates-list richlistitem .icon-container {
+  width: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  margin-inline-end: 10px !important;
+}
+
+#addons-page richlistitem.addon .icon,
+#addons-page richlistitem.addon-view .icon,
+#addons-page #addon-list richlistitem .icon,
+#addons-page #search-list richlistitem .icon,
+#addons-page #updates-list richlistitem .icon {
+  width: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+}
+
+#addons-page #detail-icon-container {
+  width: 64px !important;
+  min-width: 64px !important;
+  max-width: 64px !important;
+}
+
+#addons-page #detail-icon {
+  width: 64px !important;
+  min-width: 64px !important;
+  max-width: 64px !important;
+  height: 64px !important;
+  min-height: 64px !important;
+  max-height: 64px !important;
+}
+
+
+#addons-page #addon-list > richlistitem.addon,
+#addons-page #addon-list > richlistitem.addon-view,
+#addons-page #search-list > richlistitem.addon,
+#addons-page #search-list > richlistitem.addon-view,
+#addons-page #updates-list > richlistitem.addon,
+#addons-page #updates-list > richlistitem.addon-view {
+  border-top: none !important;
+  border-inline-start: none !important;
+  border-inline-end: none !important;
+  border-bottom: 1px solid rgba(255,255,255,.38) !important;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.08) !important;
+}
+
+#addons-page #addon-list > richlistitem.addon:last-child,
+#addons-page #addon-list > richlistitem.addon-view:last-child,
+#addons-page #search-list > richlistitem.addon:last-child,
+#addons-page #search-list > richlistitem.addon-view:last-child,
+#addons-page #updates-list > richlistitem.addon:last-child,
+#addons-page #updates-list > richlistitem.addon-view:last-child {
+  border-bottom-color: rgba(255,255,255,.50) !important;
+}
+
+#addons-page #addon-list > richlistitem.addon:hover,
+#addons-page #addon-list > richlistitem.addon-view:hover,
+#addons-page #search-list > richlistitem.addon:hover,
+#addons-page #search-list > richlistitem.addon-view:hover,
+#addons-page #updates-list > richlistitem.addon:hover,
+#addons-page #updates-list > richlistitem.addon-view:hover {
+  border-bottom-color: rgba(255,255,255,.55) !important;
+}
+
+#addons-page #addon-list > richlistitem.addon[selected="true"],
+#addons-page #addon-list > richlistitem.addon-view[selected="true"],
+#addons-page #search-list > richlistitem.addon[selected="true"],
+#addons-page #search-list > richlistitem.addon-view[selected="true"],
+#addons-page #updates-list > richlistitem.addon[selected="true"],
+#addons-page #updates-list > richlistitem.addon-view[selected="true"] {
+  border-bottom-color: rgba(255,255,255,.70) !important;
+}
+
+
+#addons-page richlistitem.addon[type="extension"] .icon[src=""],
+#addons-page richlistitem.addon-view[type="extension"] .icon[src=""],
+#addons-page #addon-list richlistitem[type="extension"] .icon[src=""],
+#addons-page #search-list richlistitem[type="extension"] .icon[src=""],
+#addons-page #updates-list richlistitem[type="extension"] .icon[src=""],
+#addons-page richlistitem.addon[type="extension"] .icon:not([src]),
+#addons-page richlistitem.addon-view[type="extension"] .icon:not([src]),
+#addons-page #addon-list richlistitem[type="extension"] .icon:not([src]),
+#addons-page #search-list richlistitem[type="extension"] .icon:not([src]),
+#addons-page #updates-list richlistitem[type="extension"] .icon:not([src]) {
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionIcons.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+  background-image: url("chrome://mozapps/skin/extensions/extensionIcons.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 16px 16px !important;
+}
+
+#addons-page #detail-view[type="extension"] #detail-icon[src=""],
+#addons-page #detail-view[type="extension"] #detail-icon:not([src]) {
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionIcons.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+  background-image: url("chrome://mozapps/skin/extensions/extensionIcons.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 32px 32px !important;
+}
+
+
+#addons-page richlistitem.addon[active="false"],
+#addons-page richlistitem.addon-view[active="false"],
+#addons-page richlistitem.addon[isDisabled="true"],
+#addons-page richlistitem.addon-view[isDisabled="true"] {
+  background-color: #07111a !important;
+  color: #aeb8c3 !important;
+}
+
+#addons-page richlistitem.addon[active="false"]:hover,
+#addons-page richlistitem.addon-view[active="false"]:hover,
+#addons-page richlistitem.addon[isDisabled="true"]:hover,
+#addons-page richlistitem.addon-view[isDisabled="true"]:hover {
+  background-color: #0c1d30 !important;
+}
+
+#addons-page richlistitem.addon[active="false"][selected="true"],
+#addons-page richlistitem.addon-view[active="false"][selected="true"],
+#addons-page richlistitem.addon[isDisabled="true"][selected="true"],
+#addons-page richlistitem.addon-view[isDisabled="true"][selected="true"] {
+  background: linear-gradient(#1b4f7c, #08345f) !important;
+  color: #d6dde5 !important;
+}
+
+/* Dim add-on text, but not buttons. */
+#addons-page richlistitem.addon[active="false"] label:not(.button-text),
+#addons-page richlistitem.addon-view[active="false"] label:not(.button-text),
+#addons-page richlistitem.addon[isDisabled="true"] label:not(.button-text),
+#addons-page richlistitem.addon-view[isDisabled="true"] label:not(.button-text),
+#addons-page richlistitem.addon[active="false"] description,
+#addons-page richlistitem.addon-view[active="false"] description,
+#addons-page richlistitem.addon[isDisabled="true"] description,
+#addons-page richlistitem.addon-view[isDisabled="true"] description,
+#addons-page richlistitem.addon[active="false"] .name,
+#addons-page richlistitem.addon-view[active="false"] .name,
+#addons-page richlistitem.addon[isDisabled="true"] .name,
+#addons-page richlistitem.addon-view[isDisabled="true"] .name,
+#addons-page richlistitem.addon[active="false"] .addon-name,
+#addons-page richlistitem.addon-view[active="false"] .addon-name,
+#addons-page richlistitem.addon[isDisabled="true"] .addon-name,
+#addons-page richlistitem.addon-view[isDisabled="true"] .addon-name {
+  color: #aeb8c3 !important;
+}
+
+#addons-page richlistitem.addon[active="false"] .description,
+#addons-page richlistitem.addon-view[active="false"] .description,
+#addons-page richlistitem.addon[isDisabled="true"] .description,
+#addons-page richlistitem.addon-view[isDisabled="true"] .description,
+#addons-page richlistitem.addon[active="false"] .addon-description,
+#addons-page richlistitem.addon-view[active="false"] .addon-description,
+#addons-page richlistitem.addon[isDisabled="true"] .addon-description,
+#addons-page richlistitem.addon-view[isDisabled="true"] .addon-description,
+#addons-page richlistitem.addon[active="false"] .disabled-postfix,
+#addons-page richlistitem.addon-view[active="false"] .disabled-postfix,
+#addons-page richlistitem.addon[isDisabled="true"] .disabled-postfix,
+#addons-page richlistitem.addon-view[isDisabled="true"] .disabled-postfix {
+  color: #7f8b97 !important;
+}
+
+/* Dim icons for inactive rows. */
+#addons-page richlistitem.addon[active="false"] .icon,
+#addons-page richlistitem.addon-view[active="false"] .icon,
+#addons-page richlistitem.addon[isDisabled="true"] .icon,
+#addons-page richlistitem.addon-view[isDisabled="true"] .icon,
+#addons-page richlistitem.addon[active="false"] .icon-container,
+#addons-page richlistitem.addon-view[active="false"] .icon-container,
+#addons-page richlistitem.addon[isDisabled="true"] .icon-container,
+#addons-page richlistitem.addon-view[isDisabled="true"] .icon-container {
+  opacity: .48 !important;
+}
+
+/* Keep action buttons full strength even inside disabled rows. */
+#addons-page richlistitem.addon[active="false"] button,
+#addons-page richlistitem.addon-view[active="false"] button,
+#addons-page richlistitem.addon[isDisabled="true"] button,
+#addons-page richlistitem.addon-view[isDisabled="true"] button,
+#addons-page richlistitem.addon[active="false"] .button-text,
+#addons-page richlistitem.addon-view[active="false"] .button-text,
+#addons-page richlistitem.addon[isDisabled="true"] .button-text,
+#addons-page richlistitem.addon-view[isDisabled="true"] .button-text {
+  opacity: 1 !important;
+  color: #ffffff !important;
+}
+
+/* Detail view: show inactive add-ons as greyed out, except controls. */
+#addons-page #detail-view[active="false"] {
+  color: #aeb8c3 !important;
+}
+
+#addons-page #detail-view[active="false"] #detail-name,
+#addons-page #detail-view[active="false"] #detail-version,
+#addons-page #detail-view[active="false"] #detail-creator,
+#addons-page #detail-view[active="false"] #detail-translators,
+#addons-page #detail-view[active="false"] #detail-desc,
+#addons-page #detail-view[active="false"] #detail-fulldesc,
+#addons-page #detail-view[active="false"] .detail-row-label,
+#addons-page #detail-view[active="false"] .detail-row-value,
+#addons-page #detail-view[active="false"] .detail-row-complex label:not(.button-text) {
+  color: #aeb8c3 !important;
+}
+
+#addons-page #detail-view[active="false"] .disabled-postfix,
+#addons-page #detail-view[active="false"] .update-postfix {
+  color: #7f8b97 !important;
+}
+
+#addons-page #detail-view[active="false"] #detail-icon,
+#addons-page #detail-view[active="false"] #detail-screenshot {
+  opacity: .50 !important;
+}
+
+#addons-page #detail-view[active="false"] button,
+#addons-page #detail-view[active="false"] button .button-text,
+#addons-page #detail-view[active="false"] button label {
+  opacity: 1 !important;
+  color: #ffffff !important;
+}
+
+
+#header {
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#header-search {
+  -moz-appearance: none !important;
+  min-height: 22px !important;
+  height: 22px !important;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 1px solid #5a5a5a !important;
+  border-radius: 2px !important;
+  background-color: #f7f7f7 !important;
+}
+
+#header-search > .textbox-input-box,
+#header-search .textbox-input-box {
+  -moz-appearance: none !important;
+  min-height: 20px !important;
+  height: 20px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: transparent !important;
+}
+
+#header-search .textbox-input {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  color: #000000 !important;
+}
+
+#header-search .textbox-search-icon,
+#header-search > .textbox-search-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Search.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+
+#header-search {
+  background-color: #f7f7f7 !important;
+  background-image: linear-gradient(to bottom, #ffffff, #e9eef7) !important;
+  color: #000000 !important;
+}
+
+#header-search > .textbox-input-box,
+#header-search .textbox-input-box,
+#header-search html|input,
+#header-search .textbox-input,
+#header-search .anonymous-div {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+#header-search[focused="true"],
+#header-search:focus {
+  background-color: #ffffff !important;
+  background-image: linear-gradient(to bottom, #ffffff, #f1f6ff) !important;
+  border-color: #63b8ff !important;
+}
+
+
+#addons-page #header-utils-btn,
+#addons-page toolbarbutton#header-utils-btn.header-button,
+#addons-page #updates-container > #header-utils-btn {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  list-style-image: url("chrome://browser/skin/addons-tools-menu-16.png") !important;
+  -moz-image-region: auto !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  padding: 2px !important;
+  margin: 0 3px !important;
+}
+
+#addons-page #header-utils-btn[disabled="true"] {
+  list-style-image: url("chrome://browser/skin/addons-tools-menu-16-disabled.png") !important;
+}
+
+#addons-page #header-utils-btn > .toolbarbutton-icon,
+#addons-page toolbarbutton#header-utils-btn.header-button > .toolbarbutton-icon {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#addons-page #header-utils-btn > .toolbarbutton-menu-dropmarker,
+#addons-page toolbarbutton#header-utils-btn.header-button > .toolbarbutton-menu-dropmarker {
+  display: none !important;
+}
+
+#addons-page #header-utils-btn:hover,
+#addons-page toolbarbutton#header-utils-btn.header-button:hover {
+  background: rgba(46, 125, 199, .18) !important;
+  border-radius: 3px !important;
+}
+
+
+/*
+ * Pale Moon's Add-ons Manager category badges may exist with value="0".
+ * Stock-style behavior is to keep zero badges hidden; otherwise the sidebar looks
+ * like every category has an explicit count of 0. Leave non-zero badges visible.
+ */
+#addons-page #categories .category-badge[value="0"],
+#addons-page #categories richlistitem.category > .category-badge[value="0"],
+#addons-page #categories richlistitem.category .category-badge[value="0"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+#addons-page #categories .category-badge[value=""],
+#addons-page #categories richlistitem.category > .category-badge[value=""],
+#addons-page #categories richlistitem.category .category-badge[value=""] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+
+#addons-page menupopup,
+#addons-page popup:not(tooltip):not(panel) {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  padding: 1px !important;
+  box-shadow: none !important;
+}
+
+#addons-page menupopup > menu,
+#addons-page popup > menu,
+#addons-page menupopup > menuitem,
+#addons-page popup > menuitem {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  text-shadow: none !important;
+}
+
+#addons-page menu[disabled="true"],
+#addons-page menuitem[disabled="true"],
+#addons-page menu[_moz-menuactive="true"][disabled="true"],
+#addons-page menuitem[_moz-menuactive="true"][disabled="true"] {
+  color: #8e8e8e !important;
+}
+
+#addons-page menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+#addons-page menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+#addons-page popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+#addons-page popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #ffffff !important;
+}
+
+#addons-page menupopup > menu[_moz-menuactive="true"][disabled="true"],
+#addons-page menupopup > menuitem[_moz-menuactive="true"][disabled="true"],
+#addons-page popup > menu[_moz-menuactive="true"][disabled="true"],
+#addons-page popup > menuitem[_moz-menuactive="true"][disabled="true"] {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #8e8e8e !important;
+}
+
+#addons-page .menu-text,
+#addons-page .menu-iconic-text,
+#addons-page .menu-accel,
+#addons-page .menu-iconic-accel,
+#addons-page .menubar-text,
+#addons-page .menu-right,
+#addons-page .menu-iconic-left,
+#addons-page .menu-iconic-icon {
+  color: inherit !important;
+}
+
+#addons-page .menu-right {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow.png") !important;
+}
+#addons-page .menu-right[_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover.png") !important;
+}
+#addons-page .menu-right[disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled.png") !important;
+}
+#addons-page .menu-right[chromedir="rtl"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-rtl.png") !important;
+}
+#addons-page .menu-right[chromedir="rtl"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover-rtl.png") !important;
+}
+#addons-page .menu-right[chromedir="rtl"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled-rtl.png") !important;
+}
+
+#addons-page menuitem[checked="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check.png") !important;
+}
+#addons-page menuitem[checked="true"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-dis.png") !important;
+}
+#addons-page menuitem:not([disabled="true"])[checked="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-hov.png") !important;
+}
+#addons-page menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio.png") !important;
+}
+#addons-page menuitem:not([disabled="true"])[checked="true"][type="radio"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio-hover.png") !important;
+}
+
+#addons-page menuseparator {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 1px !important;
+  border: 0 !important;
+  margin: 1px 0 !important;
+  background: #8aa0b8 !important;
+}

@@ -1,0 +1,175 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+prefwindow,
+prefwindow[type="child"] {
+  padding: 0 !important;
+  background: #08111d !important;
+  color: #ffffff !important;
+}
+
+prefpane {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 10px;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d 120px) !important;
+  color: #ffffff !important;
+}
+
+prefwindow[type="child"] > prefpane {
+  padding: 8px 10px 10px !important;
+}
+
+.prefWindow-dlgbuttons {
+  padding-bottom: 10px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 10px;
+  background: #08111d !important;
+  color: #ffffff !important;
+}
+
+.paneSelector {
+  margin: 6px 8px 0 8px !important;
+  padding: 4px 6px !important;
+  border: 1px solid #7f8ea1 !important;
+  background: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+}
+
+radio[pane] {
+  -moz-appearance: none !important;
+  margin: 0 1px !important;
+  padding: 2px 6px !important;
+  min-width: 4.5em !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+radio[pane]:hover {
+  background: url("chrome://browser/skin/preferences/radiopane_hover.png") repeat-x bottom center transparent !important;
+  border: 1px solid #7fa9d8 !important;
+  color: #ffffff !important;
+}
+
+radio[pane][selected="true"] {
+  background: url("chrome://browser/skin/preferences/radiopane_selected.png") repeat-x bottom center transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+.paneButtonIcon {
+  width: 32px;
+  height: 32px;
+}
+
+label,
+description,
+caption,
+caption > label,
+checkbox,
+radio,
+.groupbox-title {
+  color: #ffffff !important;
+}
+
+.text-link {
+  color: #8dc3ff !important;
+}
+
+separator {
+  border-top-color: #5f748d !important;
+}
+
+groupbox {
+  margin: 8px 6px !important;
+  padding: 8px 10px 10px !important;
+  border: 1px solid #7f8ea1 !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+groupbox > caption {
+  padding: 0 4px !important;
+}
+
+textbox,
+textbox:not(.padded),
+menulist,
+filefield {
+  -moz-appearance: none !important;
+  background: #f5f5f5 !important;
+  color: #000000 !important;
+  border: 1px solid #8b8b8b !important;
+  border-radius: 0 !important;
+  min-height: 24px !important;
+}
+
+textbox > .textbox-input-box,
+filefield > .fileFieldContentBox,
+menulist > .menulist-label-box {
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+textbox .textbox-input,
+.fileFieldLabel,
+.fileFieldLabel > .textbox-input-box > .textbox-input,
+menulist > .menulist-label-box > .menulist-label {
+  color: #000000 !important;
+}
+
+menulist > .menulist-dropmarker {
+  opacity: 1 !important;
+}
+
+#downloadFolder {
+  color: #000000 !important;
+}
+
+button,
+button:not([type="menu"]),
+button[type="menu"],
+.dialog-button {
+  -moz-appearance: none !important;
+  min-height: 24px !important;
+  padding: 2px 10px !important;
+  border: 1px solid #6f6f6f !important;
+  border-radius: 0 !important;
+  background: linear-gradient(#2a2a2a, #101010) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15) !important;
+}
+
+button:hover,
+button[type="menu"]:hover,
+.dialog-button:hover {
+  background: linear-gradient(#3d3d3d, #181818) !important;
+  border-color: #8e8e8e !important;
+}
+
+button:hover:active,
+button[type="menu"]:hover:active,
+.dialog-button:hover:active {
+  background: linear-gradient(#0f0f0f, #2c2c2c) !important;
+}
+
+button[disabled="true"],
+menulist[disabled="true"],
+textbox[disabled="true"],
+filefield[disabled="true"] {
+  opacity: 0.55 !important;
+}
+
+checkbox > .checkbox-label-box > .checkbox-label,
+radio > .radio-label-box > .radio-label {
+  color: #ffffff !important;
+}
+
+caption,
+legend {
+  color: #ffffff !important;
+}

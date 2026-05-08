@@ -1,0 +1,346 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+/* Toolbar */
+#placesToolbar {
+  border: none;
+}
+
+/* back button */
+
+#back-button {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar");
+}
+#back-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar&state=disabled");
+}
+
+#back-button:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar");
+}
+#back-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar&state=disabled");
+}
+
+/* forward button */
+
+#forward-button {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar");
+}
+#forward-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar&state=disabled");
+}
+
+#forward-button:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar");
+}
+#forward-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar&state=disabled");
+}
+
+/* Menu */
+#placesMenu {
+  appearance: none;
+  border: none;
+}
+
+#placesMenu > menu {
+  padding-inline-start: 4px;
+  -moz-binding: url("chrome://browser/skin/places/organizer.xml#toolbarbutton-dropdown");
+  appearance: toolbarbutton;
+  color: -moz-DialogText;
+}
+
+#placesMenu > menu:hover:not(:active):not([open="true"]) {
+  color: -moz-buttonhovertext;
+}
+
+#placesMenu > menu > .menubar-right {
+  appearance: toolbarbutton-dropdown;
+  width: 12px;
+  height: 12px;
+}
+
+/* Root View */
+#placesView {
+  background-color: Window;
+}
+
+/* Info box */
+#detailsDeck {
+  padding: 5px;
+}
+
+#infoBoxExpanderLabel {
+  padding-inline-start: 2px;
+}
+
+#searchModifiers {
+  padding-right: 3px;
+}
+
+#saveSearch {
+  list-style-image: url("moz-icon://stock/gtk-save?size=menu");
+}
+
+/**** menuitem stock icons ****/
+#orgClose {
+  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+}
+
+#fileImport {
+  list-style-image: url("moz-icon://stock/gtk-revert-to-saved?size=menu");
+}
+
+#fileExport {
+  list-style-image: url("moz-icon://stock/gtk-save-as?size=menu");
+}
+
+/**
+ * Downloads pane
+ */
+
+#clearDownloadsButton > .toolbarbutton-icon {
+  display: none;
+}
+
+
+#placesToolbox,
+#placesToolbar {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #06101b !important;
+  background-image: linear-gradient(to bottom, #142f50, #071421 65%, #040a11) !important;
+  color: #e8f4ff !important;
+  border: 0 !important;
+  border-bottom: 1px solid #4c91d3 !important;
+}
+
+#placesToolbar {
+  padding: 3px 6px 3px 6px !important;
+}
+
+#placesToolbar > toolbarbutton,
+#placesMenu > menu {
+  color: #e8f4ff !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.9) !important;
+}
+
+#placesToolbar > toolbarbutton:not([disabled="true"]):hover,
+#placesMenu > menu:hover,
+#placesMenu > menu[open="true"] {
+  background-color: rgba(85,160,230,.25) !important;
+  background-image: linear-gradient(to bottom, rgba(112,190,255,.35), rgba(16,73,130,.35)) !important;
+  border-color: rgba(125,200,255,.75) !important;
+  color: #ffffff !important;
+}
+
+/* Back / Forward buttons in the Library toolbar: do not rely on moz-icon GTK names. */
+#placesToolbar > #back-button,
+#placesToolbar > #forward-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool-main-toolbar-small.png") !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+}
+
+#placesToolbar > #back-button {
+  -moz-image-region: rect(0px, 24px, 24px, 0px) !important;
+}
+
+#placesToolbar > #forward-button {
+  -moz-image-region: rect(0px, 48px, 24px, 24px) !important;
+}
+
+#placesToolbar > #back-button:hover:not([disabled="true"]) {
+  -moz-image-region: rect(24px, 24px, 48px, 0px) !important;
+}
+
+#placesToolbar > #forward-button:hover:not([disabled="true"]) {
+  -moz-image-region: rect(24px, 48px, 48px, 24px) !important;
+}
+
+#placesToolbar > #back-button[disabled="true"] {
+  -moz-image-region: rect(48px, 24px, 72px, 0px) !important;
+  opacity: .75 !important;
+}
+
+#placesToolbar > #forward-button[disabled="true"] {
+  -moz-image-region: rect(48px, 48px, 72px, 24px) !important;
+  opacity: .75 !important;
+}
+
+#placesToolbar > #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+#placesToolbar > #forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+  transform: scaleX(-1);
+}
+
+#placesToolbar > #back-button > .toolbarbutton-icon,
+#placesToolbar > #forward-button > .toolbarbutton-icon {
+  width: 24px !important;
+  height: 24px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Organize menu dropmarker. The Windows native toolbarbutton-dropdown sometimes
+ * does not draw here, so paint the arrow on the text box and suppress the native grippy.
+ */
+#placesMenu {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: none !important;
+  margin-inline-start: 4px !important;
+}
+
+#placesMenu > menu {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: 1px solid transparent !important;
+  border-radius: 2px !important;
+  padding: 2px 5px !important;
+  background: transparent !important;
+}
+
+#placesMenu > menu > .menubar-text {
+  padding-inline-end: 13px !important;
+  background-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+}
+
+#placesMenu > menu > .menubar-text:-moz-locale-dir(rtl) {
+  padding-inline-start: 13px !important;
+  padding-inline-end: 0 !important;
+  background-position: left center !important;
+}
+
+#placesMenu > menu > .menubar-right {
+  display: none !important;
+}
+
+#clearDownloadsButton {
+  color: #dfefff !important;
+}
+
+
+#searchFilter .textbox-search-icon,
+#searchFilter > .textbox-search-icon,
+#searchFilter .textbox-search-icons .textbox-search-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Search.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+#searchFilter .textbox-search-icon:hover,
+#searchFilter > .textbox-search-icon:hover,
+#searchFilter .textbox-search-icons .textbox-search-icon:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
+}
+
+
+menupopup,
+popup:not(tooltip):not(panel) {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+  border: 1px solid #7f8ea1 !important;
+  padding: 1px !important;
+  box-shadow: none !important;
+}
+
+menupopup > menu,
+popup > menu,
+menupopup > menuitem,
+popup > menuitem {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  text-shadow: none !important;
+}
+
+menu[disabled="true"],
+menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+  color: #8e8e8e !important;
+}
+
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #ffffff !important;
+}
+
+menupopup > menu[_moz-menuactive="true"][disabled="true"],
+menupopup > menuitem[_moz-menuactive="true"][disabled="true"],
+popup > menu[_moz-menuactive="true"][disabled="true"],
+popup > menuitem[_moz-menuactive="true"][disabled="true"] {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  border-color: #02236c !important;
+  -moz-border-radius: 3px !important;
+  color: #8e8e8e !important;
+}
+
+.menu-text,
+.menu-iconic-text,
+.menu-accel,
+.menu-iconic-accel,
+.menubar-text,
+.menu-right,
+.menu-iconic-left,
+.menu-iconic-icon {
+  color: inherit !important;
+}
+
+.menu-right {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow.png") !important;
+}
+.menu-right[_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover.png") !important;
+}
+.menu-right[disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled.png") !important;
+}
+.menu-right[chromedir="rtl"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-rtl.png") !important;
+}
+.menu-right[chromedir="rtl"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover-rtl.png") !important;
+}
+.menu-right[chromedir="rtl"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled-rtl.png") !important;
+}
+
+menuitem[checked="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check.png") !important;
+}
+menuitem[checked="true"][disabled="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-dis.png") !important;
+}
+menuitem:not([disabled="true"])[checked="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-hov.png") !important;
+}
+menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio.png") !important;
+}
+menuitem:not([disabled="true"])[checked="true"][type="radio"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio-hover.png") !important;
+}
+
+menuseparator {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 1px !important;
+  border: 0 !important;
+  margin: 1px 0 !important;
+  background: #8aa0b8 !important;
+}

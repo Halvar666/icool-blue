@@ -1,0 +1,514 @@
+@import url("chrome://global/skin/");
+
+/* View buttons */
+#viewGroup > radio {
+  list-style-image: url("chrome://browser/skin/pageInfo.png");
+  -moz-box-orient: vertical;
+  -moz-box-align: center;
+  appearance: none;
+  min-width: 4.5em;
+  margin: 0;
+  padding: 3px;
+  color: -moz-FieldText;
+}
+
+#viewGroup > radio[selected="true"] {
+  background-color: Highlight;
+  color: HighlightText; 
+}
+
+#topBar {
+  appearance: listbox;
+  margin: 8px 8px 0;
+}
+
+#generalTab {
+  -moz-image-region: rect(0px, 32px, 32px, 0px)
+}
+
+#mediaTab {
+  -moz-image-region: rect(0px, 64px, 32px, 32px)
+}
+
+#feedTab {
+  -moz-image-region: rect(0px, 96px, 32px, 64px)
+}
+
+#permTab {
+  -moz-image-region: rect(0px, 128px, 32px, 96px)
+}
+
+#securityTab {
+  -moz-image-region: rect(0px, 160px, 32px, 128px)
+}
+
+#mainDeck {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+deck {
+  padding: 10px 10px 10px 10px;
+}
+
+/* Misc */
+tree {
+  margin: .5em;
+}
+
+.gridSeparator {
+  width: .5em;
+}
+
+textbox {
+  background: transparent !important;
+  border: none;
+  padding: 0px;
+  margin-top: 1px;
+  appearance: none;
+}
+
+textbox.header {
+  margin-inline-start: 0;
+}
+
+.iframe {
+  margin: .5em;
+  background: white;
+  overflow: auto;
+}
+
+.fixedsize {
+  height: 8.5em;
+}
+
+textbox[disabled] {
+  font-style: italic;
+}
+
+/* General Tab */
+#generalPanel > #titletext {
+  margin-inline-start: 5px;
+}
+
+groupbox.collapsable caption .caption-icon { 
+  width: 9px;
+  height: 9px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-inline-start: 1px;
+  margin-inline-end: 3px;
+  background-image: url("chrome://global/skin/tree/twisty-open.png");
+}
+
+groupbox.collapsable[closed="true"] {
+  border: none;
+}
+
+groupbox.collapsable[closed="true"] caption .caption-icon { 
+  background-image: url("chrome://global/skin/tree/twisty-clsd.png");
+}
+
+groupbox tree { 
+  margin: 0;
+  border: none;
+}
+
+groupbox.treebox .groupbox-body { 
+  margin-inline-start: 5px;
+  margin-inline-end: 1px;
+  padding-top: 0;
+}
+
+#securityBox description { 
+  margin-inline-start: 10px;
+}
+
+#general-security-identity {
+  white-space: pre-wrap;
+  line-height: 2em;
+}
+
+/* Media Tab */
+#imagetree {
+  min-height: 10em;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+#mediaSplitter {
+  appearance: none;
+  height: .8em;
+}
+
+#mediaGrid {
+  min-height: 9em;
+}
+
+#mediaLabelColumn {
+  min-width: 10em;
+}
+
+#thepreviewimage {
+  margin: 1em;
+}
+
+treechildren::-moz-tree-cell-text(broken) {
+  font-style: italic;
+  color: graytext;
+}
+
+#mediaPreviewBox .inset {
+  appearance: listbox;
+  margin-bottom: 0;  
+}
+
+/* Feeds Tab */
+#feedPanel {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#feedtree {
+  margin-bottom: 0px;
+}
+
+#feedListbox richlistitem {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-inline-start: 7px;
+  padding-inline-end: 7px;
+  min-height: 25px;
+  border-bottom: 1px dotted #C0C0C0;
+  color: -moz-FieldText;
+}
+
+#feedListbox richlistitem[selected="true"] {
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
+}
+
+#feedListbox {
+  margin-bottom: 0;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+}
+
+.feedTitle { 
+  font-weight: bold;
+}
+
+/* Permissions Tab */
+#permPanel {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+#permList {
+  appearance: listbox;
+  margin-top: .5em;
+  overflow: auto;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+  background-color: -moz-field;
+  color: -moz-FieldText;
+}
+
+.permission {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-inline-start: 7px;
+  padding-inline-end: 7px;
+  min-height: 25px;
+  border-bottom: 1px dotted #C0C0C0;
+}
+
+.permissionLabel {
+  font-weight: bold;
+}
+
+.permission:hover {
+  background-color: -moz-dialog;
+  color: -moz-DialogText;
+}
+
+/* Security Tab */
+#securityPanel .caption-icon {
+  display: none;
+}
+
+#securityPanel .header {
+  font-size: 120%;
+}
+ 
+#securityPanel .fieldLabel {
+  margin: 2px 10px 3px 10px;
+}
+
+#securityPanel .fieldValue {
+  font-weight: bold;
+  margin: 2px 10px 0px 10px;
+}
+
+/* Icons for context menus */
+menuitem:not([type]) {
+  -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
+}
+
+#menu_selectall {
+  list-style-image: url("moz-icon://stock/gtk-select-all?size=menu");
+}
+
+#menu_copy {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
+}
+
+
+/* Main window and shell */
+#main-window,
+window#main-window {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #08111d !important;
+  color: #ffffff !important;
+}
+
+#topBar,
+.viewGroupWrapper {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 8px 8px 0 8px !important;
+  padding: 4px 6px !important;
+  border: 1px solid #7f8ea1 !important;
+  border-bottom: 0 !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d) !important;
+  color: #ffffff !important;
+}
+
+#viewGroup {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding-inline-start: 0 !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+#viewGroup > radio {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  list-style-image: url("chrome://browser/skin/pageInfo.png") !important;
+  -moz-box-orient: vertical;
+  -moz-box-align: center;
+  min-width: 4.5em;
+  margin: 0 1px !important;
+  padding: 5px 6px 2px 6px !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+#viewGroup > radio:hover {
+  background-color: #123965 !important;
+  background-image: linear-gradient(to bottom, #205c95, #0b2f55) !important;
+  border-color: #517aa5 !important;
+  color: #ffffff !important;
+}
+
+#viewGroup > radio[selected="true"] {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Original iCool sprite is 160x64: row 1 normal, row 2 hover/selected. */
+#generalTab {
+  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+}
+#generalTab:hover,
+#generalTab[selected="true"] {
+  -moz-image-region: rect(32px, 32px, 64px, 0px) !important;
+}
+
+#mediaTab {
+  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+}
+#mediaTab:hover,
+#mediaTab[selected="true"] {
+  -moz-image-region: rect(32px, 64px, 64px, 32px) !important;
+}
+
+#feedTab {
+  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+}
+#feedTab:hover,
+#feedTab[selected="true"] {
+  -moz-image-region: rect(32px, 96px, 64px, 64px) !important;
+}
+
+#permTab {
+  -moz-image-region: rect(0px, 128px, 32px, 96px) !important;
+}
+#permTab:hover,
+#permTab[selected="true"] {
+  -moz-image-region: rect(32px, 128px, 64px, 96px) !important;
+}
+
+#securityTab {
+  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
+}
+#securityTab:hover,
+#securityTab[selected="true"] {
+  -moz-image-region: rect(32px, 160px, 64px, 128px) !important;
+}
+
+/* Main content shell */
+#mainDeck,
+deck#mainDeck {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 8px 8px 8px !important;
+  padding: 10px !important;
+  border: 1px solid #7f8ea1 !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d 110px) !important;
+  color: #ffffff !important;
+}
+
+#generalPanel,
+#mediaPanel,
+#feedPanel,
+#permPanel,
+#securityPanel {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Text and read-only fields */
+label,
+description,
+caption,
+caption > label,
+textbox,
+textbox.header,
+#titletext,
+.header,
+.fieldLabel,
+.fieldValue,
+#general-security-identity,
+#general-security-privacy {
+  color: #ffffff !important;
+}
+
+textbox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+textbox .textbox-input,
+textbox > .textbox-input-box,
+textbox > .textbox-input-box > html|input {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+textbox[disabled="true"],
+textbox[disabled] {
+  color: #9ca8b6 !important;
+}
+
+/* Groupboxes within Page Info */
+groupbox {
+  border: 1px solid #7f8ea1 !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+groupbox > caption {
+  background-color: #08111d !important;
+  color: #ffffff !important;
+}
+
+/* The security box in General tab should no longer look stock-light. */
+#securityBox,
+#metaTags,
+#mediaPreviewBox,
+#mediaPreviewBox .inset {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: #7f8ea1 !important;
+}
+
+#securityDetailsButtonBox {
+  background: transparent !important;
+}
+
+/* Buttons follow the dark popup/add-ons button look. */
+button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 24px !important;
+  padding: 2px 10px !important;
+  border: 1px solid #6f6f6f !important;
+  border-radius: 0 !important;
+  background: linear-gradient(#2a2a2a, #101010) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15) !important;
+}
+
+button:hover {
+  background: linear-gradient(#3d3d3d, #181818) !important;
+  border-color: #8e8e8e !important;
+}
+
+button:hover:active {
+  background: linear-gradient(#0f0f0f, #2c2c2c) !important;
+}
+
+/* Keep preview iframes/content areas readable. */
+.iframe,
+#thepreviewimage {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+
+#feedListbox,
+#permList {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: 1px solid #7f8ea1 !important;
+  background-color: #08111d !important;
+  color: #ffffff !important;
+}
+
+#feedListbox richlistitem,
+.permission,
+#permList > vbox {
+  color: #ffffff !important;
+  border-bottom-color: rgba(127, 142, 161, 0.45) !important;
+}
+
+#feedListbox richlistitem[selected="true"],
+.permission:hover,
+#permList > vbox:hover {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+}
+
+#permList > vbox > label,
+.permissionLabel {
+  color: #ffffff !important;
+}

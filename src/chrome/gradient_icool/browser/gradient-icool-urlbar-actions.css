@@ -1,0 +1,38 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Bookmark star icons in the location bar.  Only replace the artwork, not geometry. */
+#star-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool/actions/starPage.png") !important;
+  -moz-image-region: auto !important;
+}
+
+#star-button[starred="true"] {
+  list-style-image: url("chrome://browser/skin/gradient-icool/actions/pageStarred.png") !important;
+  -moz-image-region: auto !important;
+}
+
+/* Feed and popup-blocker indicators: use original iCool artwork. */
+#ub-feed-button,
+#feed-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool/actions/page-livemarks.png") !important;
+  -moz-image-region: auto !important;
+}
+
+#page-report-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool/actions/Info.png") !important;
+  -moz-image-region: auto !important;
+}
+
+/* Identity popup large icon. Do not touch the location-bar identity layout. */
+#identity-popup-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/actions/identity.png") !important;
+  -moz-image-region: rect(0px, 48px, 48px, 0px) !important;
+}
+
+#identity-popup.verifiedDomain > #identity-popup-container > #identity-popup-icon {
+  -moz-image-region: rect(48px, 48px, 96px, 0px) !important;
+}
+
+#identity-popup.verifiedIdentity > #identity-popup-container > #identity-popup-icon {
+  -moz-image-region: rect(96px, 48px, 144px, 0px) !important;
+}

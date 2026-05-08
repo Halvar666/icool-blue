@@ -1,0 +1,403 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Sidebars */
+.sidebar-placesTree {
+  margin: 0;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(leaf) ,
+.sidebar-placesTreechildren::-moz-tree-image(leaf) {
+  cursor: pointer;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(leaf, hover) {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(separator) {
+  cursor: default;
+}
+
+/* Trees */
+treechildren::-moz-tree-image(title) {
+  padding-right: 2px;
+  margin: 0px 2px;
+  width: 16px;
+  height: 16px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+treechildren::-moz-tree-image(title, livemarkItem) {
+  list-style-image: url("chrome://browser/skin/places/livemark-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+treechildren::-moz-tree-image(title, livemarkItem, visited) {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+treechildren::-moz-tree-image(title, separator) {
+  list-style-image: none;
+  width: 0;
+  height: 0;
+}
+
+treechildren::-moz-tree-image(title, container) {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+}
+
+treechildren::-moz-tree-image(title, container, livemark) {
+  list-style-image: url("chrome://browser/skin/feeds/feedIcon16.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_AllBookmarks) {
+  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  -moz-image-region: rect(0px 48px 16px 32px);
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar) {
+  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu) {
+  list-style-image: url("chrome://browser/skin/places/bookmarksMenu.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks) {
+  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png");
+  -moz-image-region: auto;
+}
+
+/* query-nodes should be styled even if they're not expandable */
+treechildren::-moz-tree-image(title, query) {
+  list-style-image: url("chrome://browser/skin/places/query.png");
+}
+
+treechildren::-moz-tree-image(query, OrganizerQuery_Downloads) {
+  list-style-image: url("chrome://browser/skin/places/downloads.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(title, query, tagContainer),
+treechildren::-moz-tree-image(query, OrganizerQuery_Tags) {
+  list-style-image: url("chrome://browser/skin/places/tag.png");
+}
+
+/* calendar icon for folders grouping items by date */
+treechildren::-moz-tree-image(title, query, dayContainer) {
+  list-style-image: url("chrome://browser/skin/places/calendar.png");
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer) {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer, open) {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+}
+
+treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
+  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
+/* We want some queries to look like ordinary folders. This must come
+   after the (title, query) selector, or it would get overridden. */
+treechildren::-moz-tree-image(title, query, folder) {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+}
+
+treechildren::-moz-tree-image(cutting) {
+  opacity: 0.5;
+}
+
+treechildren::-moz-tree-cell-text(cutting) {
+  opacity: 0.7;
+}
+
+/**** menuitem stock icons ****/
+menuitem:not([type]) {
+  -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
+}
+
+menuitem[command="cmd_cut"],
+menuitem[cmd="cmd_cut"] {
+  list-style-image: url("moz-icon://stock/gtk-cut?size=menu");
+}
+
+menuitem[command="cmd_cut"][disabled],
+menuitem[cmd="cmd_cut"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-cut?size=menu&state=disabled");
+}
+
+menuitem[command="cmd_copy"],
+menuitem[cmd="cmd_copy"] {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
+}
+
+menuitem[command="cmd_copy"][disabled],
+menuitem[cmd="cmd_copy"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu&state=disabled");
+}
+
+menuitem[command="cmd_paste"],
+menuitem[cmd="cmd_paste"] {
+  list-style-image: url("moz-icon://stock/gtk-paste?size=menu");
+}
+
+menuitem[command="cmd_paste"][disabled],
+menuitem[cmd="cmd_paste"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
+}
+
+menuitem[command="cmd_delete"],
+menuitem[cmd="cmd_delete"] {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=menu");
+}
+
+menuitem[command="cmd_delete"][disabled],
+menuitem[cmd="cmd_delete"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=menu&state=disabled");
+}
+
+menuitem[command="cmd_undo"],
+menuitem[cmd="cmd_undo"] {
+  list-style-image: url("moz-icon://stock/gtk-undo?size=menu");
+}
+
+menuitem[command="cmd_undo"][disabled],
+menuitem[cmd="cmd_undo"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-undo?size=menu&state=disabled");
+}
+
+menuitem[command="cmd_redo"] {
+  list-style-image: url("moz-icon://stock/gtk-redo?size=menu");
+}
+
+menuitem[command="cmd_redo"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-redo?size=menu&state=disabled");
+}
+
+menuitem[command="cmd_selectAll"],
+menuitem[cmd="cmd_selectAll"] {
+  list-style-image: url("moz-icon://stock/gtk-select-all?size=menu");
+}
+
+menuitem[command="cmd_selectAll"][disabled],
+menuitem[cmd="cmd_selectAll"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-select-all?size=menu&state=disabled");
+}
+
+#placesContext_open\:newwindow,
+menuitem[command="placesCmd_open:window"] {
+  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  -moz-image-region: rect(0px 80px 16px 64px);
+}
+
+#placesContext_open\:newprivatewindow,
+menuitem[command="placesCmd_open:privatewindow"] {
+  list-style-image: url("chrome://browser/skin/Privacy-16.png");
+}
+
+#placesContext_open\:newtab,
+menuitem[command="placesCmd_open:tab"] {
+  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  -moz-image-region: rect(0px 64px 16px 48px);
+}
+
+#placesContext_show\:info,
+menuitem[command="placesCmd_show:info"] {
+  list-style-image: url("moz-icon://stock/gtk-properties?size=menu");
+}
+
+#placesContext_reload {
+  list-style-image: url("moz-icon://stock/gtk-refresh?size=menu");
+}
+
+
+.sidebar-placesTreechildren::-moz-tree-image(title, container),
+.sidebar-placesTreechildren::-moz-tree-image(title, query, folder),
+.sidebar-placesTreechildren::-moz-tree-image(title, query, hostContainer),
+.sidebar-placesTreechildren::-moz-tree-image(title, query, hostContainer, open) {
+  list-style-image: url("chrome://browser/skin/gradient-icool/places/Bookmarks-folder.png") !important;
+  -moz-image-region: auto !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-image(title, container, livemark) {
+  list-style-image: url("chrome://browser/skin/gradient-icool/places/livemark-folder.png") !important;
+  -moz-image-region: auto !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-image(title, livemarkItem) {
+  list-style-image: url("chrome://browser/skin/gradient-icool/places/livemark-item.png") !important;
+  -moz-image-region: auto !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-image(title, livemarkItem, visited) {
+  list-style-image: url("chrome://browser/skin/gradient-icool/places/livemark-item.png") !important;
+  -moz-image-region: auto !important;
+}
+
+
+#bookmarksPanel,
+#history-panel {
+  background-color: #07101b !important;
+  color: #dcecff !important;
+}
+
+#bookmarksPanel #sidebar-search-container,
+#history-panel #sidebar-search-container {
+  background-color: #07101b !important;
+  color: #dcecff !important;
+  border-bottom: 1px solid #1e4772 !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+#bookmarksPanel #sidebar-search-label,
+#history-panel #sidebar-search-label {
+  color: #dcecff !important;
+}
+
+#bookmarksPanel .sidebar-placesTree,
+#history-panel .sidebar-placesTree,
+#bookmarksPanel #bookmarks-view,
+#history-panel #historyTree {
+  -moz-appearance: none !important;
+  background-color: #07101b !important;
+  color: #dcecff !important;
+  border-top: 1px solid #1e4772 !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren,
+#history-panel .sidebar-placesTreechildren,
+#bookmarksPanel #bookmarks-view-children,
+#history-panel #historyTreeChildren {
+  background-color: #07101b !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-row,
+#history-panel .sidebar-placesTreechildren::-moz-tree-row {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-row(hover),
+#history-panel .sidebar-placesTreechildren::-moz-tree-row(hover) {
+  background-color: #102a49 !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-row(selected),
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-row(current, focus),
+#history-panel .sidebar-placesTreechildren::-moz-tree-row(selected),
+#history-panel .sidebar-placesTreechildren::-moz-tree-row(current, focus) {
+  background-color: #1d78c8 !important;
+  background-image: linear-gradient(to bottom, #3398ef, #095aab) !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-cell-text,
+#history-panel .sidebar-placesTreechildren::-moz-tree-cell-text {
+  color: #dcecff !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-cell-text(hover),
+#history-panel .sidebar-placesTreechildren::-moz-tree-cell-text(hover),
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-cell-text(selected),
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-cell-text(current, focus),
+#history-panel .sidebar-placesTreechildren::-moz-tree-cell-text(selected),
+#history-panel .sidebar-placesTreechildren::-moz-tree-cell-text(current, focus) {
+  color: #ffffff !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-cell-text(separator),
+#history-panel .sidebar-placesTreechildren::-moz-tree-cell-text(separator) {
+  color: #8ea7c6 !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-twisty,
+#history-panel .sidebar-placesTreechildren::-moz-tree-twisty {
+  list-style-image: url("chrome://browser/skin/gradient-icool/sidebar/twisty-clsd.png") !important;
+  width: 9px !important;
+  padding-inline-end: 2px !important;
+}
+
+#bookmarksPanel .sidebar-placesTreechildren::-moz-tree-twisty(open),
+#history-panel .sidebar-placesTreechildren::-moz-tree-twisty(open) {
+  list-style-image: url("chrome://browser/skin/gradient-icool/sidebar/twisty-open.png") !important;
+}
+
+
+#bookmarksPanel #search-box,
+#history-panel #search-box {
+  -moz-appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: linear-gradient(to bottom, #ffffff, #e9eef7) !important;
+  color: #000000 !important;
+  border: 1px solid #2e5f9b !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .35) !important;
+}
+
+#bookmarksPanel #search-box[focused="true"],
+#history-panel #search-box[focused="true"],
+#bookmarksPanel #search-box:focus,
+#history-panel #search-box:focus {
+  border-color: #63b8ff !important;
+  box-shadow: 0 0 3px rgba(64, 158, 255, .85), inset 0 1px 2px rgba(0, 0, 0, .30) !important;
+}
+
+#bookmarksPanel #search-box > .textbox-input-box,
+#history-panel #search-box > .textbox-input-box,
+#bookmarksPanel #search-box .textbox-input-box,
+#history-panel #search-box .textbox-input-box {
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+#bookmarksPanel #search-box .textbox-input,
+#history-panel #search-box .textbox-input {
+  color: #000000 !important;
+}
+
+#bookmarksPanel #search-box .textbox-search-icon,
+#history-panel #search-box .textbox-search-icon,
+#bookmarksPanel #search-box > .textbox-search-icon,
+#history-panel #search-box > .textbox-search-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Search.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+#bookmarksPanel #search-box .textbox-search-clear,
+#history-panel #search-box .textbox-search-clear,
+#bookmarksPanel #search-box > .textbox-search-clear,
+#history-panel #search-box > .textbox-search-clear {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-normal.png") !important;
+  -moz-image-region: auto !important;
+}
+
+#bookmarksPanel #search-box .textbox-search-clear:hover,
+#history-panel #search-box .textbox-search-clear:hover,
+#bookmarksPanel #search-box > .textbox-search-clear:hover,
+#history-panel #search-box > .textbox-search-clear:hover {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-hover.png") !important;
+}
+
+#history-panel #viewButton {
+  -moz-appearance: none !important;
+  background-color: #101923 !important;
+  background-image: linear-gradient(to bottom, #24364d, #080c11) !important;
+  color: #ffffff !important;
+  border: 1px solid #2e5f9b !important;
+  border-radius: 2px !important;
+}
+
+#history-panel #viewButton:hover {
+  background-image: linear-gradient(to bottom, #315783, #0a1725) !important;
+  border-color: #63b8ff !important;
+}

@@ -1,0 +1,102 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+/* ::::: tabs ::::: */
+
+.tabs-left,
+.tabs-right {
+  border-bottom: 0 !important;
+}
+
+/* ::::: tabpanels ::::: */
+
+tabpanels {
+  -moz-appearance: none !important;
+  border: 0 !important;
+  padding: 8px !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d 90px) !important;
+  color: #ffffff !important;
+  font-family: "Segoe UI", "DejaVu Sans", sans-serif, Arial !important;
+}
+
+tabpanel {
+  -moz-appearance: none !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+/* ::::: tab ::::: */
+
+tab {
+  -moz-appearance: none !important;
+  margin: 0 3px !important;
+  padding: 1px 8px 2px 8px !important;
+  border: 1px solid transparent !important;
+  border-radius: 3px 3px 0 0 !important;
+  background-color: #0d1624 !important;
+  background-image: linear-gradient(to bottom, #18283d, #0a111c) !important;
+  color: #d7e7fb !important;
+  font-family: "Segoe UI", "DejaVu Sans", sans-serif, Arial !important;
+}
+
+.tab-text {
+  margin: 0 !important;
+  color: inherit !important;
+}
+
+tab:hover {
+  background-color: #123965 !important;
+  background-image: linear-gradient(to bottom, #205c95, #0b2f55) !important;
+  border-color: #517aa5 !important;
+  color: #ffffff !important;
+}
+
+tab[selected="true"] {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+  border-color: #8eb7e8 !important;
+  color: #ffffff !important;
+  -moz-user-focus: normal;
+}
+
+tab[disabled="true"] {
+  color: #6f7f90 !important;
+}
+
+tab:focus > .tab-middle {
+  outline: 0 !important;
+}
+
+tab[beforeselected="true"],
+tab[afterselected="true"][chromedir="rtl"],
+tab[afterselected="true"],
+tab[beforeselected="true"][chromedir="rtl"] {
+  -moz-appearance: none !important;
+}
+
+/* Tabs attached to the bottom of a panel. Keep simple and dark. */
+.tab-bottom {
+  margin-top: 0 !important;
+  margin-bottom: 2px !important;
+  padding: 2px 8px 1px 8px !important;
+  border: 1px solid #4f647c !important;
+  border-top: 0 !important;
+  border-radius: 0 0 2px 2px !important;
+  background-color: #0d1624 !important;
+  color: #d7e7fb !important;
+}
+
+.tab-bottom[selected="true"] {
+  margin-bottom: 0 !important;
+  padding: 4px 8px 1px 8px !important;
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #0b4f97, #2e7dc7) !important;
+  color: #ffffff !important;
+}
+
+.tabs-bottom > .tabs-left,
+.tabs-bottom > .tabs-right {
+  border-top: 1px solid #4f647c !important;
+  border-bottom: none !important;
+}

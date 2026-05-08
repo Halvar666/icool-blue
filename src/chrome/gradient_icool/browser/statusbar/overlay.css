@@ -1,0 +1,183 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* skipped missing include: ../../shared/statusbar/overlay.css */
+
+/*
+ * General
+ */
+
+#status4evar-status-text,
+#status4evar-progress-bar
+{
+	margin: 0px 4px;
+}
+
+/*
+ * Download status
+ */
+
+#status4evar-download-progress-bar
+{
+	height: 6px;
+}
+
+toolbar[iconsize="small"] #status4evar-download-progress-bar
+{
+	height: 4px;
+}
+
+#status4evar-download-button[attention] #status4evar-download-icon
+{
+	background-image: url("chrome://browser/skin/downloads/download-glow.png");
+}
+
+#status4evar-download-button #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 24, 24, 0) center no-repeat;
+	min-width: 24px;
+	min-height: 24px;
+}
+
+toolbar[iconsize="small"] #status4evar-download-button #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"), 0, 16, 16, 0) center no-repeat;
+	min-width: 16px;
+	min-height: 16px;
+}
+
+toolbar[iconsize="small"] > #status4evar-download-button[attention] #status4evar-download-icon {
+	background-image: url("chrome://browser/skin/downloads/download-glow-small.png");
+}
+
+toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
+{
+	margin: 0px 2px !important;
+	margin-top: -1px !important;
+	margin-inline-start: 4px !important;
+}
+
+/*
+ * Splitter
+ */
+
+splitter.status4evar-status-splitter
+{
+	width: 8px;
+	margin: 0px -4px;
+}
+
+/*
+ * Location bar
+ */
+
+#urlbar-progress-alt
+{
+	margin: -1px;
+}
+
+#notification-popup-box
+{
+	margin-inline-start: -1px;
+}
+
+#urlbar .urlbar-over-link-box
+{
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+/*
+ * Add-on bar
+ */
+
+#browser-bottombox[s4eboarder="true"] :-moz-any(#status4evar-status-bar, #addon-bar)
+{
+	appearance: none;
+}
+
+#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"])
+{
+	box-shadow: none !important;
+	border: none !important;
+	border-top: 2px solid !important;
+	-moz-border-top-colors: ThreeDShadow ThreeDHighlight !important;
+}
+
+#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"]) ~ *
+{
+	border: none !important;
+}
+
+
+#status4evar-options-button {
+	list-style-image: url("chrome://browser/skin/statusbar/pms24.png") !important;
+}
+
+toolbar[iconsize="small"] #status4evar-options-button {
+	list-style-image: url("chrome://browser/skin/statusbar/pms16.png") !important;
+}
+
+
+/* Restore the missing shared/statusbar rule for Customize Toolbar. */
+#wrapper-status4evar-download-button toolbarbutton {
+	visibility: visible !important;
+}
+
+/* Do not paint preview icons on the wrapper itself. */
+#wrapper-status4evar-download-button,
+#wrapper-status4evar-download-button > .toolbarpaletteitem-box,
+toolbarpaletteitem#wrapper-status4evar-download-button,
+toolbarpaletteitem[id="wrapper-status4evar-download-button"] > .toolbarpaletteitem-box {
+	background-image: none !important;
+	background: transparent !important;
+}
+
+/* Keep the toolbarbutton itself logic-neutral: no list-style icon here. */
+#status4evar-download-button {
+	list-style-image: none !important;
+	-moz-image-region: auto !important;
+}
+
+/* Paint the actual Status-4-Evar download icon exactly where stock paints it. */
+#status4evar-download-button #status4evar-download-icon {
+	background: -moz-image-rect(url("chrome://browser/skin/gradient-icool-main-toolbar.png"), 0, 192, 32, 160) center no-repeat !important;
+	min-width: 32px !important;
+	min-height: 32px !important;
+	width: 32px !important;
+	height: 32px !important;
+}
+
+/* Use the same iCool download artwork for attention state; visibility is still
+ * controlled by Status-4-Evar runtime attributes, not by the theme.
+ */
+#status4evar-download-button[attention] #status4evar-download-icon {
+	background: -moz-image-rect(url("chrome://browser/skin/gradient-icool-main-toolbar.png"), 0, 192, 32, 160) center no-repeat !important;
+}
+
+
+toolbar[iconsize="small"] #status4evar-download-button #status4evar-download-icon {
+	background: -moz-image-rect(url("chrome://browser/skin/gradient-icool-main-toolbar-small.png"), 0, 144, 24, 120) center no-repeat !important;
+	min-width: 24px !important;
+	min-height: 24px !important;
+	width: 24px !important;
+	height: 24px !important;
+}
+
+toolbar[iconsize="small"] > #status4evar-download-button[attention] #status4evar-download-icon,
+toolbar[iconsize="small"] #status4evar-download-button[attention] #status4evar-download-icon {
+	background: -moz-image-rect(url("chrome://browser/skin/gradient-icool-main-toolbar-small.png"), 0, 144, 24, 120) center no-repeat !important;
+}
+
+
+#status4evar-status-widget,
+#status4evar-progress-widget {
+  -moz-box-align: center !important;
+}
+
+#wrapper-status4evar-progress-widget progressmeter {
+  visibility: visible !important;
+}

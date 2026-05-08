@@ -1,0 +1,73 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* URL bar and search bar: preserve stock height/layout, add iCool-like white field and blue focus accent. */
+#urlbar,
+.searchbar-textbox {
+  -moz-appearance: none !important;
+  color: #111 !important;
+  background-color: #fff !important;
+  border: 1px solid #707070 !important;
+  border-radius: 3px !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.22) !important;
+}
+
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
+  border-color: #6fa7e8 !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.18), 0 0 2px rgba(80,150,235,.85) !important;
+}
+
+#urlbar:-moz-lwtheme,
+.searchbar-textbox:-moz-lwtheme {
+  background-color: #fff !important;
+}
+
+#urlbar .textbox-input,
+.searchbar-textbox .textbox-input {
+  color: #111 !important;
+}
+
+/* Keep identity box and URL icons structurally stock, but remove bright native bevels on our dark toolbar. */
+#identity-box,
+#urlbar-icons,
+#notification-popup-box {
+  background-color: transparent !important;
+}
+
+/* Original Gradient iCool go arrow. */
+#urlbar-go-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Go-arrow.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+#urlbar-go-button:hover,
+#urlbar-go-button:hover:active {
+  -moz-image-region: rect(16px, 16px, 32px, 0px) !important;
+}
+
+#urlbar-go-button:-moz-locale-dir(rtl) {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Go-arrow-rtl.png") !important;
+}
+
+/* Original Gradient iCool search-go icon, without importing the old Firefox 3 searchbar geometry. */
+.search-go-button {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Search.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+.search-go-button:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
+}
+
+.search-go-button:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px) !important;
+}
+
+.search-go-button[disabled="true"] {
+  -moz-image-region: rect(0px, 64px, 16px, 48px) !important;
+}
+
+.searchbar-engine-button[addengines="true"] > .button-box > .button-icon,
+.searchbar-engine-button[addengines="true"] > .button-box > .box-inherit > .button-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Search-addengines.png") !important;
+}

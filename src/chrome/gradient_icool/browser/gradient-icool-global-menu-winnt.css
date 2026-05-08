@@ -1,0 +1,289 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Base menu items: keep geometry close to Dark Moon/stock, but with iCool dark-menu colors. */
+menu,
+menuitem,
+menucaption,
+.splitmenu-menuitem {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  -moz-box-align: center;
+  font: menu;
+  color: #ffffff;
+  list-style-image: none;
+  -moz-image-region: auto;
+}
+
+menuitem[default="true"] {
+  font-weight: bold;
+}
+
+menu[disabled="true"],
+menuitem[disabled="true"],
+.splitmenu-menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"],
+.splitmenu-menuitem[_moz-menuactive="true"][disabled="true"] {
+  color: #8e8e8e !important;
+  text-shadow: none;
+}
+
+menuitem.spell-suggestion {
+  font-weight: bold;
+}
+
+/* Internal content. This also keeps non-iconic items such as Customize aligned
+ * with checkbox/iconic rows without a fragile one-off padding hack.
+ */
+.menu-accel,
+.menu-iconic-accel,
+.menu-text,
+.menu-iconic-text {
+  margin: 0 !important;
+  padding: 1px 0;
+  color: inherit !important;
+}
+
+.menu-text {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding-inline-start: 1.45em !important;
+}
+
+.menu-text,
+.menu-iconic-text {
+  font-weight: inherit;
+  margin-inline-start: 2px !important;
+  padding-inline-end: 2px;
+}
+
+menucaption > .menu-text,
+menucaption > .menu-iconic-text {
+  font-weight: bold;
+  padding-inline-start: 0 !important;
+}
+
+.menu-description {
+  font-style: italic;
+  color: #8e8e8e;
+  margin-inline-start: 1ex !important;
+}
+
+.menu-accel,
+.menu-iconic-accel {
+  color: inherit !important;
+  margin-inline-start: .74em !important;
+  margin-inline-end: 1.35em !important;
+}
+
+.menu-iconic-left {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-width: 1.45em;
+}
+
+.menu-iconic-icon {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  width: 16px;
+  height: 16px;
+  -moz-image-region: auto !important;
+}
+
+/* Menu arrow box. */
+.menu-right {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 0 0 6px;
+  width: 8px;
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow.png") !important;
+  -moz-image-region: auto !important;
+}
+
+.menu-right[_moz-menuactive="true"],
+menu[_moz-menuactive="true"] > .menu-right {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover.png") !important;
+}
+
+.menu-right[disabled="true"],
+menu[disabled="true"] > .menu-right {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled.png") !important;
+}
+
+.menu-right[chromedir="rtl"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-rtl.png") !important;
+}
+
+.menu-right[chromedir="rtl"][_moz-menuactive="true"],
+menu[_moz-menuactive="true"] > .menu-right[chromedir="rtl"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-hover-rtl.png") !important;
+}
+
+.menu-right[chromedir="rtl"][disabled="true"],
+menu[disabled="true"] > .menu-right[chromedir="rtl"] {
+  list-style-image: url("chrome://browser/skin/menu/Menu-arrow-disabled-rtl.png") !important;
+}
+
+.menu-right > image {
+  width: 5px;
+}
+
+/* Menubar items. */
+menubar > menu {
+  border: 2px solid transparent;
+}
+
+menubar > menu[_moz-menuactive="true"]:not([disabled="true"]) {
+  color: #ffffff !important;
+}
+
+menubar > menu[_moz-menuactive="true"][open="true"] {
+  border-width: 3px 1px 1px 3px;
+}
+
+menubar > menu:-moz-lwtheme {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border-style: none;
+}
+
+menubar > menu:-moz-lwtheme:not([disabled="true"]) {
+  color: inherit !important;
+}
+
+menubar > menu:-moz-lwtheme[_moz-menuactive="true"]:not([disabled="true"]) {
+  background-color: #065eb5;
+  color: #ffffff !important;
+  text-shadow: none;
+}
+
+menubar > menu:-moz-window-inactive {
+  color: #adadad;
+}
+
+.menubar-left {
+  color: inherit;
+}
+
+.menubar-text {
+  margin: 1px 6px 2px 6px !important;
+  color: inherit !important;
+}
+
+/* Popup menu items. */
+menupopup > menu,
+menupopup > menuitem,
+menupopup > menucaption {
+  max-width: 42em;
+}
+
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"],
+.splitmenu-menuitem[_moz-menuactive="true"] {
+  background: url("chrome://browser/skin/menu/menu_item_active_bkg.png") repeat-x top left #02236c !important;
+  color: #ffffff !important;
+}
+
+/* Menulist popups: keep them usable and non-native too. */
+menulist > menupopup > menuitem,
+menulist > menupopup > menucaption,
+menulist > menupopup > menu {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: 1px solid transparent;
+  padding: 1px 5px;
+  max-width: none;
+  font: message-box;
+  color: #ffffff;
+}
+
+menulist > menupopup > menuitem > .menu-iconic-left,
+menulist > menupopup > menucaption > .menu-iconic-left,
+menulist > menupopup > menu > .menu-iconic-left {
+  display: none;
+  padding-top: 0;
+}
+
+menulist > menupopup > menuitem > label,
+menulist > menupopup > menucaption > label,
+menulist > menupopup > menu > label {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+menulist:-moz-focusring > menupopup > menuitem[_moz-menuactive="true"] {
+  border: 1px dotted #4b4b4b;
+  background-color: #02236c;
+  color: #ffffff;
+}
+
+/* Checkbox/radio menuitems: this is the key Windows fix.
+ * Do not allow checkmenuitem/menucheckbox native painting; draw the theme image.
+ */
+menuitem[type="checkbox"],
+menuitem[checked="true"],
+menuitem[type="radio"] {
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+menuitem[type="checkbox"] > .menu-iconic-left,
+menuitem[checked="true"] > .menu-iconic-left,
+menuitem[type="radio"] > .menu-iconic-left {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-width: 1.45em;
+}
+
+menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
+  display: -moz-box !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  width: 16px !important;
+  height: 16px !important;
+  -moz-image-region: auto !important;
+  opacity: 1 !important;
+}
+
+menuitem[checked="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check.png") !important;
+}
+
+menuitem[checked="true"][disabled="true"],
+menuitem[checked="true"][disabled="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-dis.png") !important;
+}
+
+menuitem:not([disabled="true"])[checked="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-check-hov.png") !important;
+}
+
+menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio.png") !important;
+}
+
+menuitem:not([disabled="true"])[checked="true"][type="radio"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://browser/skin/menu/menu-radio-hover.png") !important;
+}
+
+/* Separators. */
+menuseparator {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 1px !important;
+  border: 0 !important;
+  margin: 1px 0 !important;
+  background: #8aa0b8 !important;
+}
+
+menuseparator > * {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  background: transparent !important;
+}

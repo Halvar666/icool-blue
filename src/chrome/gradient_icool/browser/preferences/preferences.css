@@ -1,0 +1,259 @@
+/* Global Styles */
+#BrowserPreferences radio[pane] {
+  list-style-image: url("chrome://browser/skin/preferences/Options.png"); 
+}
+
+radio[pane=paneMain] {
+  -moz-image-region: rect(0px, 32px,  32px, 0px)
+}
+
+radio[pane=paneTabs] {
+  -moz-image-region: rect(0px, 64px, 32px, 32px)
+}
+
+radio[pane=paneContent] {
+  -moz-image-region: rect(0px, 96px,  32px, 64px)
+}
+
+radio[pane=paneApplications] {
+  -moz-image-region: rect(0px, 128px,  32px, 96px)
+}
+
+radio[pane=panePrivacy] {
+  -moz-image-region: rect(0px, 160px,  32px, 128px)
+}
+
+radio[pane=paneSecurity] {
+  -moz-image-region: rect(0px, 192px,  32px, 160px)
+}
+
+radio[pane=paneAdvanced] {
+  -moz-image-region: rect(0px, 224px, 32px, 192px)
+}
+
+radio[pane=paneSync] {
+  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important;
+}
+
+/* Applications Pane */
+#BrowserPreferences[animated="true"] #handlersView {
+  height: 25em;
+}
+
+#BrowserPreferences[animated="false"] #handlersView {
+  -moz-box-flex: 1;
+}
+
+/* Privacy Pane */
+
+/* styles for the link elements copied from .text-link in global.css */
+.inline-link {
+  color: -moz-nativehyperlinktext;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Modeless Window Dialogs */
+.windowDialog,
+.windowDialog prefpane {
+  padding: 0px;
+}
+
+#browserHomePage:-moz-locale-dir(rtl) input {
+  unicode-bidi: plaintext;
+  direction: rtl;
+}
+
+.contentPane {
+  margin: 9px 8px 5px 8px;
+}
+
+.actionButtons {
+  margin: 0px 3px 6px 3px !important;
+}
+
+/* Cookies Manager */
+#cookiesChildren::-moz-tree-image(domainCol) {
+  width: 16px;
+  height: 16px;
+  margin: 0px 2px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+#paneApplications {
+  margin-left: 4px;
+  margin-right: 4px; 
+  padding-left: 0;
+  padding-right: 0; 
+}
+
+#linksOpenInBox {
+  margin-top: 5px;
+}
+
+#paneAdvanced {
+  padding-bottom: 10px;
+}
+#advancedPrefs {
+  margin-left: 0;
+  margin-right: 0; 
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container) {
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+}
+
+#cookieInfoBox {
+  border: 1px solid ThreeDShadow;
+  border-radius: 0px;
+  margin: 4px;
+  padding: 0px;
+}
+
+/* bottom-most box containing a groupbox in a prefpane. Prevents the bottom
+   of the groupbox from being cutoff */
+.bottomBox {
+  padding-bottom: 4px;
+}
+
+/**
+ * Clear Private Data
+ */
+#SanitizeDialogPane > groupbox {
+  margin-top: 0;
+}
+
+/* Sync Pane */
+
+#syncDesc {
+  padding: 0 8em;
+}
+
+#accountCaptionImage {
+  list-style-image: url("chrome://mozapps/skin/profile/profileicon.png");
+}
+
+#syncAddDeviceLabel {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+#CookiesDialog {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: #08111d !important;
+  color: #ffffff !important;
+}
+
+#CookiesDialog .contentPane,
+#CookiesDialog .actionButtons,
+#CookiesDialog > hbox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: #08111d !important;
+  color: #ffffff !important;
+}
+
+#CookiesDialog label,
+#CookiesDialog description,
+#cookiesIntro {
+  color: #ffffff !important;
+}
+
+/* Search field stays light, matching other search fields in the theme. */
+#CookiesDialog #filter {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: #f5f5f5 !important;
+  color: #000000 !important;
+  border: 1px solid #8b8b8b !important;
+  min-height: 24px !important;
+}
+
+#CookiesDialog #filter > .textbox-input-box,
+#CookiesDialog #filter .textbox-input {
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+#CookiesDialog #cookieInfoBox {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: 1px solid #7f8ea1 !important;
+  background: #08111d !important;
+  color: #ffffff !important;
+  margin: 4px !important;
+  padding: 4px !important;
+}
+
+#CookiesDialog #cookieInfoGrid,
+#CookiesDialog #cookieInfoGrid row,
+#CookiesDialog #cookieInfoGrid hbox {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+#CookiesDialog textbox.plain,
+#CookiesDialog textbox[readonly="true"].plain,
+#CookiesDialog #name,
+#CookiesDialog #value,
+#CookiesDialog #host,
+#CookiesDialog #path,
+#CookiesDialog #isSecure,
+#CookiesDialog #expires {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+#CookiesDialog textbox.plain > .textbox-input-box,
+#CookiesDialog textbox.plain .textbox-input {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+#CookiesDialog button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 24px !important;
+  padding: 2px 10px !important;
+  border: 1px solid #6f6f6f !important;
+  border-radius: 0 !important;
+  background: linear-gradient(#2a2a2a, #101010) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15) !important;
+}
+
+#CookiesDialog button:hover {
+  background: linear-gradient(#3d3d3d, #181818) !important;
+  border-color: #8e8e8e !important;
+  color: #ffffff !important;
+}
+
+#CookiesDialog button:hover:active {
+  background: linear-gradient(#0f0f0f, #2c2c2c) !important;
+}
+
+#CookiesDialog button[disabled="true"] {
+  opacity: .55 !important;
+}
+
+
+#CookiesDialog #filter .textbox-search-icon,
+#CookiesDialog #filter > .textbox-search-icon,
+#CookiesDialog #filter .textbox-search-icons .textbox-search-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Search.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+#CookiesDialog #filter .textbox-search-icon:hover,
+#CookiesDialog #filter > .textbox-search-icon:hover,
+#CookiesDialog #filter .textbox-search-icons .textbox-search-icon:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
+}

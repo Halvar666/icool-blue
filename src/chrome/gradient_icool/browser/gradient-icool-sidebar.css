@@ -1,0 +1,85 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#sidebar-box:not(:-moz-lwtheme) {
+  background-color: #eceff4 !important;
+}
+
+#sidebar-header:not(:-moz-lwtheme) {
+  background-color: #07090d !important;
+  background-image: linear-gradient(to bottom, #1b2533, #07090d) !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  border-top: 1px solid #2e5f9b !important;
+  border-bottom: 1px solid #000 !important;
+}
+
+#sidebar-title {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+/* Sidebar close button has no #sidebar-close id in Pale Moon 34.
+ * DOM Inspector shows: toolbarbutton.tabs-closebutton.close-icon.
+ * Style the actual button/icon and keep the same visual behavior as tab close.
+ */
+#sidebar-header > .tabs-closebutton.close-icon {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  list-style-image: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  opacity: 1 !important;
+}
+
+#sidebar-header > .tabs-closebutton.close-icon > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-normal.png") !important;
+  -moz-image-region: auto !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#sidebar-header > .tabs-closebutton.close-icon:hover > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-hover.png") !important;
+}
+
+#sidebar-header > .tabs-closebutton.close-icon:hover:active > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/tabs/close-active.png") !important;
+}
+
+#sidebar-splitter {
+  border-inline-start: 1px solid #05070a !important;
+  border-inline-end: 1px solid #2e5f9b !important;
+  background-color: #10151d !important;
+}
+
+/* Keep the actual tree body light for readability for now; only add iCool selection colors. */
+.sidebar-placesTree,
+#bookmarks-view,
+#historyTree {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected),
+.sidebar-placesTreechildren::-moz-tree-row(current, focus),
+.sidebar-placesTreechildren::-moz-tree-row(hover) {
+  background-color: #1d78c8 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(selected),
+.sidebar-placesTreechildren::-moz-tree-cell-text(current, focus),
+.sidebar-placesTreechildren::-moz-tree-cell-text(hover) {
+  color: #ffffff !important;
+}

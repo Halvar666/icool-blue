@@ -1,0 +1,94 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+richlistbox {
+  -moz-appearance: none !important;
+  margin: 2px 4px !important;
+  border: 1px solid #7f8ea1 !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d 90px) !important;
+  color: #ffffff !important;
+}
+
+richlistbox[disabled="true"] {
+  color: #7f8ea1 !important;
+}
+
+richlistitem {
+  -moz-appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(127, 142, 161, 0.45) !important;
+}
+
+richlistitem[selected="true"],
+richlistbox:focus > richlistitem[selected="true"] {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+}
+
+richlistitem:hover:not([selected="true"]) {
+  background-color: #0d2238 !important;
+  color: #ffffff !important;
+}
+
+/* Preferences Applications uses listheader/listcell-like header pieces inside
+ * or next to the richlist. Keep metrics close to stock but remove the pale
+ * stock background.
+ */
+listheader,
+richlistbox listheader {
+  -moz-appearance: none !important;
+  -moz-box-align: center;
+  border: 1px solid #7f8ea1 !important;
+  background-color: #0d1724 !important;
+  background-image: linear-gradient(to bottom, #1a3352, #08111d) !important;
+  color: #ffffff !important;
+  padding: 0 4px !important;
+}
+
+listheader[sortable="true"]:hover,
+listheader[sortable="true"]:hover:active {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+  border-color: #a8c6e8 !important;
+  color: #ffffff !important;
+}
+
+.listheader-label,
+.listcell-label,
+richlistitem label,
+richlistitem description {
+  color: inherit !important;
+}
+
+.listheader-sortdirection {
+  list-style-image: none !important;
+}
+
+/* Action menulists inside Applications should not force a white row surface. */
+richlistbox menulist,
+#handlersView menulist,
+richlistbox .actionsMenu,
+#handlersView .actionsMenu {
+  -moz-appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+richlistbox menulist > .menulist-label-box,
+#handlersView menulist > .menulist-label-box,
+richlistbox .actionsMenu > .menulist-label-box,
+#handlersView .actionsMenu > .menulist-label-box {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+richlistbox menulist > .menulist-label-box > .menulist-label,
+#handlersView menulist > .menulist-label-box > .menulist-label,
+richlistbox .actionsMenu > .menulist-label-box > .menulist-label,
+#handlersView .actionsMenu > .menulist-label-box > .menulist-label {
+  color: #ffffff !important;
+}

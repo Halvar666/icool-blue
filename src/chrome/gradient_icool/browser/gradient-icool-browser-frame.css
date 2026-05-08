@@ -1,0 +1,101 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#browser {
+  background-color: #07101b !important;
+}
+
+/* Hidden/anonymous-looking frame strips used by the main browser chrome. */
+#browser-border-start,
+#browser-border-end {
+  background-color: #07101b !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* The splitter is the actual chrome element between sidebar and appcontent.
+ * Keep its width/behavior, but remove any bright native edge.
+ */
+#sidebar-splitter,
+#sidebar-splitter.sidebar-splitter {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: linear-gradient(to right, #02050a, #102a49, #02050a) !important;
+  border-inline-start: 1px solid #05070a !important;
+  border-inline-end: 1px solid #2e5f9b !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* App content frame.  This catches the white strip that belongs to the
+ * containing chrome frame, not the page loaded inside the tab.
+ */
+#appcontent {
+  background-color: #07101b !important;
+  border-inline-start: 1px solid #2e5f9b !important;
+  border-inline-end: 0 !important;
+  box-shadow: none !important;
+}
+
+/* The tabbrowser/browser host can expose a bright native edge in some
+ * platform/theme combinations.  Do not touch the content document itself.
+ */
+#content,
+#content > tabbox,
+#content .browserStack,
+#content browser {
+  background-color: #07101b !important;
+  border-color: #2e5f9b !important;
+  box-shadow: none !important;
+}
+
+
+#browser > #sidebar-box:not([hidden="true"]),
+#browser > #sidebar-box:not([hidden="true"]) > #sidebar {
+  background-color: #07101b !important;
+  background-image: none !important;
+  border-color: #07101b !important;
+  box-shadow: none !important;
+}
+
+#browser > #sidebar-box:not([hidden="true"]) {
+  border-inline-end: 1px solid #05070a !important;
+}
+
+/* Paint over the narrow stock bright edges that sit on both sides of the
+ * actual splitter.  This avoids changing the splitter width or margins.
+ */
+#browser > #sidebar-box:not([hidden="true"]) + #sidebar-splitter,
+#browser > #sidebar-splitter.sidebar-splitter:not([hidden="true"]) {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #07101b !important;
+  background-image: linear-gradient(to right,
+                    #05070a 0,
+                    #05070a 1px,
+                    #2e5f9b 1px,
+                    #2e5f9b 2px,
+                    #102a49 2px,
+                    #07101b 100%) !important;
+  border-inline-start: 1px solid #05070a !important;
+  border-inline-end: 1px solid #2e5f9b !important;
+  box-shadow: -3px 0 0 #07101b, 3px 0 0 #07101b !important;
+}
+
+#browser > #sidebar-splitter:not([hidden="true"]) + #appcontent {
+  background-color: #07101b !important;
+  border-inline-start: 1px solid #07101b !important;
+  box-shadow: inset 1px 0 0 #2e5f9b !important;
+}
+
+/* The loaded chrome/content page can start immediately after this seam.  Keep
+ * this as a visual edge only; do not alter sizing or padding.
+ */
+#browser > #sidebar-splitter:not([hidden="true"]) + #appcontent > #content,
+#browser > #sidebar-splitter:not([hidden="true"]) + #appcontent > #content > tabbox,
+#browser > #sidebar-splitter:not([hidden="true"]) + #appcontent .browserStack {
+  border-inline-start-color: #07101b !important;
+  background-color: #07101b !important;
+}

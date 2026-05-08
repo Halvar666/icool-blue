@@ -1,0 +1,64 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#navigator-toolbox:not(:-moz-lwtheme) {
+  appearance: none !important;
+  background-color: #000 !important;
+  background-image: url("chrome://browser/skin/gradient-icool/KUI-background.png") !important;
+  background-repeat: repeat-x !important;
+  background-position: left top !important;
+  border-bottom-color: #001b38 !important;
+  color: #fff !important;
+}
+
+#toolbar-menubar:not(:-moz-lwtheme),
+#nav-bar:not(:-moz-lwtheme),
+#PersonalToolbar:not(:-moz-lwtheme),
+#TabsToolbar:not(:-moz-lwtheme) {
+  appearance: none !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+#toolbar-menubar:not(:-moz-lwtheme) {
+  background-color: #050505 !important;
+  background-image: linear-gradient(#252525, #050505) !important;
+}
+
+#nav-bar:not(:-moz-lwtheme) {
+  background-color: #020202 !important;
+  background-image: linear-gradient(#1d1d1d, #020202) !important;
+}
+
+#PersonalToolbar:not(:-moz-lwtheme) {
+  background-color: #000 !important;
+  background-image: linear-gradient(#0b0b0b, #000) !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) {
+  background-color: #000 !important;
+  background-image: linear-gradient(#030303, #001d42 55%, #000) !important;
+}
+
+#main-menubar > menu:not([disabled="true"]),
+#nav-bar toolbarbutton:not([disabled="true"]),
+#PersonalToolbar toolbarbutton:not([disabled="true"]),
+#PersonalToolbar .bookmark-item:not([disabled="true"]) {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+#main-menubar > menu[_moz-menuactive="true"]:not([disabled="true"]) {
+  color: #fff !important;
+  background-color: #1259b7 !important;
+  background-image: linear-gradient(#2e83e0, #07498e) !important;
+}
+
+#TabsToolbar .tabbrowser-tab:not([selected="true"]) {
+  color: #dbeaff !important;
+  text-shadow: none !important;
+}
+
+#TabsToolbar .tabbrowser-tab[selected="true"] {
+  color: #000 !important;
+  text-shadow: none !important;
+}

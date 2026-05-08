@@ -1,0 +1,339 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://global/skin/inContentUI.css");
+
+/* header */
+
+#permissions-pagetitle {
+  font-size: 200%;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+/* content box */
+#permissions-content {
+  height: 100%;
+}
+
+/* sites box */
+
+#sites-box {
+  padding: 10px;
+  width: 25em;
+}
+
+#sites-filter {
+  margin: 0;
+}
+
+#sites-list {
+  margin: 5px 0 0 0;
+}
+
+.site {
+  padding: 4px;
+  border-bottom: 1px solid ThreeDLightShadow;
+}
+
+.site-favicon {
+  height: 16px;
+  width: 16px;
+  margin-inline-end: 4px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+#all-sites-item > .site-container > .site-favicon {
+  list-style-image: none;
+}
+
+/* permissions box */
+
+#permissions-box {
+  padding-top: 10px;
+  overflow-y: auto;
+}
+
+#site-description {
+  font-size: 125%;
+  margin-inline-start: 6px; /* to match button margin */
+}
+
+#site-label {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#defaults-description {
+  font-size: 125%;
+  font-weight: bold;
+  margin-inline-start: 6px;
+}
+
+.pref-item {
+  margin-bottom: 10px;
+}
+
+.pref-icon {
+  width: 36px;
+  height: 36px;
+  margin-inline-end: 10px;
+}
+
+.pref-icon[type="password"] {
+  list-style-image: url(chrome://mozapps/skin/passwordmgr/key-64.png);
+}
+.pref-icon[type="image"] {
+  list-style-image: url(chrome://global/skin/icons/question-64.png);
+}
+.pref-icon[type="popup"] {
+  list-style-image: url(chrome://global/skin/icons/question-64.png);
+}
+.pref-icon[type="cookie"] {
+  list-style-image: url(chrome://global/skin/icons/question-64.png);
+}
+.pref-icon[type="desktop-notification"] {
+  list-style-image: url(chrome://browser/skin/web-notifications-icon.svg);
+}
+.pref-icon[type="install"] {
+  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric-48.png);
+}
+.pref-icon[type="geo"] {
+  list-style-image: url(chrome://browser/skin/Geolocation-64.png);
+}
+.pref-icon[type="plugins"] {
+  list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric.png);
+}
+
+.pref-title {
+  font-size: 125%;
+  margin-bottom: 0;
+  font-weight: bold;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.pref-default {
+  margin-left: 0.5em;
+  padding-left: 0;
+}
+
+.pref-set-default {
+  visibility: collapse;
+}
+
+.pref-menulist {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.plugins-label {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.plugins-vulnerable {
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.plugins-default {
+  margin-left: 0.5em;
+  padding-left: 0;
+  margin-right: 1em;
+  padding-right: 0;
+}
+
+
+#permissions-page {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: #08111d !important;
+  color: #ffffff !important;
+}
+
+#permissions-header {
+  background: #08111d !important;
+  color: #ffffff !important;
+}
+
+#permissions-pagetitle {
+  color: #ffffff !important;
+}
+
+#permissions-content.main-content,
+#permissions-content {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 10px 10px 10px !important;
+  border: 1px solid #7f8ea1 !important;
+  background-color: #08111d !important;
+  background-image: linear-gradient(to bottom, #112338, #08111d 120px) !important;
+  color: #ffffff !important;
+}
+
+#sites-box,
+#permissions-box,
+#header-deck,
+#site-header,
+#defaults-header {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+#site-description,
+#site-label,
+#site-visit-count,
+#defaults-description,
+.pref-item,
+.pref-title,
+.pref-default,
+.plugins-label,
+.plugins-vulnerable,
+.plugins-default {
+  color: #ffffff !important;
+}
+
+#sites-list {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin-top: 5px !important;
+  border: 1px solid #7f8ea1 !important;
+  background: #08111d !important;
+  color: #ffffff !important;
+}
+
+.site {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(127, 142, 161, 0.45) !important;
+}
+
+.site:hover:not([selected="true"]) {
+  background-color: #0d2238 !important;
+  color: #ffffff !important;
+}
+
+.site[selected="true"],
+richlistbox:focus > .site[selected="true"] {
+  background-color: #0b4f97 !important;
+  background-image: linear-gradient(to bottom, #2e7dc7, #0b4f97) !important;
+  color: #ffffff !important;
+}
+
+.site label,
+.site .site-domain,
+.site .site-container {
+  color: inherit !important;
+}
+
+/* Keep search fields light, matching Add-ons Manager/Page Info search styling. */
+#sites-filter {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: #f5f5f5 !important;
+  color: #000000 !important;
+  border: 1px solid #8b8b8b !important;
+  min-height: 24px !important;
+}
+
+#sites-filter > .textbox-input-box,
+#sites-filter .textbox-input {
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+/* Dark controls in the right permissions pane and reload/search-side button. */
+button,
+.pref-menulist,
+#permissions-box menulist,
+#sites-reload {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  min-height: 24px !important;
+  border: 1px solid #6f6f6f !important;
+  border-radius: 0 !important;
+  background: linear-gradient(#2a2a2a, #101010) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15) !important;
+}
+
+button {
+  padding: 2px 10px !important;
+}
+
+button:hover,
+.pref-menulist:hover,
+#permissions-box menulist:hover,
+#sites-reload:hover {
+  background: linear-gradient(#3d3d3d, #181818) !important;
+  border-color: #8e8e8e !important;
+  color: #ffffff !important;
+}
+
+button:hover:active,
+.pref-menulist:hover:active,
+#permissions-box menulist:hover:active,
+#sites-reload:hover:active {
+  background: linear-gradient(#0f0f0f, #2c2c2c) !important;
+  color: #ffffff !important;
+}
+
+.pref-menulist > .menulist-label-box,
+#permissions-box menulist > .menulist-label-box {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.pref-menulist > .menulist-label-box > .menulist-label,
+#permissions-box menulist > .menulist-label-box > .menulist-label {
+  color: #ffffff !important;
+}
+
+.pref-menulist > .menulist-dropmarker,
+#permissions-box menulist > .menulist-dropmarker {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Ensure the two requested stock-path icons exist and win over missing/fallback art. */
+.pref-icon[type="password"] {
+  list-style-image: url("chrome://mozapps/skin/passwordmgr/key-64.png") !important;
+}
+
+.pref-icon[type="install"] {
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric-48.png") !important;
+}
+
+.pref-icon {
+  opacity: 1 !important;
+}
+
+button[disabled="true"],
+menulist[disabled="true"] {
+  opacity: .55 !important;
+}
+
+
+#sites-filter {
+  margin: 0 4px !important;
+}
+
+#sites-filter .textbox-search-icon,
+#sites-filter > .textbox-search-icon,
+#sites-filter .textbox-search-icons .textbox-search-icon {
+  list-style-image: url("chrome://browser/skin/gradient-icool/location/Search.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+#sites-filter .textbox-search-icon:hover,
+#sites-filter > .textbox-search-icon:hover,
+#sites-filter .textbox-search-icons .textbox-search-icon:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
+}
